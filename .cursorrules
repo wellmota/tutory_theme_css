@@ -1,0 +1,152 @@
+# Cursor Rules for Tutory - Pure CSS Project
+
+## Project Context
+
+This is a **pure CSS project** that styles a Bootstrap-based portal. We cannot modify HTML directly - only CSS can be changed.
+
+## Core Principles
+
+1. **Pure CSS Only**: All changes must be made through CSS. No HTML modifications are possible.
+2. **Bootstrap Override Strategy**: The portal uses Bootstrap, so we target Bootstrap classes and components.
+3. **"Brutal Force" Positioning**: Use aggressive CSS positioning techniques to reposition elements when needed.
+4. **High Specificity**: Use high-specificity selectors and `!important` when necessary to override Bootstrap defaults.
+
+## CSS Writing Guidelines
+
+### Selector Strategy
+
+- Prefer ID selectors when available: `#element-id`
+- Chain Bootstrap classes for specificity: `.container .row .col-md-6`
+- Use attribute selectors for flexible targeting: `[class*="bootstrap-class"]`
+- Combine with pseudo-selectors: `.card:first-child`, `.btn:hover`
+
+### Positioning Techniques
+
+- Use `position: absolute` or `position: fixed` for precise positioning
+- Leverage `transform: translate()` for fine adjustments
+- Override Bootstrap's flexbox/grid with `!important` when needed
+- Use `z-index` to control stacking order
+- **Modern Layout**: Use flexbox/grid for modern component layouts (alignment, spacing, gaps)
+- **Chained Selectors**: Target nested Bootstrap structures: `.card.custom-card .row > .col-12:first-child`
+
+### Bootstrap Class Overrides
+
+Common Bootstrap classes to target:
+
+- Grid: `.container`, `.row`, `.col-*`, `.col-md-*`, `.col-lg-*`
+- Components: `.card`, `.btn`, `.navbar`, `.modal`, `.dropdown`
+- Utilities: `.mt-*`, `.mb-*`, `.p-*`, `.d-*`, `.text-*`
+- Forms: `.form-control`, `.form-group`, `.input-group`
+
+### Code Style
+
+- Use `!important` when overriding Bootstrap defaults
+- Add comments explaining complex positioning logic
+- Group related overrides together
+- Document which Bootstrap classes are being overridden
+
+### Modern Layout Patterns (Proven Successful)
+
+- **Card Styling**: Use larger border-radius (12px), generous padding (32px), modern shadows
+- **Flexbox Alignment**: Use `display: flex`, `align-items: center`, `gap` for spacing
+- **Visual Hierarchy**: Use borders, separators, and spacing to create clear sections
+- **Hover Effects**: Add smooth transitions, transform effects, and background changes
+- **Responsive Design**: Use media queries with mobile-first adjustments
+- **Modern Buttons**: Subtle backgrounds, borders, hover animations with transform/box-shadow
+
+## File Structure
+
+- `advanced.css` - Main stylesheet (all CSS goes here)
+- `PROJECT_APPROACH.md` - Project documentation
+- `.cursorrules` - This file
+
+## When Writing CSS
+
+1. **Identify the target**: Determine which Bootstrap classes or elements need styling
+2. **Check specificity**: Ensure your selector has enough specificity to override Bootstrap
+3. **Use positioning**: Apply positioning properties (`position`, `top`, `left`, `transform`, etc.) to reposition elements
+4. **Modern Layout First**: Prefer flexbox/grid for layout, use absolute positioning only when necessary
+5. **Add Interactions**: Include hover effects, transitions, and visual feedback for better UX
+6. **Test responsiveness**: Consider how changes affect different screen sizes with media queries
+7. **Document**: Add comments explaining complex positioning logic and modern patterns used
+
+## Example Patterns
+
+### Modern Card Layout (Proven Pattern)
+
+```css
+/* Modern card container with enhanced styling */
+.legend-week-activities.card.custom-card {
+  border-radius: 12px !important;
+  padding: 32px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0, 255, 136, 0.15) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* Modern header with flexbox alignment */
+.legend-week-activities.card.custom-card h2 {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  margin-bottom: 12px !important;
+}
+
+/* Modern list items with hover effects */
+.legend-week-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  padding: 12px 16px !important;
+  background: rgba(255, 255, 255, 0.03) !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+}
+
+.legend-week-item:hover {
+  background: rgba(0, 255, 136, 0.05) !important;
+  transform: translateX(4px) !important;
+}
+
+/* Modern buttons with hover animations */
+.week-view-links a {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 12px 24px !important;
+  transition: all 0.3s ease !important;
+}
+
+.week-view-links a:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(0, 255, 136, 0.2) !important;
+}
+```
+
+### Positioning Overrides
+
+```css
+/* Override Bootstrap card positioning */
+.card.custom-card {
+  position: relative !important;
+  top: -20px !important;
+  transform: translateX(10px) !important;
+}
+
+/* Override Bootstrap grid */
+.container .row {
+  display: flex !important;
+  flex-direction: column-reverse !important;
+}
+```
+
+## Important Reminders
+
+- We cannot modify HTML - only CSS
+- The portal uses Bootstrap - target Bootstrap classes
+- Use aggressive positioning when needed ("brutal force" approach)
+- **Prefer modern layouts**: Flexbox/grid over absolute positioning when possible
+- **Enhance UX**: Add hover effects, transitions, and visual feedback
+- Always test in the actual portal environment
+- Keep track of overridden Bootstrap classes
+- Use chained selectors for nested Bootstrap structures: `.parent .child > .grandchild`
