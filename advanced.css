@@ -3,7 +3,7 @@
 }
 
 #card_cadastro > h5:nth-child(10):after {
-  content: 'Informamos que, para realizar o cancelamento de sua assinatura ou compra, é necessário entrar em contato com nosso número de atendimento: (77) 99130-8000. Somente após o contato com este número, poderemos dar encaminhamento ao pedido de cancelamento.Ressaltamos que o prazo para solicitar o reembolso integral é de até 7 (sete) dias corridos a partir da data da compra, conforme previsto no Código de Defesa do Consumidor. Após esse período, não será possível realizar o reembolso integral.Agradecemos pela compreensão.';
+  content: 'Para realizar o cancelamento de sua assinatura ou compra, é necessário entrar em contato com nosso número de atendimento: xxxx-xxxxx. Somente após o contato com este número, poderemos dar encaminhamento ao pedido de cancelamento. O prazo para solicitar o reembolso integral é de até 7 (sete) dias corridos a partir da data da compra, conforme previsto no Código de Defesa do Consumidor. Após esse período, não será possível realizar o reembolso integral. Agradecemos pela compreensão.';
   display: block;
   margin-top: 16px !important;
   margin: 0 auto;
@@ -1099,6 +1099,32 @@ a:hover {
   border-radius: 12px !important;
   border: 1px solid rgba(0, 255, 136, 0.1) !important;
   margin-bottom: 8px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+  left: 0 !important;
+  right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* If inside a Bootstrap column, force it to span full width */
+[class*='col-'] .desempenho-full,
+.row .desempenho-full {
+  width: calc(100vw - 2rem) !important;
+  max-width: 100% !important;
+  margin-left: calc(-50vw + 50%) !important;
+  margin-right: calc(-50vw + 50%) !important;
+  position: relative !important;
+}
+
+/* If inside a container, account for container padding */
+.container .desempenho-full,
+.container-fluid .desempenho-full {
+  width: calc(100% + 30px) !important;
+  margin-left: -15px !important;
+  margin-right: -15px !important;
 }
 
 .desempenho-full h3 {
@@ -1119,29 +1145,10 @@ a:hover {
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3) !important;
 }
 
-/* Discipline Container Rows */
+/* Discipline Container Rows - Styling Only, No Layout Changes */
+/* Keep Bootstrap's grid system intact - only style the components */
 .disciplina-container {
   margin-bottom: 32px !important;
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 20px !important;
-}
-
-/* Ensure Bootstrap row displays cards side by side */
-.disciplina-container.row {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  margin-left: -12px !important;
-  margin-right: -12px !important;
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-}
-
-.disciplina-container.row > [class*='col-'] {
-  display: flex !important;
-  flex-direction: column !important;
-  padding-left: 12px !important;
-  padding-right: 12px !important;
 }
 
 /* Discipline Title Section - Collapsible Header */
@@ -1171,16 +1178,41 @@ a:hover {
   gap: 12px !important;
 }
 
+/* Icons inside disciplina title - circular background like home page */
 .disciplina-container-title h5 i {
   color: #00ff88 !important;
-  font-size: 16px !important;
-  transition: transform 0.3s ease !important;
-  width: auto !important;
-  height: auto !important;
-  background: none !important;
-  border-radius: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  background-color: rgb(45, 55, 52) !important;
+  background: linear-gradient(
+    135deg,
+    rgb(45, 55, 52) 0%,
+    rgb(40, 50, 47) 100%
+  ) !important;
   padding: 0 !important;
+  margin-right: 12px !important;
+  vertical-align: middle !important;
+  font-size: 14px !important;
+  position: relative !important;
+  flex-shrink: 0 !important;
+  line-height: 1 !important;
+  transition: transform 0.3s ease !important;
+}
+
+.disciplina-container-title h5 i::before {
+  font-size: 14px !important;
+  line-height: 1 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  height: 100% !important;
   margin: 0 !important;
+  padding: 0 !important;
 }
 
 .disciplina-container-title .progress {
@@ -1191,33 +1223,16 @@ a:hover {
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3) !important;
 }
 
-/* Subject Cards Grid - Ensure side by side layout */
-.disciplina-container .desempenho-extra {
-  padding: 0 12px !important;
+/* Subject Cards Grid - Styling Only, Bootstrap handles layout */
+.desempenho-extra {
   margin-bottom: 20px !important;
+}
+
+/* Ensure cards inside columns use flex for internal layout */
+.desempenho-extra .desempenho-container {
   display: flex !important;
   flex-direction: column !important;
-}
-
-/* Force Bootstrap grid to work properly */
-.disciplina-container.row .desempenho-extra {
-  width: 100% !important;
-}
-
-@media (min-width: 768px) {
-  .disciplina-container.row .desempenho-extra.col-md-6 {
-    width: 50% !important;
-    flex: 0 0 50% !important;
-    max-width: 50% !important;
-  }
-}
-
-@media (min-width: 992px) {
-  .disciplina-container.row .desempenho-extra.col-lg-4 {
-    width: 33.333333% !important;
-    flex: 0 0 33.333333% !important;
-    max-width: 33.333333% !important;
-  }
+  height: 100% !important;
 }
 
 .desempenho-container {
@@ -1332,6 +1347,30 @@ a:hover {
   #card_desempenho > p {
     font-size: 14px !important;
     padding: 12px 16px !important;
+  }
+
+  /* Responsive Header with Icon */
+  .card.custom-card > h2:first-child {
+    font-size: 24px !important;
+    gap: 16px !important;
+    padding-bottom: 20px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .card.custom-card > h2:first-child i {
+    width: 56px !important;
+    height: 56px !important;
+    font-size: 24px !important;
+  }
+
+  .card.custom-card > h2:first-child i::before {
+    font-size: 24px !important;
+  }
+
+  .card.custom-card > h2:first-child + p {
+    font-size: 14px !important;
+    padding: 16px 20px !important;
+    margin-bottom: 24px !important;
   }
 
   .desempenho-full {
@@ -1727,24 +1766,140 @@ a#review_goals_save {
   z-index: 3;
 }
 
+/* Account Dropdown Info Section */
 .account-dropdown .info {
-  padding: 1em 0.5em 0 0.5em;
-  border-style: NONE;
-  border-bottom: 0;
+  padding: 0 0 20px 0 !important;
+  margin-bottom: 16px !important;
+  border-bottom: 1px solid rgba(0, 255, 136, 0.15) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+}
+
+.account-dropdown .info .image {
+  width: 60px !important;
+  height: 60px !important;
+  border-radius: 50% !important;
+  overflow: hidden !important;
+  border: 3px solid rgba(0, 255, 136, 0.3) !important;
+  flex-shrink: 0 !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+}
+
+.account-dropdown .info .image:hover {
+  border-color: rgba(0, 255, 136, 0.5) !important;
+  transform: scale(1.05) !important;
+}
+
+.account-dropdown .info .image img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+.account-dropdown .info .content {
+  flex: 1 !important;
+}
+
+.account-dropdown .info .content h5 {
+  margin: 0 0 4px 0 !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+}
+
+.account-dropdown .info .content h5 a {
+  color: #ffffff !important;
+  text-decoration: none !important;
+  transition: color 0.3s ease !important;
+}
+
+.account-dropdown .info .content h5 a:hover {
+  color: #00ff88 !important;
+}
+
+.account-dropdown .info .content .email {
+  color: rgba(255, 255, 255, 0.6) !important;
+  font-size: 12px !important;
+}
+
+/* Account Dropdown Items */
+.account-dropdown__body {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+}
+
+.account-dropdown__item {
+  margin: 0 !important;
+}
+
+.account-dropdown__item a {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  padding: 12px 16px !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  text-decoration: none !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+  font-size: 14px !important;
+}
+
+.account-dropdown__item a i {
+  width: 20px !important;
+  text-align: center !important;
+  color: rgba(0, 255, 136, 0.8) !important;
+  font-size: 16px !important;
 }
 
 .account-dropdown__item a:hover {
-  background: linear-gradient(135deg, #00ff88 0%, #00cc6f 100%) !important;
-  margin: 15px;
-  border-radius: 6px;
-  color: #0a0a0a !important;
+  background: rgba(0, 255, 136, 0.1) !important;
+  color: #00ff88 !important;
+  transform: translateX(4px) !important;
+  margin: 0 !important;
+}
+
+.account-dropdown__item a:hover i {
+  color: #00ff88 !important;
+}
+
+/* Account Dropdown Footer */
+.account-dropdown__footer {
+  margin-top: 16px !important;
+  padding-top: 16px !important;
+  border-top: 1px solid rgba(0, 255, 136, 0.15) !important;
+}
+
+.account-dropdown__footer a {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  padding: 12px 16px !important;
+  color: rgba(255, 100, 100, 0.9) !important;
+  text-decoration: none !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+}
+
+.account-dropdown__footer a i {
+  width: 20px !important;
+  text-align: center !important;
+  color: rgba(255, 100, 100, 0.8) !important;
+  font-size: 16px !important;
 }
 
 .account-dropdown__footer a:hover {
-  background: linear-gradient(135deg, #00ff88 0%, #00cc6f 100%) !important;
-  margin: 15px;
-  border-radius: 6px;
-  color: #0a0a0a !important;
+  background: rgba(255, 100, 100, 0.1) !important;
+  color: #ff6464 !important;
+  transform: translateX(4px) !important;
+  margin: 0 !important;
+}
+
+.account-dropdown__footer a:hover i {
+  color: #ff6464 !important;
 }
 
 .form-control {
@@ -2019,21 +2174,42 @@ div > div.chart-graph.chart-fix-height > div.chart-empty > img {
   padding: 30px;
 }
 
+/* Modern Glass Effect Notification Dropdown */
 .notifi-dropdown.js-dropdown {
-  border-style: none;
-  border-radius: 4px;
+  border-radius: 12px !important;
+  background: rgba(26, 26, 26, 0.9) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  border: 1px solid rgba(0, 255, 136, 0.2) !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(0, 255, 136, 0.1) inset !important;
+  padding: 16px !important;
+  min-width: 320px !important;
+  max-width: 400px !important;
 }
 
-.notifi__item .content p {
-  color: #d0d0d0;
-  line-height: 1;
-  padding-top: 5px;
-  margin-bottom: 5px;
+.notifi__item {
+  padding: 12px 16px !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+  margin-bottom: 8px !important;
+}
+
+.notifi__item:last-child {
+  margin-bottom: 0 !important;
 }
 
 .notifi__item:hover {
-  border-style: none;
-  border-radius: 4px;
+  background: rgba(0, 255, 136, 0.1) !important;
+  transform: translateX(4px) !important;
+}
+
+.notifi__item .content p {
+  color: rgba(255, 255, 255, 0.9) !important;
+  line-height: 1.5 !important;
+  padding-top: 0 !important;
+  margin-bottom: 0 !important;
+  font-size: 14px !important;
 }
 
 body
@@ -3516,8 +3692,282 @@ a#review_goals_save:hover {
   border: 1px solid rgba(0, 255, 136, 0.3);
 }
 
-.header-desktop,
-.menu-sidebar .logo,
+/* Modern Glass Effect Header - Styling Only,
+   Position is handled by original CSS, don't override */
+.header-desktop {
+  background: rgba(26, 26, 26, 0.85) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  border-bottom: 1px solid rgba(0, 255, 136, 0.15) !important;
+  border-left: none !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(0, 255, 136, 0.1) inset !important;
+  /* Don't override position - let original CSS handle it */
+}
+
+.header-desktop::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 1px !important;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 255, 136, 0.3) 50%,
+    transparent 100%
+  ) !important;
+}
+
+/* Modern Glass Effect Logo - Connects seamlessly with header */
+.logo {
+  background: rgba(26, 26, 26, 0.85) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  border-bottom: 1px solid rgba(0, 255, 136, 0.15) !important;
+  border-right: none !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(0, 255, 136, 0.1) inset !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+.logo::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 1px !important;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 255, 136, 0.3) 50%,
+    transparent 100%
+  ) !important;
+  z-index: 0 !important;
+}
+
+.logo a {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-decoration: none !important;
+  transition: opacity 0.3s ease !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.logo a:hover {
+  opacity: 0.8 !important;
+}
+
+.logo img {
+  width: auto !important;
+  max-width: 250px !important;
+  max-height: 55px !important;
+  height: auto !important;
+  display: none !important; /* Hide original image */
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* Force new logo image URL using CSS */
+.logo a::before {
+  content: '' !important;
+  display: block !important;
+  width: 250px !important;
+  height: 55px !important;
+  background-image: url('https://i.postimg.cc/RZBjZNwj/brand.png') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* Don't override layout - let original CSS handle positioning and layout */
+/* Only style individual elements below */
+
+/* Header Elements Styling */
+.header-exp-count {
+  display: flex !important;
+  align-items: baseline !important;
+  gap: 4px !important;
+  padding: 8px 16px !important;
+  background: rgba(0, 255, 136, 0.1) !important;
+  border-radius: 20px !important;
+  border: 1px solid rgba(0, 255, 136, 0.2) !important;
+  color: #00ff88 !important;
+  font-size: 14px !important;
+  transition: all 0.3s ease !important;
+}
+
+.header-exp-count:hover {
+  background: rgba(0, 255, 136, 0.15) !important;
+  border-color: rgba(0, 255, 136, 0.3) !important;
+  transform: translateY(-1px) !important;
+}
+
+.header-exp-count b {
+  font-weight: 700 !important;
+  font-size: 16px !important;
+  color: #00ff88 !important;
+}
+
+.header-exp-count small {
+  font-size: 12px !important;
+  color: rgba(0, 255, 136, 0.8) !important;
+}
+
+/* Help Button */
+.header-help a {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  transition: all 0.3s ease !important;
+  text-decoration: none !important;
+}
+
+.header-help a:hover {
+  background: rgba(0, 255, 136, 0.1) !important;
+  border-color: rgba(0, 255, 136, 0.3) !important;
+  color: #00ff88 !important;
+  transform: scale(1.1) !important;
+}
+
+.header-help a i {
+  font-size: 18px !important;
+}
+
+/* Notification Bell */
+.noti-wrap {
+  position: relative !important;
+}
+
+.noti__item {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  position: relative !important;
+}
+
+.noti__item:hover {
+  background: rgba(0, 255, 136, 0.1) !important;
+  border-color: rgba(0, 255, 136, 0.3) !important;
+  color: #00ff88 !important;
+  transform: scale(1.1) !important;
+}
+
+.noti__item i {
+  font-size: 18px !important;
+}
+
+.noti__item .quantity {
+  position: absolute !important;
+  top: -4px !important;
+  right: -4px !important;
+  background: linear-gradient(135deg, #00ff88 0%, #00cc6f 100%) !important;
+  color: #0a0a0a !important;
+  border-radius: 12px !important;
+  padding: 2px 8px !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  min-width: 20px !important;
+  text-align: center !important;
+  box-shadow: 0 2px 8px rgba(0, 255, 136, 0.4) !important;
+}
+
+/* Account Dropdown */
+.account-wrap {
+  position: relative !important;
+}
+
+.account-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  padding: 6px 12px 6px 6px !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-radius: 24px !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+}
+
+.account-item:hover {
+  background: rgba(0, 255, 136, 0.1) !important;
+  border-color: rgba(0, 255, 136, 0.3) !important;
+  transform: translateY(-1px) !important;
+}
+
+.account-item .image {
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 50% !important;
+  overflow: hidden !important;
+  border: 2px solid rgba(0, 255, 136, 0.3) !important;
+  flex-shrink: 0 !important;
+}
+
+.account-item .image img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+.account-item .content a {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  transition: color 0.3s ease !important;
+}
+
+.account-item .content a:hover {
+  color: #00ff88 !important;
+}
+
+.account-item .content a i {
+  font-size: 12px !important;
+  color: rgba(255, 255, 255, 0.6) !important;
+  transition: transform 0.3s ease !important;
+}
+
+.account-item:hover .content a i {
+  color: #00ff88 !important;
+  transform: rotate(180deg) !important;
+}
+
+/* Logo glass effect already applied above */
+.menu-sidebar .logo {
+  background: rgba(26, 26, 26, 0.85) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  border-bottom: 1px solid rgba(0, 255, 136, 0.15) !important;
+  border-right: none !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(0, 255, 136, 0.1) inset !important;
+}
+
 #chat_header {
   background-color: #1a1a1a;
 }
@@ -3609,6 +4059,150 @@ a#extra_time_complete_before:focus {
   border-radius: 8px !important;
   color: #404040 !important;
 }
+/* Modern Header Section with Icon - "Meu Desempenho" */
+.card.custom-card > h2:first-child {
+  display: flex !important;
+  align-items: center !important;
+  gap: 20px !important;
+  margin: 0 0 24px 0 !important;
+  padding-bottom: 24px !important;
+  border-bottom: 1px solid rgba(0, 255, 136, 0.15) !important;
+  font-size: 32px !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+}
+
+/* Bigger Icon in Circle for Header - Works with Font Awesome and zmdi */
+.card.custom-card > h2:first-child i {
+  color: #00ff88 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 64px !important;
+  height: 64px !important;
+  border-radius: 50% !important;
+  background-color: rgb(45, 55, 52) !important;
+  background: linear-gradient(
+    135deg,
+    rgb(45, 55, 52) 0%,
+    rgb(40, 50, 47) 100%
+  ) !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  font-size: 28px !important;
+  position: relative !important;
+  flex-shrink: 0 !important;
+  line-height: 64px !important;
+  box-shadow: 0 4px 12px rgba(0, 255, 136, 0.2) !important;
+  transition: all 0.3s ease !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Support for Font Awesome icons */
+.card.custom-card > h2:first-child i::before {
+  font-size: 28px !important;
+  line-height: 1 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Support for zmdi icons - ensure visibility */
+.card.custom-card > h2:first-child i.zmdi,
+.card.custom-card.card-dashboard-home > h2:first-child i {
+  font-size: 32px !important;
+  line-height: 64px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.card.custom-card > h2:first-child i.zmdi::before,
+.card.custom-card.card-dashboard-home > h2:first-child i::before {
+  font-size: 32px !important;
+  line-height: 64px !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+  width: auto !important;
+  height: auto !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Ensure zmdi icon is visible in dashboard home card */
+.card.custom-card.card-dashboard-home h2 i.zmdi-walk,
+.card.custom-card.card-dashboard-home h2 i[class*='zmdi'] {
+  display: inline-flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  font-size: 32px !important;
+  color: #00ff88 !important;
+  width: 64px !important;
+  height: 64px !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+}
+
+/* zmdi icons use ::before - ensure it's visible */
+.card.custom-card.card-dashboard-home h2 i[class*='zmdi']::before {
+  font-size: 32px !important;
+  line-height: 1 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.card.custom-card > h2:first-child:hover i {
+  transform: scale(1.05) !important;
+  box-shadow: 0 6px 16px rgba(0, 255, 136, 0.3) !important;
+}
+
+/* Description Paragraph Below Header */
+.card.custom-card > h2:first-child + p {
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-size: 16px !important;
+  line-height: 1.7 !important;
+  margin: 0 0 32px 0 !important;
+  padding: 20px 24px !important;
+  background: rgba(0, 255, 136, 0.05) !important;
+  border-left: 4px solid rgba(0, 255, 136, 0.3) !important;
+  border-radius: 8px !important;
+}
+
+.card.custom-card > h2:first-child + p b {
+  color: #00ff88 !important;
+  font-weight: 600 !important;
+}
+
+/* HR Separator */
+.card.custom-card > h2:first-child + p + hr {
+  margin: 32px 0 24px 0 !important;
+  border: none !important;
+  height: 1px !important;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 255, 136, 0.2) 50%,
+    transparent 100%
+  ) !important;
+}
+
 .custom-card h2 {
   margin-top: 32px !important;
 }
@@ -3632,5 +4226,243 @@ div#video_boas_vindas_onboarding_aluno {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* ============================================
+   CADERNO CARDS - Modern Dark Theme Styling
+   ============================================ */
+
+/* Caderno List Container */
+.caderno-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Individual Caderno Item - Modern Card Style */
+.caderno-item {
+  position: relative !important;
+  margin-bottom: 0 !important;
+  padding: 0 !important;
+  border-bottom: none !important;
+}
+
+/* Override inherited border-bottom from .caderno-list .caderno-item */
+.caderno-list .caderno-item {
+  border-bottom: none !important;
+  border: none !important;
+}
+
+/* Subtle divider between items - More visible */
+.caderno-item:not(:last-child)::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 1px !important;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.08) 20%,
+    rgba(255, 255, 255, 0.12) 50%,
+    rgba(255, 255, 255, 0.08) 80%,
+    transparent 100%
+  ) !important;
+  pointer-events: none !important;
+}
+
+/* Caderno Link Container - Card-like appearance */
+.caderno-link {
+  display: block !important;
+  padding: 24px 28px !important;
+  background: rgba(255, 255, 255, 0.02) !important;
+  border-radius: 0 !important;
+  border: none !important;
+  border-top: none !important;
+  border-right: none !important;
+  border-bottom: none !important;
+  border-left: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  transition: all 0.3s ease !important;
+  position: relative !important;
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+.caderno-link:hover {
+  background: rgba(255, 255, 255, 0.04) !important;
+  transform: translateX(4px) !important;
+  border: none !important;
+  border-top: none !important;
+  border-right: none !important;
+  border-bottom: none !important;
+  border-left: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Typography Hierarchy - Title (h4) */
+.caderno-link h4 {
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  color: #ffffff !important;
+  margin: 0 0 12px 0 !important;
+  padding: 0 !important;
+  line-height: 1.4 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  letter-spacing: -0.01em !important;
+}
+
+/* Icon in title - Circular background */
+.caderno-link h4 i {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 255, 136, 0.15) 0%,
+    rgba(0, 255, 136, 0.08) 100%
+  ) !important;
+  color: #00ff88 !important;
+  font-size: 16px !important;
+  flex-shrink: 0 !important;
+  box-shadow: 0 2px 8px rgba(0, 255, 136, 0.1) !important;
+  transition: all 0.3s ease !important;
+}
+
+.caderno-link:hover h4 i {
+  transform: scale(1.05) !important;
+  box-shadow: 0 4px 12px rgba(0, 255, 136, 0.2) !important;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 255, 136, 0.25) 0%,
+    rgba(0, 255, 136, 0.15) 100%
+  ) !important;
+}
+
+/* Typography Hierarchy - Character Count (p) */
+.caderno-link p {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+  margin: 0 0 16px 0 !important;
+  padding: 0 !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.01em !important;
+}
+
+/* Actions Container */
+.caderno-actions {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  flex-wrap: wrap !important;
+  margin-top: 4px !important;
+}
+
+/* Modern Button Styling */
+.caderno-actions .btn {
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  padding: 10px 20px !important;
+  border-radius: 8px !important;
+  border: 1px solid transparent !important;
+  transition: all 0.3s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  text-decoration: none !important;
+  letter-spacing: 0.02em !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Primary Button - "ver caderno" */
+.caderno-actions .btn-primary {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 255, 136, 0.15) 0%,
+    rgba(0, 255, 136, 0.1) 100%
+  ) !important;
+  color: #00ff88 !important;
+  border-color: rgba(0, 255, 136, 0.2) !important;
+}
+
+.caderno-actions .btn-primary:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 255, 136, 0.25) 0%,
+    rgba(0, 255, 136, 0.18) 100%
+  ) !important;
+  border-color: rgba(0, 255, 136, 0.4) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(0, 255, 136, 0.25) !important;
+}
+
+/* Info Button - "baixar caderno" */
+.caderno-actions .btn-info {
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.caderno-actions .btn-info:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Button Icons */
+.caderno-actions .btn i {
+  font-size: 14px !important;
+  opacity: 0.9 !important;
+  transition: all 0.3s ease !important;
+}
+
+.caderno-actions .btn:hover i {
+  opacity: 1 !important;
+  transform: scale(1.1) !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .caderno-link {
+    padding: 20px !important;
+  }
+
+  .caderno-link h4 {
+    font-size: 16px !important;
+    gap: 10px !important;
+  }
+
+  .caderno-link h4 i {
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 14px !important;
+  }
+
+  .caderno-link p {
+    font-size: 13px !important;
+  }
+
+  .caderno-actions {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  .caderno-actions .btn {
+    width: 100% !important;
+    justify-content: center !important;
   }
 }
