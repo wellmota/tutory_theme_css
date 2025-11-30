@@ -26,7 +26,7 @@
 html,
 body {
   background: #000000
-    url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/a08d199dfd47e95209be7a4a2812c5cd7b155d95/images/bg3.jpg')
+    url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/1edd1d745c19b4439659ba092bd223d96134b496/images/bg3.jpg')
     center center fixed !important;
   background-size: cover !important;
   background-repeat: no-repeat !important;
@@ -168,12 +168,43 @@ i {
   line-height: 1.6 !important;
 }
 
-/* Force dark tactical background for all cards */
-.custom-card {
+/* Force dark tactical background for all cards - High Specificity */
+.card,
+.card.custom-card,
+.custom-card,
+.card.custom-card.mt-3,
+.custom-card.mt-3,
+div.card.custom-card,
+div.custom-card,
+div.card {
   background: rgba(10, 10, 10, 0.95) !important;
   border: 1px solid rgba(255, 102, 0, 0.3) !important;
   box-shadow: 0 0 20px rgba(255, 102, 0, 0.2), inset 0 0 20px rgba(0, 0, 0, 0.5) !important;
   border-radius: 0 !important;
+  color: #e0e0e0 !important;
+}
+
+/* Override any white backgrounds on card elements */
+.card.custom-card *,
+.custom-card * {
+  color: #e0e0e0 !important;
+}
+
+.card.custom-card h2,
+.custom-card h2 {
+  color: #ff6600 !important;
+  text-shadow: 0 0 10px rgba(255, 102, 0, 0.5), 0 0 20px rgba(255, 102, 0, 0.3) !important;
+}
+
+.card.custom-card p,
+.custom-card p {
+  color: #e0e0e0 !important;
+}
+
+.card.custom-card hr,
+.custom-card hr {
+  border-color: rgba(255, 102, 0, 0.3) !important;
+  border-width: 1px !important;
 }
 
 /* Tactical orange icons inside cards */
@@ -1026,11 +1057,13 @@ div#nps_aluno {
   left: 100% !important;
 }
 
-.custom-card-notice {
+.custom-card-notice,
+.card.custom-card .custom-card-notice,
+.custom-card .custom-card-notice {
   margin: 1em 0;
   padding: 1.25em 1.5em !important;
   border-left: 4px solid #ff6600 !important;
-  background: rgba(10, 10, 10, 0.8) !important;
+  background: rgba(10, 10, 10, 0.9) !important;
   backdrop-filter: blur(10px);
   box-shadow: 0 0 15px rgba(255, 102, 0, 0.2), inset 0 0 15px rgba(0, 0, 0, 0.5) !important;
   border-radius: 0 !important;
@@ -1038,6 +1071,28 @@ div#nps_aluno {
   font-size: 16px !important;
   line-height: 1.6 !important;
   color: #e0e0e0 !important;
+}
+
+.custom-card-notice h6,
+.card.custom-card .custom-card-notice h6,
+.custom-card .custom-card-notice h6 {
+  color: #ff6600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  font-weight: 700 !important;
+}
+
+.custom-card-notice p,
+.card.custom-card .custom-card-notice p,
+.custom-card .custom-card-notice p {
+  color: #e0e0e0 !important;
+}
+
+.custom-card-notice b,
+.card.custom-card .custom-card-notice b,
+.custom-card .custom-card-notice b {
+  color: #ff8800 !important;
+  font-weight: 700 !important;
 }
 
 .badge-info {
@@ -1078,12 +1133,22 @@ div#nps_aluno {
 
 .week-view-links a {
   display: inline-block;
-  padding: 10px;
-  background: #f5f5f5;
-  border-style: none;
-  border-radius: 8px;
-  padding: 10px 20px 10px 20px;
-  color: #1a1a1a;
+  padding: 10px 20px;
+  background: rgba(255, 102, 0, 0.2) !important;
+  border: 2px solid rgba(255, 102, 0, 0.3) !important;
+  border-radius: 0 !important;
+  color: #ff6600 !important;
+  text-transform: uppercase !important;
+  font-weight: 700 !important;
+  letter-spacing: 1px !important;
+  transition: all 0.3s ease !important;
+}
+
+.week-view-links a:hover {
+  background: rgba(255, 102, 0, 0.4) !important;
+  border-color: #ff6600 !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 15px rgba(255, 102, 0, 0.5) !important;
 }
 
 .alert-primary {
@@ -3557,9 +3622,10 @@ input.btn.btn-sm.btn-success:focus {
 }
 
 .progress {
-  border-radius: 8px !important;
-  background-color: #ffffff !important;
-  background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%) !important;
+  border-radius: 0 !important;
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  background: rgba(0, 0, 0, 0.8) !important;
+  border: 1px solid rgba(255, 102, 0, 0.3) !important;
 }
 
 .btn-group,
@@ -6412,6 +6478,41 @@ a {
 a:hover {
   color: #ff8800 !important;
   text-shadow: 0 0 8px rgba(255, 102, 0, 0.6) !important;
+}
+
+/* Override ALL Bootstrap card backgrounds - Maximum Specificity */
+.card,
+.card.card-default,
+.card.card-primary,
+.card.card-secondary,
+.card.card-success,
+.card.card-danger,
+.card.card-warning,
+.card.card-info,
+.card.card-light,
+.card.card-dark,
+div.card,
+div[class*='card'] {
+  background-color: rgba(10, 10, 10, 0.95) !important;
+  background: rgba(10, 10, 0, 0.95) !important;
+  border-color: rgba(255, 102, 0, 0.3) !important;
+  color: #e0e0e0 !important;
+}
+
+/* Override white backgrounds on any element inside cards */
+.card *,
+.card.custom-card *,
+.custom-card * {
+  color: #e0e0e0 !important;
+}
+
+.card h1,
+.card h2,
+.card h3,
+.card h4,
+.card h5,
+.card h6 {
+  color: #ff6600 !important;
 }
 
 /* All borders - Remove rounded corners */
