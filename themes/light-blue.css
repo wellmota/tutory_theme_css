@@ -610,9 +610,320 @@ div#nps_aluno {
   }
 }
 
+/* ============================================
+   AGENDA CALENDAR - Modern Weekly Schedule UI
+   ============================================ */
+
+/* Table Container - Modern Card Style */
+#tabela_resumo_semana.table-earning {
+  background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%) !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(59, 130, 246, 0.12) !important;
+  border: 1px solid rgba(59, 130, 246, 0.1) !important;
+  margin-bottom: 32px !important;
+}
+
+/* Table Header - Modern Styling */
+#tabela_resumo_semana.table-earning thead {
+  background: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.08) 0%,
+    rgba(59, 130, 246, 0.05) 100%
+  ) !important;
+  border-bottom: 2px solid rgba(59, 130, 246, 0.15) !important;
+}
+
+#tabela_resumo_semana.table-earning thead th {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: #0a0a0a !important;
+  vertical-align: middle !important;
+  text-transform: capitalize !important;
+  line-height: 1.4 !important;
+  padding: 20px 16px !important;
+  white-space: normal !important;
+  border-right: 1px solid rgba(59, 130, 246, 0.1) !important;
+  border-bottom: none !important;
+}
+
+#tabela_resumo_semana.table-earning thead th:last-child {
+  border-right: none !important;
+}
+
+#tabela_resumo_semana.table-earning thead th div {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 4px !important;
+  line-height: 1.3 !important;
+}
+
+#tabela_resumo_semana.table-earning thead th div br {
+  display: block !important;
+  content: '' !important;
+  margin: 0 !important;
+}
+
+/* Table Body - Modern Styling */
+#tabela_resumo_semana.table-earning tbody {
+  background: transparent !important;
+}
+
+#tabela_resumo_semana.table-earning tbody td {
+  padding: 12px !important;
+  vertical-align: top !important;
+  border-right: 1px solid rgba(59, 130, 246, 0.08) !important;
+  border-bottom: 1px solid rgba(59, 130, 246, 0.08) !important;
+  background: rgba(0, 0, 0, 0.01) !important;
+  transition: background 0.3s ease !important;
+  min-height: 120px !important;
+  height: auto !important;
+}
+
+#tabela_resumo_semana.table-earning tbody td:last-child {
+  border-right: none !important;
+}
+
+#tabela_resumo_semana.table-earning tbody tr:last-child td {
+  border-bottom: none !important;
+}
+
+/* Empty Cells - Subtle Background */
+#tabela_resumo_semana.table-earning tbody td:empty {
+  background: rgba(0, 0, 0, 0.02) !important;
+}
+
+/* Activity Blocks - Modern Card Style */
 #tabela_resumo_semana .calendar-aluno-has-activity {
-  color: #1a1a1a;
-  border: 3px solid #fff;
+  color: #1a1a1a !important;
+  border: none !important;
+  border-left: 4px solid transparent !important;
+  border-radius: 10px !important;
+  padding: 16px !important;
+  margin: 0 !important;
+  background: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.1) 0%,
+    rgba(59, 130, 246, 0.08) 100%
+  ) !important;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.15),
+    0 0 0 1px rgba(59, 130, 246, 0.2) inset !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer !important;
+  overflow: hidden !important;
+  min-height: 100px !important;
+}
+
+#tabela_resumo_semana .calendar-aluno-has-activity:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.25),
+    0 0 0 1px rgba(59, 130, 246, 0.3) inset !important;
+  background: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.15) 0%,
+    rgba(59, 130, 246, 0.12) 100%
+  ) !important;
+}
+
+/* Activity Content - Typography */
+#tabela_resumo_semana .calendar-aluno-has-activity div {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+#tabela_resumo_semana .calendar-aluno-has-activity div b {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: #0a0a0a !important;
+  line-height: 1.4 !important;
+  margin-bottom: 8px !important;
+  display: block !important;
+  letter-spacing: -0.01em !important;
+}
+
+#tabela_resumo_semana .calendar-aluno-has-activity div br {
+  display: block !important;
+  content: '' !important;
+  margin: 6px 0 !important;
+}
+
+#tabela_resumo_semana .calendar-aluno-has-activity div small {
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  color: rgba(26, 26, 26, 0.7) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  display: block !important;
+  margin: 8px 0 10px 0 !important;
+  padding: 4px 8px !important;
+  background: rgba(255, 255, 255, 0.5) !important;
+  border-radius: 4px !important;
+  display: inline-block !important;
+}
+
+/* Activity Type Badge - Estudo (etapa-1) */
+#tabela_resumo_semana .calendar-aluno-has-activity.etapa-1 {
+  border-left-color: #3b82f6 !important;
+  background: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.12) 0%,
+    rgba(59, 130, 246, 0.08) 100%
+  ) !important;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.2),
+    0 0 0 1px rgba(59, 130, 246, 0.25) inset !important;
+}
+
+#tabela_resumo_semana .calendar-aluno-has-activity.etapa-1:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.18) 0%,
+    rgba(59, 130, 246, 0.14) 100%
+  ) !important;
+  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.3),
+    0 0 0 1px rgba(59, 130, 246, 0.35) inset !important;
+}
+
+/* Activity Type Badge - Resumo/Mapa Mental (etapa-2) */
+#tabela_resumo_semana .calendar-aluno-has-activity.etapa-2 {
+  border-left-color: #fbbf24 !important;
+  background: linear-gradient(
+    135deg,
+    rgba(251, 191, 36, 0.12) 0%,
+    rgba(251, 191, 36, 0.08) 100%
+  ) !important;
+  box-shadow: 0 2px 8px rgba(251, 191, 36, 0.2),
+    0 0 0 1px rgba(251, 191, 36, 0.25) inset !important;
+}
+
+#tabela_resumo_semana .calendar-aluno-has-activity.etapa-2:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(251, 191, 36, 0.18) 0%,
+    rgba(251, 191, 36, 0.14) 100%
+  ) !important;
+  box-shadow: 0 4px 16px rgba(251, 191, 36, 0.3),
+    0 0 0 1px rgba(251, 191, 36, 0.35) inset !important;
+}
+
+/* Activity Type Badge - Revisão (etapa-3) */
+#tabela_resumo_semana .calendar-aluno-has-activity.etapa-3 {
+  border-left-color: #a855f7 !important;
+  background: linear-gradient(
+    135deg,
+    rgba(168, 85, 247, 0.12) 0%,
+    rgba(168, 85, 247, 0.08) 100%
+  ) !important;
+  box-shadow: 0 2px 8px rgba(168, 85, 247, 0.2),
+    0 0 0 1px rgba(168, 85, 247, 0.25) inset !important;
+}
+
+#tabela_resumo_semana .calendar-aluno-has-activity.etapa-3:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(168, 85, 247, 0.18) 0%,
+    rgba(168, 85, 247, 0.14) 100%
+  ) !important;
+  box-shadow: 0 4px 16px rgba(168, 85, 247, 0.3),
+    0 0 0 1px rgba(168, 85, 247, 0.35) inset !important;
+}
+
+/* Duration Badge - Modern Style */
+#tabela_resumo_semana .calendar-aluno-has-activity .badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 6px 12px !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  border-radius: 6px !important;
+  margin-top: 10px !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.3s ease !important;
+}
+
+#tabela_resumo_semana .calendar-aluno-has-activity .badge.badge-light {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(255, 255, 255, 0.8) 100%
+  ) !important;
+  color: #1a1a1a !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+#tabela_resumo_semana .calendar-aluno-has-activity:hover .badge {
+  transform: scale(1.05) !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Container Wrapper */
+.container-table-semana {
+  position: relative !important;
+  margin-bottom: 40px !important;
+  padding: 0 !important;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  #tabela_resumo_semana.table-earning thead th {
+    padding: 16px 12px !important;
+    font-size: 13px !important;
+  }
+
+  #tabela_resumo_semana.table-earning tbody td {
+    padding: 10px !important;
+  }
+
+  #tabela_resumo_semana .calendar-aluno-has-activity {
+    padding: 12px !important;
+    min-height: 90px !important;
+  }
+
+  #tabela_resumo_semana .calendar-aluno-has-activity div b {
+    font-size: 13px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  #tabela_resumo_semana.table-earning {
+    border-radius: 8px !important;
+  }
+
+  #tabela_resumo_semana.table-earning thead th {
+    padding: 12px 8px !important;
+    font-size: 12px !important;
+  }
+
+  #tabela_resumo_semana.table-earning thead th div {
+    gap: 2px !important;
+  }
+
+  #tabela_resumo_semana.table-earning tbody td {
+    padding: 8px !important;
+  }
+
+  #tabela_resumo_semana .calendar-aluno-has-activity {
+    padding: 10px !important;
+    min-height: 80px !important;
+  }
+
+  #tabela_resumo_semana .calendar-aluno-has-activity div b {
+    font-size: 12px !important;
+    line-height: 1.3 !important;
+  }
+
+  #tabela_resumo_semana .calendar-aluno-has-activity div small {
+    font-size: 10px !important;
+    padding: 3px 6px !important;
+  }
+
+  #tabela_resumo_semana .calendar-aluno-has-activity .badge {
+    font-size: 10px !important;
+    padding: 4px 8px !important;
+  }
 }
 
 .video-onboarding-aluno {
@@ -3860,7 +4171,8 @@ body
   display: none;
 }
 
-.table-earning thead th {
+/* General table-earning header - Overridden by specific calendar rules above */
+.table-earning:not(#tabela_resumo_semana) thead th {
   background: #1e1e1e59;
   backdrop-filter: blur(10px);
   font-size: 16px;
