@@ -1,0 +1,303 @@
+<div class="container-fluid">
+  <div class="card custom-card card-dashboard-home" data-intro="Confira o panorama dos seus estudos"
+    data-position="top">
+    <h2>
+      <i class="zmdi zmdi-walk"></i>
+      Olá, Wellington 👋
+    </h2>
+    <div class="activity-title-category"></div>
+    <div class="activity-title-progress">
+      <p>Progresso do Plano de Estudos: <b>0%</b></p>
+      <div class="progress">
+        <div class="progress-bar bg-success" role="progressbar" aria-valuenow="0" style="width:0%" aria-valuemin="0"
+          aria-valuemax="100">
+          0%
+        </div>
+      </div>
+    </div>
+    <div class="activity-title-dates">
+      <p class="activity-title-date-subscription">Sua assinatura da plataforma termina em <span
+          class="badge badge-primary">25/12/2025</span></p>
+      <p class="activity-title-date-cronogram">Seu planejamento de estudos acaba em <span
+          class="badge badge-primary">12/03/2027</span></p>
+    </div>
+    <div class="dash-stats">
+      <div class="dash-tile-summary">
+        <div class="row">
+          <div class="col col-6 col-sm-6 col-md-3">
+            <div class="dash dash-value dash-number-complete" data-value="0">0</div>
+            <div class="dash dash-text">dias estudando</div>
+          </div>
+          <div class="col col-6 col-sm-6 col-md-3">
+            <div class="dash dash-value dash-number-complete" data-value="0" data-sufix="h">0h</div>
+            <div class="dash dash-text">horas estudando</div>
+          </div>
+          <div class="col col-6 col-sm-6 col-md-3">
+            <div class="dash dash-value dash-number-complete" data-value="0" data-sufix="h">0h</div>
+            <div class="dash dash-text">horas cronometradas</div>
+          </div>
+          <div class="col col-6 col-sm-6 col-md-3">
+            <div class="dash dash-value dash-number-complete" data-value="0" data-range="0" data-sufix="%">0%</div>
+            <div class="dash dash-text">taxa de acertos</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Painel -->
+  <div class="dashboard-tiles">
+    <div class="row">
+      <div class="col col-12 col-md-4">
+        <div class="custom-card mt-3" data-intro="Confira alguns dos recursos do seu painel">
+          <div class="custom-card-title">
+            <h3>Atalhos rápidos:</h3>
+          </div>
+          <div class="row">
+            <div class="col col-6 col-sm-6 col-md-4 col-lg-2">
+              <div class="dashboard-tile"
+                data-intro="Suas metas diárias, ou seja, atividades a cumprir, aparecem nessa página">
+                <a href="metas" class="dashboard-tile-link">
+                  <img src="https://img.icons8.com/cute-clipart/64/000000/goal.png">
+                  <p>Metas Diárias</p>
+                </a>
+              </div>
+            </div>
+            <div class="col col-6 col-sm-6 col-md-4 col-lg-2">
+              <div class="dashboard-tile" data-intro="Aqui, você acompanha seu plano de estudos por semanas">
+                <a href="semana?periodo=1" class="dashboard-tile-link">
+                  <img src="https://img.icons8.com/cute-clipart/64/000000/calendar.png">
+                  <p>Resumo da Semana</p>
+                </a>
+              </div>
+            </div>
+            <div class="col col-6 col-sm-6 col-md-4 col-lg-2">
+              <div class="dashboard-tile" data-intro="O seu desempenho de questões está aqui">
+                <a href="dashboards/?id=4" class="dashboard-tile-link">
+                  <img src="https://img.icons8.com/dusk/64/000000/exam.png">
+                  <p>Análise de Questões</p>
+                </a>
+              </div>
+            </div>
+            <div class="col col-6 col-sm-6 col-md-4 col-lg-2">
+              <div class="dashboard-tile" data-intro="Veja o seu desempenho de estudos">
+                <a href="#!" class="dashboard-tile-link show-dashboard-reports">
+                  <img src="https://img.icons8.com/clouds/64/000000/statistics.png">
+                  <p>Meu Desempenho</p>
+                </a>
+              </div>
+            </div>
+            <div class="col col-6 col-sm-6 col-md-4 col-lg-2">
+              <div class="dashboard-tile" data-intro="Edite as configurações do seu plano de estudos">
+                <a href="#!" class="dashboard-tile-link show-dashboard-config">
+                  <img src="https://img.icons8.com/clouds/64/000000/work.png">
+                  <p>Configurações</p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Reports -->
+          <div class="row dashboard-reports reports-report">
+            <div class="col col-12">
+              <hr>
+              <h5>Relatórios:</h5>
+            </div>
+            <div class="col col-6 col-sm-6 col-md-4 col-lg-2">
+              <div class="dashboard-tile">
+                <a href="/painel/desempenho" class="dashboard-tile-link">
+                  <img src="https://img.icons8.com/cute-clipart/64/000000/doughnut-chart.png">
+                  <p>Seu Progresso</p>
+                </a>
+              </div>
+            </div>
+            <div class="col col-6 col-sm-6 col-md-4 col-lg-2">
+              <div class="dashboard-tile">
+                <a href="dashboards/?id=1" class="dashboard-tile-link">
+                  <img src="https://img.icons8.com/clouds/64/000000/combo-chart.png">
+                  <p>Perfil dos Estudos</p>
+                </a>
+              </div>
+            </div>
+            <div class="col col-6 col-sm-6 col-md-4 col-lg-2">
+              <div class="dashboard-tile">
+                <a href="dashboards/?id=2" class="dashboard-tile-link">
+                  <img src="https://img.icons8.com/cute-clipart/64/000000/empty-hourglass.png">
+                  <p>Tempos de Estudo</p>
+                </a>
+              </div>
+            </div>
+            <div class="col col-6 col-sm-6 col-md-4 col-lg-2">
+              <div class="dashboard-tile">
+                <a href="dashboards/?id=5" class="dashboard-tile-link">
+                  <img src="https://img.icons8.com/cute-clipart/64/000000/timer.png">
+                  <p>Horas Líquidas (cronômetro)</p>
+                </a>
+              </div>
+            </div>
+            <div class="col col-6 col-sm-6 col-md-4 col-lg-2">
+              <div class="dashboard-tile">
+                <a href="dashboards/?id=3" class="dashboard-tile-link">
+                  <img src="https://img.icons8.com/clouds/64/000000/trophy--v2.png">
+                  <p>Sua Performance</p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Reports -->
+          <!-- Groups -->
+          <!-- Groups -->
+          <!-- Config -->
+          <div class="row dashboard-reports reports-config">
+            <div class="col col-12">
+              <hr>
+              <h5>Configurações:</h5>
+            </div>
+            <div class="col col-6 col-sm-6 col-md-4 col-lg-2">
+              <div class="dashboard-tile">
+                <a href="config/disciplinas" class="dashboard-tile-link">
+                  <img src="https://img.icons8.com/cute-clipart/64/000000/settings.png">
+                  <p>Editar Plano</p>
+                </a>
+              </div>
+            </div>
+            <div class="col col-6 col-sm-6 col-md-4 col-lg-2">
+              <div class="dashboard-tile">
+                <a href="config/horarios" class="dashboard-tile-link">
+                  <img src="https://img.icons8.com/cute-clipart/64/000000/time-span.png">
+                  <p>Editar Horários</p>
+                </a>
+              </div>
+            </div>
+            <div class="col col-6 col-sm-6 col-md-4 col-lg-2">
+              <div class="dashboard-tile">
+                <a href="config/pausar-plano" class="dashboard-tile-link show-dashboard-reports">
+                  <img src="https://img.icons8.com/clouds/64/000000/pause.png">
+                  <p>Pausar Plano</p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Config -->
+        </div>
+      </div>
+      <div class="col col-12 col-md-8" data-position="top"
+        data-intro="Fique de olho nos avisos, pois são informações super importantes">
+        <div class="custom-card mt-3">
+          <div class="custom-card-title">
+            <h3>Mural de avisos:</h3>
+          </div>
+          <div class="custom-card-body mural-container-padding-control">
+            <div class="mural-home-empty">
+              <div class="alert alert-primary">sem avisos no momento</div>
+            </div>
+          </div>
+          <div class="custom-card-footer" data-intro="Clique aqui para ver o mural completo">
+            <a href="mural">ver mural</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /Painel -->
+  <!-- Resumo -->
+  <div id="dashboard_summary" data-intro="Esse aqui é o panorama da sua semana atual com suas atividades"
+    data-position="top">
+    <div class="dash-summary-shadow"></div>
+    <div class="dash-summary-day day-2025-11-30 day-active">
+      <div class="dash-day-name">
+        30/11 </div>
+    </div>
+    <div class="dash-summary-day day-2025-12-01 ">
+      <div class="dash-day-name">
+        01/12 </div>
+      <div class="dash-day-scroller">
+        <div class="day-activity  day-activity-step-1 ">
+          <p class="day-activity-disc">Língua Portuguesa - Tcu Auditor</p>
+          <p class="day-activity-subject">Domínio da Ortografia Oficial</p>
+        </div>
+        <div class="day-activity  day-activity-step-1 ">
+          <p class="day-activity-disc">Administração Financeira e Orçamentária - Tcu Auditor</p>
+          <p class="day-activity-subject">Funções do Governo. Orçamento público: conceitos e princípios. Orçamento
+            público no Brasil: Títulos I, IV, V e VI da Lei nº 4.320/1964.</p>
+        </div>
+      </div>
+    </div>
+    <div class="dash-summary-day day-2025-12-02 ">
+      <div class="dash-day-name">
+        02/12 </div>
+      <div class="dash-day-scroller">
+        <div class="day-activity  day-activity-step-1 ">
+          <p class="day-activity-disc">Direito Administrativo - Tcu Auditor</p>
+          <p class="day-activity-subject">Regime Jurídico-Administrativo</p>
+        </div>
+        <div class="day-activity  day-activity-step-1 ">
+          <p class="day-activity-disc">Auditoria Governamental - Tcu Auditor</p>
+          <p class="day-activity-subject">Conceito, evolução. Auditoria interna e externa: papéis. Auditoria
+            governamental segundo a INTOSAI (International Organization of Supreme Audit Institutions). Auditoria
+            interna segundo o IIA (Institute of Internal Auditors).</p>
+        </div>
+      </div>
+    </div>
+    <div class="dash-summary-day day-2025-12-03 ">
+      <div class="dash-day-name">
+        03/12 </div>
+      <div class="dash-day-scroller">
+        <div class="day-activity  day-activity-step-1 ">
+          <p class="day-activity-disc">Contabilidade Geral - Tcu Auditor</p>
+          <p class="day-activity-subject">Princípios Contábeis Fundamentais</p>
+        </div>
+        <div class="day-activity  day-activity-step-1 ">
+          <p class="day-activity-disc">Contabilidade Geral - Tcu Auditor</p>
+          <p class="day-activity-subject">Conceitos, Objetivos e Finalidades da Contabilidade</p>
+        </div>
+        <div class="day-activity  day-activity-step-1 ">
+          <p class="day-activity-disc">Economia - Tcu Auditor</p>
+          <p class="day-activity-subject">O sistema de contas nacionais e as identidades macroeconômicas básicas</p>
+        </div>
+      </div>
+    </div>
+    <div class="dash-summary-day day-2025-12-04 ">
+      <div class="dash-day-name">
+        04/12 </div>
+      <div class="dash-day-scroller">
+        <div class="day-activity  day-activity-step-2 ">
+          <p class="day-activity-disc">Contabilidade Geral - Tcu Auditor</p>
+          <p class="day-activity-subject">Princípios Contábeis Fundamentais</p>
+        </div>
+        <div class="day-activity  day-activity-step-2 ">
+          <p class="day-activity-disc">Contabilidade Geral - Tcu Auditor</p>
+          <p class="day-activity-subject">Conceitos, Objetivos e Finalidades da Contabilidade</p>
+        </div>
+        <div class="day-activity  day-activity-step-1 ">
+          <p class="day-activity-disc">Direito Constitucional - Tcu Auditor</p>
+          <p class="day-activity-subject">Direito Constitucional: Conceitos Iniciais</p>
+        </div>
+      </div>
+    </div>
+    <div class="dash-summary-day day-2025-12-05 ">
+      <div class="dash-day-name">
+        05/12 </div>
+      <div class="dash-day-scroller">
+        <div class="day-activity  day-activity-step-3 ">
+          <p class="day-activity-disc">Contabilidade Geral - Tcu Auditor</p>
+          <p class="day-activity-subject">Princípios Contábeis Fundamentais</p>
+        </div>
+        <div class="day-activity  day-activity-step-3 ">
+          <p class="day-activity-disc">Contabilidade Geral - Tcu Auditor</p>
+          <p class="day-activity-subject">Conceitos, Objetivos e Finalidades da Contabilidade</p>
+        </div>
+        <div class="day-activity  day-activity-step-1 ">
+          <p class="day-activity-disc">Contabilidade Pública - Tcu Auditor</p>
+          <p class="day-activity-subject">Contabilidade pública: campo de aplicação, objeto e objetivos. Título IX da
+            Lei nº 4.320/1964.</p>
+        </div>
+      </div>
+    </div>
+    <div class="dash-summary-day day-2025-12-06 ">
+      <div class="dash-day-name">
+        06/12 </div>
+    </div>
+
+  </div>
+  <!-- Resumo -->
+
+</div>
