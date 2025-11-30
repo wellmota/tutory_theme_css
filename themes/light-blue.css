@@ -176,91 +176,8 @@ i {
   color: #0a0a0a !important;
 }
 
-/* Replace "Metas diarias" icon with custom SVG */
-/* Target menu items containing "meta" in href or text */
-.menu-sidebar ul li a[href*='meta'],
-.menu-sidebar ul li a[href*='Meta'],
-.menu-sidebar ul li a[href*='METAS'],
-.menu-sidebar ul li a[href*='metas'],
-.sidebar ul li a[href*='meta'],
-.sidebar ul li a[href*='Meta'],
-.sidebar ul li a[href*='METAS'],
-.sidebar ul li a[href*='metas'],
-.navbar-sidebar ul li a[href*='meta'],
-.navbar-sidebar ul li a[href*='Meta'],
-.navbar-sidebar ul li a[href*='METAS'],
-.navbar-sidebar ul li a[href*='metas'] {
-  position: relative !important;
-  display: flex !important;
-  align-items: center !important;
-}
-
-/* Hide original icon for Metas diarias - Multiple approaches */
-.menu-sidebar ul li a[href*='meta'] i,
-.menu-sidebar ul li a[href*='Meta'] i,
-.menu-sidebar ul li a[href*='METAS'] i,
-.menu-sidebar ul li a[href*='metas'] i,
-.menu-sidebar ul li a[href*='meta'] i::before,
-.menu-sidebar ul li a[href*='Meta'] i::before,
-.menu-sidebar ul li a[href*='METAS'] i::before,
-.menu-sidebar ul li a[href*='metas'] i::before,
-.sidebar ul li a[href*='meta'] i,
-.sidebar ul li a[href*='Meta'] i,
-.sidebar ul li a[href*='METAS'] i,
-.sidebar ul li a[href*='metas'] i,
-.sidebar ul li a[href*='meta'] i::before,
-.sidebar ul li a[href*='Meta'] i::before,
-.sidebar ul li a[href*='METAS'] i::before,
-.sidebar ul li a[href*='metas'] i::before,
-.navbar-sidebar ul li a[href*='meta'] i,
-.navbar-sidebar ul li a[href*='Meta'] i,
-.navbar-sidebar ul li a[href*='METAS'] i,
-.navbar-sidebar ul li a[href*='metas'] i,
-.navbar-sidebar ul li a[href*='meta'] i::before,
-.navbar-sidebar ul li a[href*='Meta'] i::before,
-.navbar-sidebar ul li a[href*='METAS'] i::before,
-.navbar-sidebar ul li a[href*='metas'] i::before {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  width: 0 !important;
-  height: 0 !important;
-  font-size: 0 !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-/* Add new icon using ::before pseudo-element */
-.menu-sidebar ul li a[href*='meta']::before,
-.menu-sidebar ul li a[href*='Meta']::before,
-.menu-sidebar ul li a[href*='METAS']::before,
-.menu-sidebar ul li a[href*='metas']::before,
-.sidebar ul li a[href*='meta']::before,
-.sidebar ul li a[href*='Meta']::before,
-.sidebar ul li a[href*='METAS']::before,
-.sidebar ul li a[href*='metas']::before,
-.navbar-sidebar ul li a[href*='meta']::before,
-.navbar-sidebar ul li a[href*='Meta']::before,
-.navbar-sidebar ul li a[href*='METAS']::before,
-.navbar-sidebar ul li a[href*='metas']::before {
-  content: '' !important;
-  display: inline-block !important;
-  width: 20px !important;
-  height: 20px !important;
-  min-width: 20px !important;
-  min-height: 20px !important;
-  background-image: url('https://maxst.icons8.com/vue-static/icon/menu/filters-active.svg') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  margin-right: 12px !important;
-  vertical-align: middle !important;
-  flex-shrink: 0 !important;
-  filter: brightness(
-    0
-  ) !important; /* Make it dark/black to match menu icon color */
-  position: relative !important;
-}
+/* Metas Diárias icon will be handled by the standard icon replacement system */
+/* The i.fa-calendar icon will be automatically replaced with calendar.svg */
 
 /* Icons inside h4 tags - add subtle light blue circle container */
 h4 i,
@@ -450,17 +367,7 @@ div#nps_aluno {
   background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%) !important;
 }
 
-.day-activity.day-activity-step-1 {
-  padding: 15px !important;
-}
-
-.day-activity.day-activity-step-3 {
-  padding: 15px !important;
-}
-
-.day-activity.day-activity-step-4 {
-  padding: 15px !important;
-}
+/* Day activity padding is now handled in #dashboard_summary .day-activity above */
 
 .video-onboarding-aluno-img a div {
   width: 50px;
@@ -1574,9 +1481,11 @@ a:hover {
 }
 
 div#chat_messages {
-  background: #111111de;
+  background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%) !important;
   padding: 30px;
   border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(59, 130, 246, 0.15) !important;
+  border: 1px solid rgba(59, 130, 246, 0.15) !important;
 }
 
 #chat_container .chat-message .chat-message-icon {
@@ -1642,18 +1551,14 @@ td.table-danger {
   position: relative;
   margin: 1em 0 1.5em 0;
   display: flex;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4),
-    0 4px 6px -2px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(59, 130, 246, 0.1);
-  -moz-box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4),
-    0 4px 6px -2px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(59, 130, 246, 0.1);
-  -webkit-box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4),
-    0 4px 6px -2px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(59, 130, 246, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(59, 130, 246, 0.15) !important;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  background: #ffffff;
+  justify-content: flex-start;
+  background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%) !important;
   backdrop-filter: blur(10px);
-  border-radius: 6px;
-  border: 1px solid rgba(59, 130, 246, 0.15);
+  border-radius: 12px !important;
+  border: 1px solid rgba(59, 130, 246, 0.15) !important;
+  overflow: hidden;
 }
 
 #dashboard_summary .dash-summary-day {
@@ -1664,10 +1569,102 @@ td.table-danger {
   min-width: 75px;
   padding: 0;
   margin: 0;
-  border-right: 0;
-  background: #ffffff;
-  opacity: 0.3;
+  border-right: 1px solid rgba(59, 130, 246, 0.1) !important;
+  background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%) !important;
+  opacity: 1 !important;
   overflow: hidden;
+  transition: all 0.3s ease !important;
+}
+
+#dashboard_summary .dash-summary-day:last-child {
+  border-right: none !important;
+}
+
+#dashboard_summary .dash-summary-day.day-active {
+  background: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.1) 0%,
+    rgba(59, 130, 246, 0.05) 100%
+  ) !important;
+  border-right-color: rgba(59, 130, 246, 0.2) !important;
+}
+
+#dashboard_summary .dash-day-name {
+  padding: 16px 12px !important;
+  text-align: center !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  color: #1a1a1a !important;
+  background: rgba(0, 0, 0, 0.02) !important;
+  border-bottom: 1px solid rgba(59, 130, 246, 0.1) !important;
+}
+
+#dashboard_summary .dash-summary-day.day-active .dash-day-name {
+  background: rgba(59, 130, 246, 0.08) !important;
+  color: #2563eb !important;
+  font-weight: 700 !important;
+  border-bottom-color: rgba(59, 130, 246, 0.2) !important;
+}
+
+#dashboard_summary .dash-day-scroller {
+  max-height: none !important;
+  padding: 12px !important;
+  background: transparent !important;
+}
+
+#dashboard_summary .day-activity {
+  padding: 16px !important;
+  margin-bottom: 12px !important;
+  background: rgba(0, 0, 0, 0.03) !important;
+  border-radius: 8px !important;
+  border: 1px solid rgba(59, 130, 246, 0.1) !important;
+  transition: all 0.3s ease !important;
+}
+
+#dashboard_summary .day-activity:hover {
+  background: rgba(59, 130, 246, 0.05) !important;
+  border-color: rgba(59, 130, 246, 0.2) !important;
+  transform: translateX(4px) !important;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.15) !important;
+}
+
+#dashboard_summary .day-activity:last-child {
+  margin-bottom: 0 !important;
+}
+
+#dashboard_summary .day-activity-step-1 {
+  border-left: 4px solid rgba(59, 130, 246, 0.3) !important;
+}
+
+#dashboard_summary .day-activity-step-2 {
+  border-left: 4px solid rgba(34, 197, 94, 0.4) !important;
+  background: rgba(34, 197, 94, 0.03) !important;
+}
+
+#dashboard_summary .day-activity-step-3 {
+  border-left: 4px solid rgba(34, 197, 94, 0.6) !important;
+  background: rgba(34, 197, 94, 0.05) !important;
+}
+
+#dashboard_summary .day-activity-step-4 {
+  border-left: 4px solid rgba(34, 197, 94, 0.8) !important;
+  background: rgba(34, 197, 94, 0.08) !important;
+}
+
+#dashboard_summary .day-activity-disc {
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  color: #0a0a0a !important;
+  margin: 0 0 8px 0 !important;
+  line-height: 1.4 !important;
+}
+
+#dashboard_summary .day-activity-subject {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  color: #2d2d2d !important;
+  margin: 0 !important;
+  line-height: 1.6 !important;
 }
 
 .main-content {
@@ -1894,23 +1891,48 @@ a#review_goals_save {
 }
 
 #response_btn .btn-action-response {
-  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%) !important;
   border-radius: 8px !important;
-  padding: 10px 20px 10px 20px !important;
-  margin: 5px 0px;
-  box-shadow: 0 4px 6px rgba(59, 130, 246, 0.3);
-  color: #0a0a0a;
-  font-weight: 600;
+  padding: 14px 24px !important;
+  margin: 0 !important;
+  box-shadow: 0 4px 6px rgba(59, 130, 246, 0.3) !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  font-size: 15px !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 48px !important;
+  transition: all 0.3s ease !important;
+  border: none !important;
+  line-height: 1.5 !important;
+}
+
+#response_btn .btn-action-response:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) !important;
+  box-shadow: 0 6px 12px rgba(59, 130, 246, 0.4) !important;
+  transform: translateY(-2px) !important;
+  color: #ffffff !important;
+}
+
+#response_btn .btn-action-response:active {
+  transform: translateY(0) !important;
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.3) !important;
 }
 
 .account-dropdown {
-  min-width: 305px;
-  padding: 20px;
+  min-width: 320px !important;
+  max-width: 400px !important;
+  padding: 24px !important;
   position: absolute;
   top: 58px;
   right: 0;
-  border-radius: 6px;
-  background: #ffffff;
+  border-radius: 12px !important;
+  background: #ffffff !important;
   backdrop-filter: blur(20px);
   -webkit-box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5),
     0 10px 10px -5px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(59, 130, 246, 0.2);
@@ -1970,12 +1992,15 @@ a#review_goals_save {
 
 .account-dropdown .info .content {
   flex: 1 !important;
+  margin-left: 0px !important;
 }
 
 .account-dropdown .info .content h5 {
   margin: 0 0 4px 0 !important;
   font-size: 16px !important;
   font-weight: 600 !important;
+  line-height: 1.4 !important;
+  word-wrap: break-word !important;
 }
 
 .account-dropdown .info .content h5 a {
@@ -1989,7 +2014,7 @@ a#review_goals_save {
 }
 
 .account-dropdown .info .content .email {
-  color: rgba(255, 255, 255, 0.6) !important;
+  color: rgba(26, 26, 26, 0.6) !important;
   font-size: 12px !important;
 }
 
@@ -2007,20 +2032,42 @@ a#review_goals_save {
 .account-dropdown__item a {
   display: flex !important;
   align-items: center !important;
-  gap: 12px !important;
-  padding: 12px 16px !important;
+  gap: 8px !important;
+  padding: 10px 16px !important;
   color: rgba(26, 26, 26, 0.9) !important;
   text-decoration: none !important;
   border-radius: 8px !important;
   transition: all 0.3s ease !important;
   font-size: 14px !important;
+  line-height: 1.5 !important;
+  word-wrap: break-word !important;
 }
 
 .account-dropdown__item a i {
-  width: 20px !important;
+  width: 18px !important;
+  min-width: 18px !important;
+  height: 18px !important;
+  margin-top: 0 !important;
   text-align: center !important;
   color: rgba(59, 130, 246, 0.8) !important;
   font-size: 16px !important;
+  flex-shrink: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+}
+
+.account-dropdown__item a i::before {
+  width: 18px !important;
+  height: 18px !important;
+}
+
+.account-dropdown__item a span,
+.account-dropdown__item a {
+  white-space: normal !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
 }
 
 .account-dropdown__item a:hover {
@@ -2044,8 +2091,8 @@ a#review_goals_save {
 .account-dropdown__footer a {
   display: flex !important;
   align-items: center !important;
-  gap: 12px !important;
-  padding: 12px 16px !important;
+  gap: 8px !important;
+  padding: 10px 16px !important;
   color: rgba(255, 100, 100, 0.9) !important;
   text-decoration: none !important;
   border-radius: 8px !important;
@@ -2055,10 +2102,22 @@ a#review_goals_save {
 }
 
 .account-dropdown__footer a i {
-  width: 20px !important;
+  width: 18px !important;
+  min-width: 18px !important;
+  height: 18px !important;
   text-align: center !important;
   color: rgba(255, 100, 100, 0.8) !important;
   font-size: 16px !important;
+  flex-shrink: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+}
+
+.account-dropdown__footer a i::before {
+  width: 18px !important;
+  height: 18px !important;
 }
 
 .account-dropdown__footer a:hover {
@@ -2348,11 +2407,11 @@ div > div.chart-graph.chart-fix-height > div.chart-empty > img {
 /* Modern Glass Effect Notification Dropdown */
 .notifi-dropdown.js-dropdown {
   border-radius: 12px !important;
-  background: rgba(26, 26, 26, 0.9) !important;
+  background: rgba(255, 255, 255, 0.95) !important;
   backdrop-filter: blur(20px) saturate(180%) !important;
   -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
   border: 1px solid rgba(59, 130, 246, 0.2) !important;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6),
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15),
     0 0 0 1px rgba(59, 130, 246, 0.1) inset !important;
   padding: 16px !important;
   min-width: 320px !important;
@@ -3203,11 +3262,111 @@ a.btn.btn-primary.btn-sm:focus {
   background-color: #eaeaf3;
 }
 
+#chat_response .container {
+  max-width: 100% !important;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+}
+
+#chat_response #response_text .row {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  margin: 0 !important;
+}
+
+#chat_response #response_text .row > [class*='col-'] {
+  padding-left: 4px !important;
+  padding-right: 4px !important;
+  margin: 0 !important;
+}
+
+#chat_response #response_text .row > [class*='col-']:first-child {
+  padding-left: 0 !important;
+}
+
+#chat_response #response_text .row > [class*='col-']:last-child {
+  padding-right: 0 !important;
+}
+
+#chat_response #chat_response_input {
+  width: 100% !important;
+  padding: 14px 16px !important;
+  border-radius: 8px !important;
+  border: 1px solid rgba(59, 130, 246, 0.2) !important;
+  background: #ffffff !important;
+  color: #1a1a1a !important;
+  font-size: 15px !important;
+  transition: all 0.3s ease !important;
+}
+
+#chat_response #chat_response_input:focus {
+  outline: none !important;
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+}
+
+#chat_response #chat_response_input::placeholder {
+  color: rgba(26, 26, 26, 0.5) !important;
+}
+
+#chat_response #chat_response_btn_action {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 48px !important;
+  border-radius: 8px !important;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%) !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 6px rgba(59, 130, 246, 0.3) !important;
+}
+
+#chat_response #chat_response_btn_action:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) !important;
+  box-shadow: 0 6px 12px rgba(59, 130, 246, 0.4) !important;
+  transform: translateY(-2px) !important;
+}
+
+#chat_response #chat_response_btn_action i {
+  font-size: 16px !important;
+  color: #ffffff !important;
+}
+
+#chat_response #response_btn .row {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 12px !important;
+  margin: 0 !important;
+}
+
+#chat_response #response_btn .row > [class*='col-'] {
+  display: flex !important;
+  align-items: stretch !important;
+  padding-left: 6px !important;
+  padding-right: 6px !important;
+  margin: 0 !important;
+}
+
+#chat_response #response_btn .row > [class*='col-']:first-child {
+  padding-left: 0 !important;
+}
+
+#chat_response #response_btn .row > [class*='col-']:last-child {
+  padding-right: 0 !important;
+}
+
 div#chat_messages {
-  background: #111111de;
+  background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%) !important;
   padding: 30px;
   border-radius: 6px;
   margin-top: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(59, 130, 246, 0.15) !important;
+  border: 1px solid rgba(59, 130, 246, 0.15) !important;
 }
 
 .btn-primary:active {
@@ -3241,13 +3400,35 @@ div#chat_messages {
   color: #1a1a1a;
 }
 
+.chatbot-horarios-container h3 {
+  color: #0a0a0a !important;
+}
+
+.chatbot-horarios-container h3 i {
+  color: #3b82f6 !important;
+}
+
+.chatbot-horarios-container label {
+  color: #2d2d2d !important;
+}
+
 .chat-message-text {
   font-size: 18px !important;
+  color: #2d2d2d !important;
 }
 
 #chat_container .chat-message {
   position: relative;
   margin: 2em 0;
+  color: #2d2d2d !important;
+}
+
+#chat_container .chat-message.chat-bot-message {
+  color: #2d2d2d !important;
+}
+
+#chat_container .chat-message.chat-user-message {
+  color: #2d2d2d !important;
 }
 
 #chat_container .chat-message.chat-user-message .chat-message-icon {
@@ -3259,9 +3440,45 @@ div#chat_messages {
 
 #chat_response_btn_action.ok,
 #chat_response_check_action.ok {
-  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
-  color: #0a0a0a;
-  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.3);
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.3) !important;
+  border-radius: 8px !important;
+  padding: 14px 24px !important;
+  font-weight: 600 !important;
+  font-size: 15px !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  transition: all 0.3s ease !important;
+  border: none !important;
+}
+
+#chat_response_btn_action.ok:hover,
+#chat_response_check_action.ok:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) !important;
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.4) !important;
+  transform: translateY(-2px) !important;
+  color: #ffffff !important;
+}
+
+#chat_response #response_check .row {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-bottom: 16px !important;
+}
+
+#chat_response #response_check .row:last-child {
+  margin-bottom: 0 !important;
+}
+
+#chat_response #response_check .col-12 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 body
@@ -4052,21 +4269,34 @@ a#review_goals_save:hover {
 }
 
 .noti__item i {
-  font-size: 18px !important;
+  font-size: 22px !important;
+  line-height: 1 !important;
+  display: block !important;
+  width: 22px !important;
+  height: 22px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: relative !important;
 }
 
 .noti__item .quantity {
   position: absolute !important;
-  top: -4px !important;
-  right: -4px !important;
+  top: -2px !important;
+  right: -6px !important;
   background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%) !important;
-  color: #0a0a0a !important;
-  border-radius: 12px !important;
-  padding: 2px 8px !important;
+  color: #ffffff !important;
+  border-radius: 50% !important;
+  width: 20px !important;
+  height: 20px !important;
+  min-width: 20px !important;
+  padding: 0 !important;
   font-size: 11px !important;
   font-weight: 700 !important;
-  min-width: 20px !important;
   text-align: center !important;
+  line-height: 20px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   box-shadow: 0 2px 8px rgba(59, 130, 246, 0.4) !important;
 }
 
@@ -4125,13 +4355,40 @@ a#review_goals_save:hover {
 
 .account-item .content a i {
   font-size: 12px !important;
-  color: rgba(255, 255, 255, 0.6) !important;
-  transition: transform 0.3s ease !important;
+  color: rgba(26, 26, 26, 0.6) !important;
+  transition: all 0.3s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 14px !important;
+  height: 14px !important;
+  line-height: 1 !important;
+  vertical-align: middle !important;
+  margin-left: 4px !important;
+  flex-shrink: 0 !important;
+}
+
+/* Chevron down icon for account dropdown */
+.account-item .content a i.fa-chevron-down::before {
+  content: '' !important;
+  display: block !important;
+  width: 14px !important;
+  height: 14px !important;
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/chevron-down.svg') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .account-item:hover .content a i {
   color: #3b82f6 !important;
-  transform: rotate(180deg) !important;
+}
+
+/* Change to chevron up on hover */
+.account-item:hover .content a i.fa-chevron-down::before {
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/chevron-up.svg') !important;
 }
 
 /* Logo glass effect already applied above */
@@ -4153,22 +4410,7 @@ header.header-mobile.d-block.d-lg-none {
   background-color: #ffffff;
 }
 
-#dashboard_summary {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  margin: 20px 0px;
-}
-
-#dashboard_summary .dash-summary-day {
-  width: 100%;
-  margin: 20px 10px;
-}
-
-#dashboard_summary .dash-day-scroller {
-  max-height: none;
-}
+/* Dashboard summary styles are defined above at line 1560 */
 
 #anotacao_placeholder .anotacao-quill-container {
   position: relative;
@@ -4343,6 +4585,22 @@ a#extra_time_complete_before:focus {
   padding: 0 !important;
   visibility: visible !important;
   opacity: 1 !important;
+  background-size: 60% !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* Specific styling for zmdi-walk icon in dashboard home */
+.card.custom-card.card-dashboard-home h2 i.zmdi-walk::before {
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/activity-square.svg') !important;
+  background-size: 60% !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
 .card.custom-card > h2:first-child:hover i {
@@ -4515,6 +4773,15 @@ div#video_boas_vindas_onboarding_aluno {
   flex-shrink: 0 !important;
   box-shadow: 0 2px 8px rgba(59, 130, 246, 0.15) !important;
   transition: all 0.3s ease !important;
+  position: relative !important;
+}
+
+.caderno-link h4 i::before {
+  width: 20px !important;
+  height: 20px !important;
+  background-size: contain !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
 }
 
 .caderno-link:hover h4 i {
@@ -4607,6 +4874,20 @@ div#video_boas_vindas_onboarding_aluno {
   font-size: 14px !important;
   opacity: 0.9 !important;
   transition: all 0.3s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 16px !important;
+  height: 16px !important;
+  flex-shrink: 0 !important;
+}
+
+.caderno-actions .btn i::before {
+  width: 16px !important;
+  height: 16px !important;
+  background-size: contain !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
 }
 
 .caderno-actions .btn:hover i {
@@ -4852,4 +5133,721 @@ div#video_boas_vindas_onboarding_aluno {
     margin-bottom: 8px !important;
     justify-content: center !important;
   }
+}
+
+/* ============================================
+   ICON REPLACEMENT SYSTEM - GitHub URLs
+   Replace all icons with GitHub-hosted SVGs
+   ============================================ */
+
+/* Generic Icon Replacement Strategy */
+/* Target Font Awesome icons */
+i[class*='fa-'],
+i.fa,
+.fa,
+[class*='fa-'] {
+  position: relative !important;
+}
+
+/* Target Material Design icons */
+i[class*='zmdi-'],
+i.zmdi,
+.zmdi,
+[class*='zmdi-'] {
+  position: relative !important;
+}
+
+/* Target generic icon classes */
+[class*='icon'],
+[class*='Icon'],
+i[class*='icon'],
+svg[class*='icon'] {
+  position: relative !important;
+}
+
+/* Common Icon Replacements - Using background-image strategy */
+/* Font Awesome and Material Design icons will be replaced via ::before pseudo-element */
+
+/* Accessibility Icon */
+i.fa-universal-access::before,
+i.zmdi-account-circle::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/accessibility.svg') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  vertical-align: middle !important;
+}
+
+/* Activity Icon */
+i.fa-chart-line::before,
+i.zmdi-chart::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/activity.svg') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  vertical-align: middle !important;
+}
+
+/* Walk/Activity Square Icon - For greeting/dashboard */
+i.zmdi-walk::before,
+i.fa-walking::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/activity-square.svg') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  vertical-align: middle !important;
+}
+
+/* Alert Circle Icon */
+i.fa-exclamation-circle::before,
+i.zmdi-alert-circle::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/alert-circle.svg') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  vertical-align: middle !important;
+}
+
+/* Arrow Down Icon */
+i.fa-arrow-down::before,
+i.zmdi-chevron-down::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/arrow-down.svg') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  vertical-align: middle !important;
+}
+
+/* Chevron Down Icon */
+i.fa-chevron-down::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/chevron-down.svg') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  vertical-align: middle !important;
+}
+
+/* Arrow Up Icon */
+i.fa-arrow-up::before,
+i.zmdi-chevron-up::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/arrow-up.svg') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  vertical-align: middle !important;
+}
+
+/* Chevron Up Icon */
+i.fa-chevron-up::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/chevron-up.svg') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  vertical-align: middle !important;
+}
+
+/* Arrow Left Icon */
+i.fa-arrow-left::before,
+i.fa-chevron-left::before,
+i.zmdi-chevron-left::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/arrow-left.svg') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  vertical-align: middle !important;
+}
+
+/* Arrow Right Icon */
+i.fa-arrow-right::before,
+i.fa-chevron-right::before,
+i.zmdi-chevron-right::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/arrow-right.svg') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  vertical-align: middle !important;
+}
+
+/* Bell Icon */
+i.fa-bell::before,
+i.zmdi-notifications::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/bell.svg') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  vertical-align: middle !important;
+}
+
+/* Notification Bell Icon - Larger size for header */
+.noti__item i.fa-bell::before,
+.noti__item i.zmdi-notifications::before {
+  width: 22px !important;
+  height: 22px !important;
+  background-size: contain !important;
+  background-position: center center !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Book Icon */
+i.fa-book::before,
+i.zmdi-book::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/book.svg') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  vertical-align: middle !important;
+}
+
+/* Book Open Icon */
+i.fa-book-open::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/book-open.svg') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  vertical-align: middle !important;
+}
+
+/* File Word Icon - Using file icon as Word file representation */
+i.fa-file-word::before,
+i.fa-file-word-o::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/file.svg') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  vertical-align: middle !important;
+}
+
+/* Calendar Icon */
+i.fa-calendar::before,
+i.fa-calendar-alt::before,
+i.zmdi-calendar::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/calendar.svg') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  vertical-align: middle !important;
+}
+
+/* Check Icon */
+i.fa-check::before,
+i.zmdi-check::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/check.svg') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  vertical-align: middle !important;
+}
+
+/* Clock Icon */
+i.fa-clock::before,
+i.zmdi-time::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/clock.svg') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  vertical-align: middle !important;
+}
+
+/* Cog/Settings Icon */
+i.fa-cog::before,
+i.fa-gear::before,
+i.zmdi-settings::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/cog.svg') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  vertical-align: middle !important;
+}
+
+/* Download Icon */
+i.fa-download::before,
+i.zmdi-download::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/download.svg') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  vertical-align: middle !important;
+}
+
+/* Edit Icon */
+i.fa-edit::before,
+i.fa-pencil::before,
+i.zmdi-edit::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/edit.svg') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  vertical-align: middle !important;
+}
+
+/* Eye Icon */
+i.fa-eye::before,
+i.zmdi-eye::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/eye.svg') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  vertical-align: middle !important;
+}
+
+/* Eye Off Icon */
+i.fa-eye-slash::before,
+i.zmdi-eye-off::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/eye-off.svg') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  vertical-align: middle !important;
+}
+
+/* Home Icon */
+i.fa-home::before,
+i.zmdi-home::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/home.svg') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  vertical-align: middle !important;
+}
+
+/* Info Icon */
+i.fa-info-circle::before,
+i.zmdi-info::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/info.svg') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  vertical-align: middle !important;
+}
+
+/* Lock Icon */
+i.fa-lock::before,
+i.zmdi-lock::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/lock.svg') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  vertical-align: middle !important;
+}
+
+/* Mail Icon */
+i.fa-envelope::before,
+i.zmdi-email::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/mail.svg') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  vertical-align: middle !important;
+}
+
+/* Menu Icon - Only target actual icon elements, not containers */
+i.fa-bars::before,
+i.zmdi-menu::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/menu.svg') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  vertical-align: middle !important;
+}
+
+/* Plus Icon */
+i.fa-plus::before,
+i.zmdi-plus::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/plus.svg') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  vertical-align: middle !important;
+}
+
+/* Search Icon */
+i.fa-search::before,
+i.zmdi-search::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/search.svg') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  vertical-align: middle !important;
+}
+
+/* Trash Icon */
+i.fa-trash::before,
+i.zmdi-delete::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/trash.svg') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  vertical-align: middle !important;
+}
+
+/* User Icon */
+i.fa-user::before,
+i.zmdi-account::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/user.svg') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  vertical-align: middle !important;
+}
+
+/* Users Icon */
+i.fa-users::before,
+i.zmdi-accounts::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/users.svg') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  vertical-align: middle !important;
+}
+
+/* X/Close Icon */
+i.fa-times::before,
+i.fa-close::before,
+i.zmdi-close::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/x.svg') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  vertical-align: middle !important;
+}
+
+/* Hide original icon fonts/text */
+i[class*='fa-']::before,
+i.fa::before,
+i[class*='zmdi-']::before,
+i.zmdi::before {
+  font-family: inherit !important;
+  content: '' !important;
+}
+
+/* Sidebar Menu Specific Icon Mappings */
+/* Calendar - Single Day View (for calendar-alt variant only) */
+/* Note: fa-calendar is handled by the main Calendar Icon rule above */
+i.fa-calendar-alt::before,
+i.zmdi-calendar-note::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/calendar-1.svg') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  vertical-align: middle !important;
+}
+
+/* Calendar - Grid/Month View */
+i.fa-calendar-week::before,
+i.fa-calendar-days::before,
+i.zmdi-calendar::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/calendar-days.svg') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  vertical-align: middle !important;
+}
+
+/* Message/WhatsApp/Phone Call Bubble */
+i.fa-comments::before,
+i.fa-whatsapp::before,
+i.fa-comment-dots::before,
+i.zmdi-comment-text::before,
+i.zmdi-whatsapp::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/message-circle.svg') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  vertical-align: middle !important;
+}
+
+/* Phone Icon */
+i.fa-phone::before,
+i.fa-phone-alt::before,
+i.zmdi-phone::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/phone.svg') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  vertical-align: middle !important;
+}
+
+/* Gauge/Speedometer Icon */
+i.fa-tachometer-alt::before,
+i.fa-gauge::before,
+i.zmdi-time-countdown::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/gauge.svg') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  vertical-align: middle !important;
+}
+
+/* Numbered List Icon */
+i.fa-list-ol::before,
+i.fa-list-numeric::before,
+i.zmdi-format-list-numbered::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/list-ordered.svg') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  vertical-align: middle !important;
+}
+
+/* File/Document Icon */
+i.fa-file::before,
+i.fa-file-alt::before,
+i.fa-file-text::before,
+i.zmdi-file-text::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/file.svg') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  vertical-align: middle !important;
+}
+
+/* Brain Icon - Also used for Referências (fa-university) */
+i.fa-brain::before,
+i.fa-university::before,
+i.zmdi-brain::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/brain.svg') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  vertical-align: middle !important;
+}
+
+/* Inbox Icon */
+i.fa-inbox::before,
+i.zmdi-inbox::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/inbox.svg') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  vertical-align: middle !important;
+}
+
+/* Bookmark Icon */
+i.fa-bookmark::before,
+i.zmdi-bookmark::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/bookmark.svg') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  vertical-align: middle !important;
+}
+
+/* Camera Icon */
+i.fa-camera::before,
+i.fa-camera-retro::before,
+i.zmdi-camera::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/camera.svg') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  vertical-align: middle !important;
+}
+
+/* Sign Out/Logout Icon */
+i.fa-sign-out-alt::before,
+i.fa-sign-out::before,
+i.fa-logout::before,
+i.zmdi-power::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 1em !important;
+  height: 1em !important;
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/log-out.svg') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  vertical-align: middle !important;
+}
+
+/* Ensure icons maintain proper sizing */
+i[class*='fa-'],
+i.fa,
+i[class*='zmdi-'],
+i.zmdi {
+  font-size: inherit !important;
+  line-height: inherit !important;
+  width: 1em !important;
+  height: 1em !important;
+  display: inline-block !important;
 }
