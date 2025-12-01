@@ -207,86 +207,7 @@ div.card {
   border-width: 1px !important;
 }
 
-/* Tactical orange icons inside cards */
-.card i,
-.custom-card i,
-.card .fa,
-.custom-card .fa,
-.card [class*='icon'],
-.custom-card [class*='icon'],
-.card svg,
-.custom-card svg {
-  color: #ff6600 !important;
-  text-shadow: 0 0 8px rgba(255, 102, 0, 0.5) !important;
-}
-
-/* Tactical icons in sidebar navbar */
-.menu-sidebar ul li a i,
-.menu-sidebar ul li a .fa,
-.menu-sidebar ul li a [class*='icon'],
-.menu-sidebar ul li a svg,
-.sidebar ul li a i,
-.sidebar ul li a .fa,
-.sidebar ul li a [class*='icon'],
-.sidebar ul li a svg,
-.navbar-sidebar ul li a i,
-.navbar-sidebar ul li a .fa,
-.navbar-sidebar ul li a [class*='icon'],
-.navbar-sidebar ul li a svg {
-  color: #ff6600 !important;
-  text-shadow: 0 0 8px rgba(255, 102, 0, 0.5) !important;
-}
-
-/* Metas Diárias icon will be handled by the standard icon replacement system */
-/* The i.fa-calendar icon will be automatically replaced with calendar.svg */
-
-/* Icons inside h4 tags - add subtle light blue circle container */
-h4 i,
-h4 .fa,
-h4 [class*='icon'],
-h4 svg {
-  color: #3b82f6 !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  width: 40px !important;
-  height: 40px !important;
-  border-radius: 50% !important;
-  background-color: rgba(59, 130, 246, 0.1) !important;
-  background: linear-gradient(
-    135deg,
-    rgba(59, 130, 246, 0.12) 0%,
-    rgba(59, 130, 246, 0.08) 100%
-  ) !important;
-  padding: 0 !important;
-  margin-right: 8px;
-  vertical-align: middle;
-  font-size: 14px;
-  position: relative;
-  flex-shrink: 0;
-  line-height: 1 !important;
-}
-
-h4 i::before,
-h4 .fa::before {
-  font-size: 14px !important;
-  line-height: 1 !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  width: 100% !important;
-  height: 100% !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-h4 svg {
-  width: 18px !important;
-  height: 18px !important;
-  margin: auto !important;
-  display: block !important;
-  flex-shrink: 0;
-}
+/* Icon color and styling rules removed - using default styling */
 
 /* Tactical progress bars - LED monitor style */
 .progress {
@@ -317,10 +238,6 @@ h4 svg {
   background: rgba(20, 20, 20, 0.8) !important;
   background-color: rgba(20, 20, 20, 0.8) !important;
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8) !important;
-}
-
-li.sidebar-menu-item-metodologia {
-  display: none;
 }
 
 #login_table .login-placeholder.login-aluno {
@@ -467,9 +384,11 @@ div#nps_aluno {
 /* Modern Layout for Legend Week Activities Card */
 .legend-week-activities.card.custom-card {
   border-radius: 12px !important;
-  background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%) !important;
+  background: rgba(10, 10, 10, 0.98) !important;
   padding: 32px !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(59, 130, 246, 0.15) !important;
+  box-shadow: 0 0 30px rgba(255, 102, 0, 0.3), inset 0 0 30px rgba(0, 0, 0, 0.6),
+    0 0 0 2px rgba(255, 102, 0, 0.3) !important;
+  border: 2px solid rgba(255, 102, 0, 0.3) !important;
   position: relative !important;
   overflow: hidden !important;
 }
@@ -478,7 +397,7 @@ div#nps_aluno {
 .legend-week-activities.card.custom-card .row > .col-12:first-child {
   margin-bottom: 32px !important;
   padding-bottom: 24px !important;
-  border-bottom: 1px solid rgba(59, 130, 246, 0.15) !important;
+  border-bottom: 2px solid rgba(255, 102, 0, 0.3) !important;
 }
 
 /* Title with Icon - Better Alignment */
@@ -488,13 +407,14 @@ div#nps_aluno {
   gap: 14px !important;
   margin-bottom: 16px !important;
   font-size: 28px !important;
-  font-weight: 700 !important;
-  color: #0a0a0a !important;
+  font-weight: 800 !important;
+  color: #ff6600 !important;
   line-height: 1.3 !important;
+  text-shadow: 0 0 15px rgba(255, 102, 0, 0.6) !important;
 }
 
 .legend-week-activities.card.custom-card h2 i {
-  color: #3b82f6 !important;
+  color: #ff6600 !important;
   font-size: 28px !important;
   width: auto !important;
   height: auto !important;
@@ -503,16 +423,17 @@ div#nps_aluno {
   padding: 0 !important;
   margin: 0 !important;
   display: inline-block !important;
+  text-shadow: 0 0 10px rgba(255, 102, 0, 0.6) !important;
 }
 
 .legend-week-activities.card.custom-card h2 span {
-  color: rgba(26, 26, 26, 0.8) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
   font-weight: 400 !important;
 }
 
 /* Subtitle */
 .legend-week-activities.card.custom-card p {
-  color: #2d2d2d !important;
+  color: #f5f5f5 !important;
   font-size: 16px !important;
   margin: 0 !important;
   margin-top: 10px !important;
@@ -541,16 +462,17 @@ div#nps_aluno {
   align-items: center !important;
   gap: 12px !important;
   padding: 12px 16px !important;
-  background: rgba(0, 0, 0, 0.03) !important;
+  background: rgba(255, 102, 0, 0.05) !important;
   border-radius: 8px !important;
   transition: all 0.3s ease !important;
-  border: 1px solid transparent !important;
+  border: 1px solid rgba(255, 102, 0, 0.2) !important;
 }
 
 .legend-week-item:hover {
-  background: rgba(59, 130, 246, 0.05) !important;
-  border-color: rgba(59, 130, 246, 0.2) !important;
+  background: rgba(255, 102, 0, 0.15) !important;
+  border-color: rgba(255, 102, 0, 0.4) !important;
   transform: translateX(4px) !important;
+  box-shadow: 0 0 10px rgba(255, 102, 0, 0.3) !important;
 }
 
 /* Legend Color Indicator */
@@ -564,7 +486,7 @@ div#nps_aluno {
 }
 
 .legend-week-item {
-  color: #2d2d2d !important;
+  color: #f5f5f5 !important;
   font-size: 16px !important;
   font-weight: 500 !important;
   line-height: 1.5 !important;
@@ -574,13 +496,14 @@ div#nps_aluno {
 .legend-week-activities.card.custom-card hr {
   margin: 32px 0 24px 0 !important;
   border: none !important;
-  height: 1px !important;
+  height: 2px !important;
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(59, 130, 246, 0.2) 50%,
+    rgba(255, 102, 0, 0.4) 50%,
     transparent 100%
   ) !important;
+  box-shadow: 0 0 8px rgba(255, 102, 0, 0.3) !important;
 }
 
 /* Navigation Links Container - Centered Modern Layout */
@@ -607,16 +530,18 @@ div#nps_aluno {
   align-items: center !important;
   gap: 8px !important;
   padding: 12px 24px !important;
-  background: rgba(0, 0, 0, 0.05) !important;
-  border: 1px solid rgba(59, 130, 246, 0.2) !important;
+  background: rgba(255, 102, 0, 0.15) !important;
+  border: 2px solid rgba(255, 102, 0, 0.4) !important;
   border-radius: 8px !important;
-  color: #1a1a1a !important;
+  color: #ff6600 !important;
   font-size: 14px !important;
-  font-weight: 500 !important;
+  font-weight: 600 !important;
   text-decoration: none !important;
   transition: all 0.3s ease !important;
   position: relative !important;
   overflow: hidden !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
 }
 
 .week-view-links a::before {
@@ -628,18 +553,19 @@ div#nps_aluno {
   height: 100% !important;
   background: linear-gradient(
     135deg,
-    rgba(59, 130, 246, 0.1) 0%,
-    rgba(59, 130, 246, 0.05) 100%
+    rgba(255, 102, 0, 0.2) 0%,
+    rgba(255, 136, 0, 0.15) 100%
   ) !important;
   transition: left 0.3s ease !important;
   z-index: 0 !important;
 }
 
 .week-view-links a:hover {
-  background: rgba(59, 130, 246, 0.1) !important;
-  border-color: rgba(59, 130, 246, 0.4) !important;
+  background: rgba(255, 102, 0, 0.3) !important;
+  border-color: rgba(255, 102, 0, 0.6) !important;
   transform: translateY(-2px) !important;
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2) !important;
+  box-shadow: 0 4px 15px rgba(255, 102, 0, 0.4) !important;
+  color: #ffffff !important;
 }
 
 .week-view-links a:hover::before {
@@ -649,7 +575,7 @@ div#nps_aluno {
 .week-view-links a i {
   position: relative !important;
   z-index: 1 !important;
-  color: #3b82f6 !important;
+  color: inherit !important;
   font-size: 14px !important;
 }
 
@@ -768,9 +694,44 @@ div#nps_aluno {
   border-bottom: none !important;
 }
 
-/* Empty Cells - Tactical Dark Background */
+/* Empty Cells - Tactical Dark Background with Orange Accent */
 #tabela_resumo_semana.table-earning tbody td:empty {
-  background: rgba(0, 0, 0, 0.3) !important;
+  background: rgba(10, 10, 10, 0.6) !important;
+  border: 1px solid rgba(255, 102, 0, 0.15) !important;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5) !important;
+  position: relative !important;
+}
+
+/* Add subtle orange glow to empty cells */
+#tabela_resumo_semana.table-earning tbody td:empty::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    rgba(255, 102, 0, 0.02) 10px,
+    rgba(255, 102, 0, 0.02) 20px
+  ) !important;
+  pointer-events: none !important;
+}
+
+/* Style header columns for empty days (Domingo, Sábado) */
+#tabela_resumo_semana.table-earning thead th:first-child,
+#tabela_resumo_semana.table-earning thead th:last-child {
+  background: rgba(10, 10, 10, 0.8) !important;
+  opacity: 0.9 !important;
+}
+
+/* Style corresponding empty body cells for first and last columns */
+#tabela_resumo_semana.table-earning tbody td:first-child:empty,
+#tabela_resumo_semana.table-earning tbody td:last-child:empty {
+  background: rgba(10, 10, 10, 0.7) !important;
+  border-color: rgba(255, 102, 0, 0.2) !important;
 }
 
 /* Activity Blocks - Tactical Card Style */
@@ -1274,12 +1235,7 @@ a:hover {
   color: #2563eb;
 }
 
-.menu-sidebar,
-.menu-sidebar .menu-sidebar__content {
-  background-color: rgba(0, 0, 0, 0.98) !important;
-  border-right: 2px solid rgba(255, 102, 0, 0.5) !important;
-  box-shadow: 0 0 20px rgba(255, 102, 0, 0.2), inset 0 0 20px rgba(0, 0, 0, 0.8) !important;
-}
+/* NOTE: Removed .menu-sidebar rules - these don't apply to .navbar-sidebar */
 
 /* Modern Dashboard Layout - Styling Only, No Layout Changes */
 /* Keep Bootstrap's grid system intact - only style the cards */
@@ -1571,25 +1527,29 @@ a:hover {
 /* Modern Desempenho de Estudo Card Layout */
 #card_desempenho.card.custom-card {
   border-radius: 12px !important;
-  background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%) !important;
+  background: rgba(10, 10, 10, 0.98) !important;
   padding: 32px !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(59, 130, 246, 0.15) !important;
+  box-shadow: 0 0 30px rgba(255, 102, 0, 0.3), inset 0 0 30px rgba(0, 0, 0, 0.8) !important;
+  border: 2px solid rgba(255, 102, 0, 0.5) !important;
   position: relative !important;
   overflow: hidden !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
 }
 
 /* Card Header Section */
 .card-desempenho-header {
   margin-bottom: 24px !important;
   padding-bottom: 20px !important;
-  border-bottom: 1px solid rgba(59, 130, 246, 0.15) !important;
+  border-bottom: 2px solid rgba(255, 102, 0, 0.3) !important;
 }
 
 .card-desempenho-header h2.desemp-title-34 {
   margin: 0 !important;
   font-size: 32px !important;
   font-weight: 700 !important;
-  color: #0a0a0a !important;
+  color: #ff6600 !important;
+  text-shadow: 0 0 15px rgba(255, 102, 0, 0.6), 0 0 30px rgba(255, 102, 0, 0.3) !important;
   display: flex !important;
   align-items: center !important;
   gap: 14px !important;
@@ -1598,14 +1558,20 @@ a:hover {
 
 /* Description Paragraph */
 #card_desempenho > p {
-  color: #2d2d2d !important;
+  color: #f5f5f5 !important;
   font-size: 17px !important;
   line-height: 1.7 !important;
   margin-bottom: 32px !important;
   padding: 18px 24px !important;
-  background: rgba(59, 130, 246, 0.06) !important;
-  border-left: 4px solid rgba(59, 130, 246, 0.35) !important;
+  background: rgba(255, 102, 0, 0.05) !important;
+  border-left: 4px solid rgba(255, 102, 0, 0.5) !important;
   border-radius: 8px !important;
+}
+
+#card_desempenho > p b {
+  color: #ff8800 !important;
+  font-weight: 700 !important;
+  text-shadow: 0 0 8px rgba(255, 102, 0, 0.5) !important;
 }
 
 /* Desempenho Placeholder Container */
@@ -1618,10 +1584,11 @@ a:hover {
 /* General Progress Section */
 .desempenho-full {
   padding: 24px !important;
-  background: rgba(0, 0, 0, 0.03) !important;
+  background: rgba(255, 102, 0, 0.05) !important;
   border-radius: 12px !important;
-  border: 1px solid rgba(59, 130, 246, 0.1) !important;
+  border: 1px solid rgba(255, 102, 0, 0.2) !important;
   margin-bottom: 8px !important;
+  box-shadow: 0 0 15px rgba(255, 102, 0, 0.1), inset 0 0 15px rgba(0, 0, 0, 0.5) !important;
   width: 100% !important;
   max-width: 100% !important;
   box-sizing: border-box !important;
@@ -1654,7 +1621,8 @@ a:hover {
   margin: 0 0 20px 0 !important;
   font-size: 24px !important;
   font-weight: 700 !important;
-  color: #0a0a0a !important;
+  color: #ff6600 !important;
+  text-shadow: 0 0 10px rgba(255, 102, 0, 0.5) !important;
   display: flex !important;
   align-items: center !important;
   gap: 10px !important;
@@ -1664,9 +1632,10 @@ a:hover {
 .desempenho-full .progress {
   height: 30px !important;
   border-radius: 8px !important;
-  background: rgba(0, 0, 0, 0.05) !important;
+  background: rgba(0, 0, 0, 0.6) !important;
+  border: 1px solid rgba(255, 102, 0, 0.3) !important;
   overflow: hidden !important;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8), 0 0 5px rgba(255, 102, 0, 0.2) !important;
 }
 
 /* Discipline Container Rows - Styling Only, No Layout Changes */
@@ -1678,25 +1647,28 @@ a:hover {
 /* Discipline Title Section - Collapsible Header */
 .disciplina-container-title {
   padding: 20px 24px !important;
-  background: rgba(59, 130, 246, 0.08) !important;
+  background: rgba(255, 102, 0, 0.05) !important;
   border-radius: 10px !important;
-  border: 1px solid rgba(59, 130, 246, 0.2) !important;
+  border: 1px solid rgba(255, 102, 0, 0.3) !important;
   cursor: pointer !important;
+  transition: all 0.3s ease !important;
   transition: all 0.3s ease !important;
   margin-bottom: 16px !important;
 }
 
 .disciplina-container-title:hover {
-  background: rgba(59, 130, 246, 0.12) !important;
-  border-color: rgba(59, 130, 246, 0.3) !important;
+  background: rgba(255, 102, 0, 0.1) !important;
+  border-color: rgba(255, 102, 0, 0.5) !important;
   transform: translateX(4px) !important;
+  box-shadow: 0 0 15px rgba(255, 102, 0, 0.2) !important;
 }
 
 .disciplina-container-title h5 {
   margin: 0 0 16px 0 !important;
   font-size: 20px !important;
   font-weight: 700 !important;
-  color: #0a0a0a !important;
+  color: #ff6600 !important;
+  text-shadow: 0 0 10px rgba(255, 102, 0, 0.5) !important;
   display: flex !important;
   align-items: center !important;
   gap: 14px !important;
@@ -1705,18 +1677,19 @@ a:hover {
 
 /* Icons inside disciplina title - circular background like home page */
 .disciplina-container-title h5 i {
-  color: #3b82f6 !important;
+  color: #ff6600 !important;
+  text-shadow: 0 0 8px rgba(255, 102, 0, 0.6) !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
   width: 40px !important;
   height: 40px !important;
   border-radius: 50% !important;
-  background-color: rgba(59, 130, 246, 0.1) !important;
+  background-color: rgba(255, 102, 0, 0.1) !important;
   background: linear-gradient(
     135deg,
-    rgba(59, 130, 246, 0.12) 0%,
-    rgba(59, 130, 246, 0.08) 100%
+    rgba(255, 102, 0, 0.12) 0%,
+    rgba(255, 102, 0, 0.08) 100%
   ) !important;
   padding: 0 !important;
   margin-right: 12px !important;
@@ -1743,9 +1716,10 @@ a:hover {
 .disciplina-container-title .progress {
   height: 24px !important;
   border-radius: 8px !important;
-  background: rgba(0, 0, 0, 0.05) !important;
+  background: rgba(0, 0, 0, 0.6) !important;
+  border: 1px solid rgba(255, 102, 0, 0.3) !important;
   overflow: hidden !important;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8), 0 0 5px rgba(255, 102, 0, 0.2) !important;
 }
 
 /* Subject Cards Grid - Styling Only, Bootstrap handles layout */
@@ -1762,9 +1736,9 @@ a:hover {
 
 .desempenho-container {
   padding: 20px !important;
-  background: rgba(0, 0, 0, 0.03) !important;
+  background: rgba(255, 102, 0, 0.03) !important;
   border-radius: 10px !important;
-  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 102, 0, 0.15) !important;
   transition: all 0.3s ease !important;
   height: 100% !important;
   display: flex !important;
@@ -1772,17 +1746,17 @@ a:hover {
 }
 
 .desempenho-container:hover {
-  background: rgba(59, 130, 246, 0.05) !important;
-  border-color: rgba(59, 130, 246, 0.2) !important;
+  background: rgba(255, 102, 0, 0.08) !important;
+  border-color: rgba(255, 102, 0, 0.4) !important;
   transform: translateY(-2px) !important;
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15) !important;
+  box-shadow: 0 4px 12px rgba(255, 102, 0, 0.2) !important;
 }
 
 /* Subject Title */
 .desempenho-title {
   font-size: 16px !important;
   font-weight: 600 !important;
-  color: #1a1a1a !important;
+  color: #f5f5f5 !important;
   line-height: 1.6 !important;
   margin-bottom: 16px !important;
   flex: 1 !important;
@@ -1798,47 +1772,63 @@ a:hover {
 .desempenho-performance .progress {
   height: 20px !important;
   border-radius: 6px !important;
-  background: rgba(0, 0, 0, 0.05) !important;
+  background: rgba(0, 0, 0, 0.6) !important;
+  border: 1px solid rgba(255, 102, 0, 0.3) !important;
   overflow: hidden !important;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8), 0 0 5px rgba(255, 102, 0, 0.2) !important;
 }
 
 .desempenho-performance-description {
   margin: 0 !important;
   font-size: 13px !important;
   font-weight: 600 !important;
-  color: #3b82f6 !important;
+  color: #ff6600 !important;
+  text-shadow: 0 0 8px rgba(255, 102, 0, 0.5) !important;
   text-align: right !important;
 }
 
 /* Progress Bar Styling */
 #card_desempenho .progress-bar {
-  background: linear-gradient(90deg, #3b82f6 0%, #2563eb 100%) !important;
-  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.4) !important;
+  background: linear-gradient(90deg, #ff6600 0%, #ff8800 100%) !important;
+  box-shadow: 0 0 15px rgba(255, 102, 0, 0.6),
+    inset 0 0 10px rgba(255, 136, 0, 0.3) !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   font-size: 12px !important;
-  font-weight: 600 !important;
-  color: #0a0a0a !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7) !important;
   transition: width 0.6s ease !important;
 }
 
-#card_desempenho .progress-bar.bg-success {
-  background: linear-gradient(90deg, #3b82f6 0%, #2563eb 100%) !important;
+#card_desempenho .progress-bar.bg-success,
+.progress-bar.bg-success {
+  background: linear-gradient(90deg, #ff6600 0%, #ff8800 100%) !important;
+  box-shadow: 0 0 15px rgba(255, 102, 0, 0.8),
+    inset 0 0 10px rgba(255, 136, 0, 0.4) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7) !important;
 }
 
-#card_desempenho .progress-bar.bg-info {
-  background: linear-gradient(90deg, #3b82f6 0%, #2563eb 100%) !important;
+#card_desempenho .progress-bar.bg-info,
+.progress-bar.bg-info {
+  background: linear-gradient(90deg, #ff6600 0%, #ff8800 100%) !important;
+  box-shadow: 0 0 15px rgba(255, 102, 0, 0.6),
+    inset 0 0 10px rgba(255, 136, 0, 0.3) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7) !important;
 }
 
 /* Empty Progress Bars */
 #card_desempenho .progress-bar[aria-valuenow='0'],
 #card_desempenho .progress-bar[style*='width:0%'],
 #card_desempenho .progress-bar[style*='width: 0%'] {
-  background: rgba(0, 0, 0, 0.05) !important;
-  color: rgba(26, 26, 26, 0.4) !important;
-  box-shadow: none !important;
+  background: rgba(0, 0, 0, 0.6) !important;
+  color: rgba(255, 255, 255, 0.4) !important;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8) !important;
 }
 
 /* Responsive Design for Desempenho Card */
@@ -1999,13 +1989,13 @@ td.table-danger {
   position: relative;
   margin: 1em 0 1.5em 0;
   display: flex;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(59, 130, 246, 0.15) !important;
+  box-shadow: 0 0 30px rgba(255, 102, 0, 0.3), inset 0 0 30px rgba(0, 0, 0, 0.8) !important;
   flex-wrap: wrap;
   justify-content: flex-start;
-  background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%) !important;
+  background: rgba(0, 0, 0, 0.95) !important;
   backdrop-filter: blur(10px);
-  border-radius: 12px !important;
-  border: 1px solid rgba(59, 130, 246, 0.15) !important;
+  border-radius: 0 !important;
+  border: 2px solid rgba(255, 102, 0, 0.5) !important;
   overflow: hidden;
 }
 
@@ -2017,8 +2007,8 @@ td.table-danger {
   min-width: 75px;
   padding: 0;
   margin: 0;
-  border-right: 1px solid rgba(59, 130, 246, 0.1) !important;
-  background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%) !important;
+  border-right: 1px solid rgba(255, 102, 0, 0.3) !important;
+  background: rgba(10, 10, 10, 0.9) !important;
   opacity: 1 !important;
   overflow: hidden;
   transition: all 0.3s ease !important;
@@ -2029,12 +2019,9 @@ td.table-danger {
 }
 
 #dashboard_summary .dash-summary-day.day-active {
-  background: linear-gradient(
-    135deg,
-    rgba(59, 130, 246, 0.1) 0%,
-    rgba(59, 130, 246, 0.05) 100%
-  ) !important;
-  border-right-color: rgba(59, 130, 246, 0.2) !important;
+  background: rgba(20, 10, 0, 0.95) !important;
+  border-right-color: rgba(255, 102, 0, 0.6) !important;
+  box-shadow: inset 0 0 20px rgba(255, 102, 0, 0.1) !important;
 }
 
 #dashboard_summary .dash-day-name {
@@ -2042,16 +2029,19 @@ td.table-danger {
   text-align: center !important;
   font-weight: 600 !important;
   font-size: 14px !important;
-  color: #1a1a1a !important;
-  background: rgba(0, 0, 0, 0.02) !important;
-  border-bottom: 1px solid rgba(59, 130, 246, 0.1) !important;
+  color: #e0e0e0 !important;
+  background: rgba(0, 0, 0, 0.5) !important;
+  border-bottom: 1px solid rgba(255, 102, 0, 0.3) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
 }
 
 #dashboard_summary .dash-summary-day.day-active .dash-day-name {
-  background: rgba(59, 130, 246, 0.08) !important;
-  color: #2563eb !important;
-  font-weight: 700 !important;
-  border-bottom-color: rgba(59, 130, 246, 0.2) !important;
+  background: rgba(255, 102, 0, 0.2) !important;
+  color: #ff6600 !important;
+  font-weight: 800 !important;
+  border-bottom-color: rgba(255, 102, 0, 0.5) !important;
+  text-shadow: 0 0 10px rgba(255, 102, 0, 0.6) !important;
 }
 
 #dashboard_summary .dash-day-scroller {
@@ -2063,17 +2053,19 @@ td.table-danger {
 #dashboard_summary .day-activity {
   padding: 16px !important;
   margin-bottom: 12px !important;
-  background: rgba(0, 0, 0, 0.03) !important;
-  border-radius: 8px !important;
-  border: 1px solid rgba(59, 130, 246, 0.1) !important;
+  background: rgba(10, 10, 10, 0.8) !important;
+  border-radius: 0 !important;
+  border: 1px solid rgba(255, 102, 0, 0.3) !important;
   transition: all 0.3s ease !important;
+  box-shadow: 0 0 10px rgba(255, 102, 0, 0.1), inset 0 0 10px rgba(0, 0, 0, 0.5) !important;
 }
 
 #dashboard_summary .day-activity:hover {
-  background: rgba(59, 130, 246, 0.05) !important;
-  border-color: rgba(59, 130, 246, 0.2) !important;
+  background: rgba(20, 10, 0, 0.9) !important;
+  border-color: rgba(255, 102, 0, 0.6) !important;
   transform: translateX(4px) !important;
-  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.15) !important;
+  box-shadow: 0 0 15px rgba(255, 102, 0, 0.3),
+    inset 0 0 15px rgba(255, 102, 0, 0.05) !important;
 }
 
 #dashboard_summary .day-activity:last-child {
@@ -2081,36 +2073,39 @@ td.table-danger {
 }
 
 #dashboard_summary .day-activity-step-1 {
-  border-left: 4px solid rgba(59, 130, 246, 0.3) !important;
+  border-left: 4px solid rgba(255, 102, 0, 0.5) !important;
 }
 
 #dashboard_summary .day-activity-step-2 {
-  border-left: 4px solid rgba(34, 197, 94, 0.4) !important;
-  background: rgba(34, 197, 94, 0.03) !important;
+  border-left: 4px solid rgba(255, 136, 0, 0.6) !important;
+  background: rgba(20, 12, 0, 0.85) !important;
 }
 
 #dashboard_summary .day-activity-step-3 {
-  border-left: 4px solid rgba(34, 197, 94, 0.6) !important;
-  background: rgba(34, 197, 94, 0.05) !important;
+  border-left: 4px solid rgba(255, 170, 0, 0.7) !important;
+  background: rgba(25, 15, 0, 0.9) !important;
 }
 
 #dashboard_summary .day-activity-step-4 {
-  border-left: 4px solid rgba(34, 197, 94, 0.8) !important;
-  background: rgba(34, 197, 94, 0.08) !important;
+  border-left: 4px solid rgba(255, 170, 0, 0.9) !important;
+  background: rgba(30, 18, 0, 0.95) !important;
 }
 
 #dashboard_summary .day-activity-disc {
   font-size: 15px !important;
-  font-weight: 600 !important;
-  color: #0a0a0a !important;
+  font-weight: 700 !important;
+  color: #ff6600 !important;
   margin: 0 0 8px 0 !important;
   line-height: 1.4 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  text-shadow: 0 0 8px rgba(255, 102, 0, 0.5) !important;
 }
 
 #dashboard_summary .day-activity-subject {
   font-size: 14px !important;
+  color: #e0e0e0 !important;
   font-weight: 400 !important;
-  color: #2d2d2d !important;
   margin: 0 !important;
   line-height: 1.6 !important;
 }
@@ -2122,13 +2117,16 @@ td.table-danger {
 }
 
 .meta-horario {
-  color: #1a1a1a;
-  background: #ffbc00;
-  border-radius: 0.15rem;
-  padding: 0.25em 0.5em;
-  display: inline-block;
-  margin: 0.25em 0;
-  font-size: 0.8rem;
+  background: rgba(255, 102, 0, 0.15) !important;
+  border: 1px solid rgba(255, 102, 0, 0.3) !important;
+  border-radius: 8px !important;
+  padding: 10px 16px !important;
+  color: #ff6600 !important;
+  font-weight: 600 !important;
+  display: inline-block !important;
+  margin: 20px 0 0 0 !important;
+  font-size: 0.9rem !important;
+  box-shadow: 0 0 10px rgba(255, 102, 0, 0.2) !important;
 }
 
 .activity-goal-links ul a {
@@ -2173,10 +2171,10 @@ td.table-danger {
 }
 
 .meta-dia-orientacao {
-  border-style: none;
-  background: #f5f5f5;
-  padding: 20px;
-  border-radius: 4px;
+  background: rgba(255, 102, 0, 0.05) !important;
+  border: 1px solid rgba(255, 102, 0, 0.2) !important;
+  border-radius: 8px !important;
+  padding: 20px !important;
 }
 
 h4.meta-trigger-link.meta-trigger-aula {
@@ -2223,44 +2221,79 @@ h6.meta-trigger-link.meta-trigger-aula {
   margin: 5px 0px;
 }
 
-button.btn.btn-sm.btn-primary.dropdown-toggle {
-  font-size: 0.7rem !important;
-  color: #1a1a1a !important;
-  background: #545454;
-  border-style: none;
+button.btn.btn-sm.btn-primary.dropdown-toggle,
+.meta-acoes button.btn.btn-sm.btn-primary.dropdown-toggle,
+.btn-pomodoro-trigger button.btn.btn-sm.btn-primary.dropdown-toggle {
+  font-size: 0.9rem !important;
+  color: #ffffff !important;
+  background: rgba(255, 102, 0, 0.2) !important;
+  border: 2px solid rgba(255, 102, 0, 0.5) !important;
   border-radius: 8px !important;
-  padding: 10px 20px 10px 20px !important;
-  margin: 5px 0px;
+  padding: 12px 24px !important;
+  margin: 0 !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  min-height: 44px !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 0 10px rgba(255, 102, 0, 0.2) !important;
 }
 
-button.btn.btn-sm.btn-primary.dropdown-toggle:hover {
-  font-size: 0.7rem !important;
-  color: #1a1a1a !important;
-  background: #545454;
-  border-style: none;
-  border-radius: 8px !important;
-  padding: 10px 20px 10px 20px !important;
-  margin: 5px 0px;
+button.btn.btn-sm.btn-primary.dropdown-toggle:hover,
+.meta-acoes button.btn.btn-sm.btn-primary.dropdown-toggle:hover,
+.btn-pomodoro-trigger button.btn.btn-sm.btn-primary.dropdown-toggle:hover {
+  font-size: 0.9rem !important;
+  color: #ffffff !important;
+  background: rgba(255, 102, 0, 0.4) !important;
+  border-color: rgba(255, 102, 0, 0.8) !important;
+  box-shadow: 0 0 20px rgba(255, 102, 0, 0.6) !important;
+  transform: translateY(-2px) !important;
 }
 
-button.btn.btn-sm.btn-primary.dropdown-toggle:focus {
-  font-size: 0.7rem !important;
-  color: #1a1a1a !important;
-  background: #545454;
-  border-style: none;
-  border-radius: 8px !important;
-  padding: 10px 20px 10px 20px !important;
-  margin: 5px 0px;
+button.btn.btn-sm.btn-primary.dropdown-toggle:focus,
+.meta-acoes button.btn.btn-sm.btn-primary.dropdown-toggle:focus,
+.btn-pomodoro-trigger button.btn.btn-sm.btn-primary.dropdown-toggle:focus {
+  font-size: 0.9rem !important;
+  color: #ffffff !important;
+  background: rgba(255, 102, 0, 0.3) !important;
+  border-color: rgba(255, 102, 0, 0.7) !important;
+  box-shadow: 0 0 15px rgba(255, 102, 0, 0.5) !important;
+  outline: none !important;
 }
 
 a.btn.btn-sm.btn-info {
-  font-size: 0.7rem !important;
-  color: #1a1a1a !important;
-  background: #545454;
-  border-style: none;
+  font-size: 0.9rem !important;
+  color: #ffffff !important;
+  background: rgba(255, 102, 0, 0.2) !important;
+  border: 2px solid rgba(255, 102, 0, 0.5) !important;
   border-radius: 8px !important;
-  padding: 10px 20px 10px 20px !important;
-  margin: 5px 0px;
+  padding: 12px 24px !important;
+  margin: 5px 0px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 0 10px rgba(255, 102, 0, 0.2) !important;
+}
+
+a.btn.btn-sm.btn-info:hover {
+  background: rgba(255, 102, 0, 0.4) !important;
+  border-color: rgba(255, 102, 0, 0.8) !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 20px rgba(255, 102, 0, 0.6) !important;
+  transform: translateY(-2px) !important;
+}
+
+a.btn.btn-sm.btn-info i {
+  color: #ffffff !important;
+  font-size: 1rem !important;
 }
 
 .btn-primary {
@@ -2294,13 +2327,34 @@ a.btn.btn-sm.btn-info {
 }
 
 a.btn.btn-sm.btn-info.btn-download-caderno {
-  font-size: 0.7rem !important;
-  color: #1a1a1a !important;
-  background: #545454;
-  border-style: none;
+  font-size: 0.9rem !important;
+  color: #ffffff !important;
+  background: rgba(255, 102, 0, 0.2) !important;
+  border: 2px solid rgba(255, 102, 0, 0.5) !important;
   border-radius: 8px !important;
-  padding: 10px 20px 10px 20px !important;
-  margin: 5px 0px;
+  padding: 12px 24px !important;
+  margin: 5px 0px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 0 10px rgba(255, 102, 0, 0.2) !important;
+}
+
+a.btn.btn-sm.btn-info.btn-download-caderno:hover {
+  background: rgba(255, 102, 0, 0.4) !important;
+  border-color: rgba(255, 102, 0, 0.8) !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 20px rgba(255, 102, 0, 0.6) !important;
+  transform: translateY(-2px) !important;
+}
+
+a.btn.btn-sm.btn-info.btn-download-caderno i {
+  color: #ffffff !important;
+  font-size: 1rem !important;
 }
 
 a.btn.btn-danger {
@@ -2484,7 +2538,7 @@ a#review_goals_save {
   align-items: center !important;
   gap: 8px !important;
   padding: 10px 16px !important;
-  color: rgba(26, 26, 26, 0.9) !important;
+  color: #f5f5f5 !important;
   text-decoration: none !important;
   border-radius: 8px !important;
   transition: all 0.3s ease !important;
@@ -2499,7 +2553,7 @@ a#review_goals_save {
   height: 18px !important;
   margin-top: 0 !important;
   text-align: center !important;
-  color: rgba(59, 130, 246, 0.8) !important;
+  color: #ff6600 !important;
   font-size: 16px !important;
   flex-shrink: 0 !important;
   display: inline-flex !important;
@@ -2511,6 +2565,10 @@ a#review_goals_save {
 .account-dropdown__item a i::before {
   width: 18px !important;
   height: 18px !important;
+}
+
+.account-dropdown__item a span {
+  color: #f5f5f5 !important;
 }
 
 .account-dropdown__item a span,
@@ -2624,36 +2682,106 @@ a.btn.btn-danger {
   margin: 5px 0px;
 }
 
-#bia_menu ul li {
-  background-color: rgba(0, 0, 0, 0.1);
-  padding: 5px;
-  font-size: 0.8em;
-}
-
-#bia_help .bia-title,
-#bia_menu h3,
-#bia_menu ul a {
-  color: #1a1a1a;
-  padding: 10px;
-}
-
-#bia_help .bia-title,
+/* BIA Menu - Dark Tactical Theme */
 #bia_menu {
-  background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
-  border-radius: 6px;
-  background-size: cover;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(59, 130, 246, 0.15);
+  background: rgba(10, 10, 10, 0.98) !important;
+  border-radius: 12px !important;
+  backdrop-filter: blur(10px) !important;
+  border: 2px solid rgba(255, 102, 0, 0.3) !important;
+  box-shadow: 0 0 30px rgba(255, 102, 0, 0.3), inset 0 0 30px rgba(0, 0, 0, 0.6) !important;
+  padding: 24px !important;
 }
 
-a#save_question_input {
-  font-size: 0.7rem !important;
-  color: #1a1a1a !important;
-  background: #f5f5f5;
-  border-style: none;
+#bia_menu h3 {
+  color: #ff6600 !important;
+  padding: 10px 0 !important;
+  margin-bottom: 16px !important;
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  text-shadow: 0 0 15px rgba(255, 102, 0, 0.6) !important;
+  border-bottom: 2px solid rgba(255, 102, 0, 0.3) !important;
+  padding-bottom: 12px !important;
+}
+
+#bia_menu ul {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+#bia_menu ul li {
+  background-color: rgba(255, 102, 0, 0.05) !important;
+  padding: 0 !important;
+  margin-bottom: 8px !important;
+  font-size: 0.9em !important;
+  border: 1px solid rgba(255, 102, 0, 0.2) !important;
   border-radius: 8px !important;
-  padding: 10px 20px 10px 20px !important;
-  margin: 5px 0px;
+  transition: all 0.3s ease !important;
+}
+
+#bia_menu ul li:hover {
+  background-color: rgba(255, 102, 0, 0.15) !important;
+  border-color: rgba(255, 102, 0, 0.5) !important;
+  transform: translateX(4px) !important;
+  box-shadow: 0 0 10px rgba(255, 102, 0, 0.3) !important;
+}
+
+#bia_menu ul a {
+  color: #f5f5f5 !important;
+  padding: 12px 16px !important;
+  display: block !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+}
+
+#bia_menu ul a:hover {
+  color: #ff6600 !important;
+  text-shadow: 0 0 8px rgba(255, 102, 0, 0.6) !important;
+}
+
+#bia_help .bia-title {
+  background: rgba(10, 10, 10, 0.98) !important;
+  border-radius: 12px !important;
+  backdrop-filter: blur(10px) !important;
+  border: 2px solid rgba(255, 102, 0, 0.3) !important;
+  box-shadow: 0 0 30px rgba(255, 102, 0, 0.3), inset 0 0 30px rgba(0, 0, 0, 0.6) !important;
+  color: #ff6600 !important;
+  padding: 10px !important;
+}
+
+a#save_question_input,
+a#save_question_input.btn.btn-sm.btn-success {
+  font-size: 0.9rem !important;
+  color: #ffffff !important;
+  background: rgba(0, 200, 83, 0.8) !important;
+  border: 2px solid rgba(0, 200, 83, 0.9) !important;
+  border-radius: 8px !important;
+  padding: 12px 24px !important;
+  margin: 5px 0px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 0 10px rgba(0, 200, 83, 0.3) !important;
+}
+
+a#save_question_input:hover,
+a#save_question_input.btn.btn-sm.btn-success:hover {
+  background: rgba(0, 200, 83, 1) !important;
+  border-color: rgba(0, 200, 83, 1) !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 20px rgba(0, 200, 83, 0.5) !important;
+  transform: translateY(-2px) !important;
+}
+
+a#save_question_input i,
+a#save_question_input.btn.btn-sm.btn-success i {
+  color: #ffffff !important;
+  font-size: 1rem !important;
 }
 
 .custom-card.card-warning {
@@ -3089,13 +3217,43 @@ a#btn_select_more_time:focus {
   background: #ffffff;
 }
 
-.dashboard-tile p {
+.dashboard-tile,
+.dashboard-tile-link {
+  background: rgba(10, 10, 10, 0.8) !important;
+  border: 1px solid rgba(255, 102, 0, 0.3) !important;
+  border-radius: 0 !important;
+  transition: all 0.3s ease !important;
+}
+
+.dashboard-tile:hover,
+.dashboard-tile-link:hover {
+  background: rgba(20, 10, 0, 0.9) !important;
+  border-color: rgba(255, 102, 0, 0.6) !important;
+  box-shadow: 0 0 15px rgba(255, 102, 0, 0.3) !important;
+  transform: translateY(-2px) !important;
+}
+
+.dashboard-tile p,
+.dashboard-tile-link p {
   font-size: 0.7rem;
-  color: #1a1a1a;
-  font-weight: bolder;
+  color: #ff6600 !important;
+  font-weight: 700 !important;
   line-height: 12px;
   margin: 0 auto 0 auto;
   padding: 0;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+}
+
+.dashboard-tile-link {
+  color: #ff6600 !important;
+  text-decoration: none !important;
+  display: block !important;
+  padding: 16px !important;
+}
+
+.dashboard-tile-link:hover {
+  color: #ff8800 !important;
 }
 
 .bg-primary {
@@ -3115,14 +3273,13 @@ a#btn_select_more_time:focus {
 }
 
 .meta-progresso {
-  color: #d0d0d0;
-  font-size: 0.75rem;
-  display: inline-block;
-  background: #ffffff;
-  padding: 20px;
-  box-shadow: none;
-  border-radius: 6px;
-  border: 1px solid rgba(59, 130, 246, 0.15);
+  background: rgba(255, 102, 0, 0.05) !important;
+  border: 1px solid rgba(255, 102, 0, 0.2) !important;
+  border-radius: 8px !important;
+  padding: 20px !important;
+  margin: 25px 0 !important;
+  color: #f5f5f5 !important;
+  font-size: 0.85rem !important;
 }
 
 .au-task__item-inner:not(.strikethrough) .au-checkmark {
@@ -3130,16 +3287,16 @@ a#btn_select_more_time:focus {
 }
 
 .au-checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  border: 2px solid #d5d5d5;
-  border-radius: 3px;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  border: 2px solid rgba(255, 102, 0, 0.5) !important;
+  background: rgba(10, 10, 10, 0.8) !important;
+  border-radius: 4px !important;
+  transition: all 0.3s ease !important;
 }
 
-.meta-horario {
-  margin-top: 20px !important;
-}
+/* .meta-horario margin-top handled in main rule */
 
 #save_questions .container {
   position: relative;
@@ -3289,7 +3446,7 @@ h4.consultoria-modulo-title {
 }
 
 .au-checkbox .au-checkmark:after {
-  border: solid #ffbc00;
+  border: solid #ff6600 !important;
 }
 
 .au-task__item.au-task__item--danger {
@@ -3350,65 +3507,192 @@ h4.consultoria-modulo-title {
 
 #tarefas_dia_aluno .au-task-list .au-task__item-inner .task .time-container,
 #tarefas_dia_aluno .au-task-list .au-task__item-inner .task .time-notify-delay {
-  position: relative;
-  display: inline-block;
-  padding: 10px;
-  height: auto;
-  width: auto;
-  margin: 0.25em auto;
-  background: #545454;
-  border-radius: 4px;
+  background: rgba(255, 102, 0, 0.2) !important;
+  border: 1px solid rgba(255, 102, 0, 0.5) !important;
+  border-radius: 8px !important;
+  padding: 12px 18px !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  font-size: 0.9rem !important;
+  display: inline-block !important;
+  margin: 0.25em 0 !important;
+  box-shadow: 0 0 10px rgba(255, 102, 0, 0.3) !important;
 }
 
-.meta-horario {
-  color: #0a0a0a;
-  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
-  border-radius: 4px;
-  padding: 10px;
-  display: inline-block;
-  margin: 0.25em 0;
-  font-size: 0.8rem;
-  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.3);
+#tarefas_dia_aluno .au-task-list .au-task__item-inner .task .time-container p,
+#tarefas_dia_aluno .au-task-list .au-task__item-inner .task .time-container,
+#tarefas_dia_aluno .au-task-list .au-task__item-inner .task .time-notify-delay {
+  color: #ffffff !important;
 }
 
-.card-dashboard-home .progress {
+#tarefas_dia_aluno .au-task-list .au-task__item-inner .task .time-container i,
+#tarefas_dia_aluno
+  .au-task-list
+  .au-task__item-inner
+  .task
+  .time-notify-delay
+  i {
+  color: #ffffff !important;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8) !important;
+}
+
+#tarefas_dia_aluno .au-task-list .au-task__item-inner .task .time-container b,
+#tarefas_dia_aluno
+  .au-task-list
+  .au-task__item-inner
+  .task
+  .time-notify-delay
+  b {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+/* .meta-horario styling moved to tactical theme section */
+
+.card-dashboard-home .progress,
+.card.custom-card.card-dashboard-home .progress {
   margin: 0 auto;
-  height: 20px;
-  border-radius: 8px;
-  background-color: rgba(59, 130, 246, 0.1) !important;
-  background: linear-gradient(
-    135deg,
-    rgba(59, 130, 246, 0.12) 0%,
-    rgba(59, 130, 246, 0.08) 100%
-  ) !important;
+  height: 24px;
+  border-radius: 0 !important;
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  background: rgba(0, 0, 0, 0.8) !important;
+  border: 1px solid rgba(255, 102, 0, 0.3) !important;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8), 0 0 5px rgba(255, 102, 0, 0.2) !important;
 }
 
 .card.custom-card.card-dashboard-home {
-  border-radius: 6px !important;
-  padding: 32px;
-  background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%) !important;
+  border-radius: 12px !important;
+  padding: 40px !important;
+  background: rgba(10, 10, 10, 0.98) !important;
+  border: 2px solid rgba(255, 102, 0, 0.4) !important;
+  box-shadow: 0 0 30px rgba(255, 102, 0, 0.3), inset 0 0 30px rgba(0, 0, 0, 0.6) !important;
+  color: #f0f0f0 !important;
 }
 
+/* Greeting Header - Enhanced Visibility - Maximum Specificity */
+.card.custom-card.card-dashboard-home h2,
+.card.custom-card.card-dashboard-home > h2,
+.card.custom-card.card-dashboard-home > h2:first-child {
+  color: #ff6600 !important;
+  font-size: 32px !important;
+  font-weight: 800 !important;
+  text-shadow: 0 0 15px rgba(255, 102, 0, 0.8), 0 0 30px rgba(255, 102, 0, 0.4) !important;
+  margin-bottom: 24px !important;
+  padding-bottom: 16px !important;
+  border-bottom: 2px solid rgba(255, 102, 0, 0.3) !important;
+  letter-spacing: 0.5px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 20px !important;
+}
+
+/* Paragraph Text - Better Contrast */
+.card.custom-card.card-dashboard-home p {
+  color: #f5f5f5 !important;
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+}
+
+.card.custom-card.card-dashboard-home p b {
+  color: #ff8800 !important;
+  font-weight: 800 !important;
+  text-shadow: 0 0 8px rgba(255, 136, 0, 0.6) !important;
+}
+
+/* Progress Section */
 .activity-title-dates {
-  margin: 20px 0px;
+  margin: 24px 0px !important;
+}
+
+.activity-title-progress {
+  margin-bottom: 24px !important;
+}
+
+.activity-title-progress,
+.activity-title-progress p {
+  color: #f5f5f5 !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  margin-bottom: 12px !important;
+}
+
+.activity-title-progress b {
+  color: #ff6600 !important;
+  font-weight: 800 !important;
+  font-size: 18px !important;
+  text-shadow: 0 0 10px rgba(255, 102, 0, 0.7) !important;
+}
+
+/* Date Boxes - Orange Theme */
+.activity-title-date-subscription,
+.activity-title-date-cronogram {
+  color: #f5f5f5 !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  line-height: 1.6 !important;
+}
+
+.activity-title-date-subscription .badge,
+.activity-title-date-cronogram .badge {
+  background: linear-gradient(135deg, #ff6600 0%, #ff8800 100%) !important;
+  color: #ffffff !important;
+  border: 2px solid rgba(255, 136, 0, 0.8) !important;
+  box-shadow: 0 0 15px rgba(255, 102, 0, 0.7),
+    inset 0 0 10px rgba(255, 255, 255, 0.1) !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  padding: 6px 14px !important;
+  border-radius: 6px !important;
+  margin-left: 8px !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Dashboard Stats - Enhanced Visibility */
+.dash-stats,
+.dash-tile-summary {
+  background: transparent !important;
+  margin-top: 32px !important;
+  padding-top: 24px !important;
+  border-top: 2px solid rgba(255, 102, 0, 0.2) !important;
+}
+
+.dash-value,
+.dash-number-complete {
+  color: #ff6600 !important;
+  font-weight: 900 !important;
+  font-size: 36px !important;
+  text-shadow: 0 0 15px rgba(255, 102, 0, 0.8), 0 0 30px rgba(255, 102, 0, 0.4) !important;
+  margin-bottom: 8px !important;
+  letter-spacing: -1px !important;
+}
+
+.dash-text {
+  color: #e8e8e8 !important;
+  font-weight: 600 !important;
+  font-size: 13px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  opacity: 0.95 !important;
 }
 
 p.activity-title-date-subscription {
-  border: 1px solid rgba(59, 130, 246, 0.4);
-  border-radius: 8px;
-  padding: 5px 20px;
-  font-size: 15px;
-  margin: 5px 0px;
-  background: rgba(59, 130, 246, 0.05);
+  border: 2px solid rgba(255, 102, 0, 0.3) !important;
+  border-radius: 10px !important;
+  padding: 16px 24px !important;
+  font-size: 15px !important;
+  margin: 12px 0px !important;
+  background: rgba(255, 102, 0, 0.08) !important;
+  backdrop-filter: blur(5px) !important;
 }
 
 p.activity-title-date-cronogram {
-  border: 1px solid rgba(59, 130, 246, 0.4);
-  border-radius: 8px;
-  padding: 5px 20px;
-  font-size: 15px;
-  margin: 5px 0px;
-  background: rgba(59, 130, 246, 0.05);
+  border: 2px solid rgba(255, 102, 0, 0.3) !important;
+  border-radius: 10px !important;
+  padding: 16px 24px !important;
+  font-size: 15px !important;
+  margin: 12px 0px !important;
+  background: rgba(255, 102, 0, 0.08) !important;
+  backdrop-filter: blur(5px) !important;
 }
 
 a#recover_pwd {
@@ -3417,18 +3701,25 @@ a#recover_pwd {
 }
 
 .meta-dia-orientacao h4 {
-  font-size: 1.15rem;
-  font-weight: 700;
-  margin: 5px 0px;
-  color: #1a1a1a;
+  color: #ff6600 !important;
+  font-size: 1.15rem !important;
+  font-weight: 700 !important;
+  margin: 5px 0 !important;
+  text-shadow: 0 0 10px rgba(255, 102, 0, 0.5) !important;
+}
+
+.meta-dia-orientacao h4 span {
+  color: #ff8800 !important;
+  font-weight: 800 !important;
 }
 
 .meta-dia-orientacao h6 {
-  font-size: 0.9rem;
-  font-weight: 300;
-  margin: 0;
-  margin-top: 0.25em;
-  color: #1a1a1a;
+  color: #e8e8e8 !important;
+  font-size: 0.9rem !important;
+  font-weight: 400 !important;
+  margin: 0 !important;
+  margin-top: 0.5em !important;
+  line-height: 1.5 !important;
 }
 
 .swal-icon--success__line {
@@ -4192,8 +4483,9 @@ a.btn.btn-sm.btn-success.btn-add-card:focus {
   box-shadow: none;
 }
 .custom-card-title {
-  border-bottom: 1px solid #404040;
+  border-bottom: 2px solid rgba(255, 102, 0, 0.5) !important;
   margin-bottom: 1em;
+  padding-bottom: 12px !important;
 }
 
 .custom-card-title + .row {
@@ -4201,9 +4493,54 @@ a.btn.btn-sm.btn-success.btn-add-card:focus {
 }
 
 .custom-card-title h3 {
-  color: #1a1a1a !important;
+  color: #ff6600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  font-weight: 800 !important;
+  text-shadow: 0 0 10px rgba(255, 102, 0, 0.5) !important;
+}
+
+.custom-card-title h5 {
+  color: #ff6600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
   font-weight: 700 !important;
-  font-size: 20px !important;
+}
+
+.custom-card-body,
+.custom-card-body * {
+  color: #e0e0e0 !important;
+}
+
+.custom-card-footer {
+  border-top: 2px solid rgba(255, 102, 0, 0.5) !important;
+  padding-top: 16px !important;
+  margin-top: 16px !important;
+}
+
+.custom-card-footer a {
+  color: #ff6600 !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  transition: all 0.3s ease !important;
+}
+
+.custom-card-footer a:hover {
+  color: #ff8800 !important;
+  text-shadow: 0 0 10px rgba(255, 102, 0, 0.6) !important;
+}
+
+.mural-home-empty,
+.mural-container-padding-control {
+  background: transparent !important;
+}
+
+.mural-home-empty .alert {
+  background: rgba(10, 10, 10, 0.9) !important;
+  border: 2px solid rgba(255, 102, 0, 0.5) !important;
+  color: #e0e0e0 !important;
+  border-radius: 0 !important;
 }
 
 .badge-primary {
@@ -4269,10 +4606,7 @@ a.btn.btn-sm.btn-primary.btn-meta-download-material {
   font-weight: bolder;
 }
 
-.progress-bar.bg-success {
-  color: #1a1a1a;
-  font-weight: bolder;
-}
+/* Progress bar success already updated above */
 
 body
   > div.page-wrapper.tutory-menu-closed
@@ -4292,8 +4626,28 @@ body
 .week-view-change-notice {
   padding-top: 20px;
   margin-top: 20px;
-  border-top: 1px solid #f1f1f1;
+  border-top: 2px solid rgba(255, 102, 0, 0.3) !important;
   font-size: 0.8rem;
+  color: #f5f5f5 !important;
+}
+
+.week-view-change-notice b {
+  color: #ff6600 !important;
+  text-shadow: 0 0 8px rgba(255, 102, 0, 0.5) !important;
+}
+
+.week-view-change-notice i {
+  color: #ff6600 !important;
+}
+
+.week-view-change-notice a {
+  color: #ff8800 !important;
+  text-decoration: underline !important;
+}
+
+.week-view-change-notice a:hover {
+  color: #ffaa00 !important;
+  text-shadow: 0 0 8px rgba(255, 136, 0, 0.6) !important;
 }
 
 .progress-bar {
@@ -4572,7 +4926,7 @@ a#review_goals_save:hover {
   border-bottom: 2px solid rgba(255, 102, 0, 0.5) !important;
   border-left: none !important;
   box-shadow: 0 0 20px rgba(255, 102, 0, 0.3), inset 0 0 20px rgba(0, 0, 0, 0.8) !important;
-  position: relative !important;
+  /* Position removed - keeping all other styling */
 }
 
 .header-desktop::before {
@@ -4885,28 +5239,9 @@ a#review_goals_save:hover {
   flex-shrink: 0 !important;
 }
 
-/* Chevron down icon for account dropdown */
-.account-item .content a i.fa-chevron-down::before {
-  content: '' !important;
-  display: block !important;
-  width: 14px !important;
-  height: 14px !important;
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/chevron-down.svg') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center center !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
 .account-item:hover .content a i {
   color: #ff6600 !important;
   text-shadow: 0 0 8px rgba(255, 102, 0, 0.6) !important;
-}
-
-/* Change to chevron up on hover */
-.account-item:hover .content a i.fa-chevron-down::before {
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/chevron-up.svg') !important;
 }
 
 /* Tactical Sidebar Logo */
@@ -5002,26 +5337,27 @@ a#extra_time_complete_before:focus {
   gap: 20px !important;
   margin: 0 0 24px 0 !important;
   padding-bottom: 24px !important;
-  border-bottom: 1px solid rgba(59, 130, 246, 0.15) !important;
+  border-bottom: 1px solid rgba(255, 102, 0, 0.3) !important;
   font-size: 32px !important;
   font-weight: 700 !important;
-  color: #1a1a1a !important;
+  color: #ff6600 !important;
+  text-shadow: 0 0 10px rgba(255, 102, 0, 0.5), 0 0 20px rgba(255, 102, 0, 0.3) !important;
 }
 
 /* Bigger Icon in Circle for Header - Works with Font Awesome and zmdi */
 .card.custom-card > h2:first-child i {
-  color: #3b82f6 !important;
+  color: #ff6600 !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
   width: 64px !important;
   height: 64px !important;
   border-radius: 50% !important;
-  background-color: rgba(59, 130, 246, 0.1) !important;
+  background-color: rgba(255, 102, 0, 0.1) !important;
   background: linear-gradient(
     135deg,
-    rgba(59, 130, 246, 0.12) 0%,
-    rgba(59, 130, 246, 0.08) 100%
+    rgba(255, 102, 0, 0.12) 0%,
+    rgba(255, 102, 0, 0.08) 100%
   ) !important;
   padding: 0 !important;
   margin: 0 !important;
@@ -5074,23 +5410,35 @@ a#extra_time_complete_before:focus {
   opacity: 1 !important;
 }
 
-/* Ensure zmdi icon is visible in dashboard home card */
+/* Ensure zmdi icon is visible in dashboard home card - Override general rules */
 .card.custom-card.card-dashboard-home h2 i.zmdi-walk,
-.card.custom-card.card-dashboard-home h2 i[class*='zmdi'] {
+.card.custom-card.card-dashboard-home h2 i[class*='zmdi'],
+.card.custom-card.card-dashboard-home > h2:first-child i,
+.card.custom-card.card-dashboard-home > h2:first-child i.zmdi-walk,
+.card.custom-card.card-dashboard-home > h2:first-child i[class*='zmdi'] {
   display: inline-flex !important;
   visibility: visible !important;
   opacity: 1 !important;
   font-size: 32px !important;
-  color: #3b82f6 !important;
+  color: #ff6600 !important;
   width: 64px !important;
   height: 64px !important;
   align-items: center !important;
   justify-content: center !important;
   line-height: 1 !important;
+  text-shadow: 0 0 10px rgba(255, 102, 0, 0.6) !important;
+  margin-right: 12px !important;
+  background: none !important;
+  background-color: transparent !important;
+  border-radius: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
-/* zmdi icons use ::before - ensure it's visible */
-.card.custom-card.card-dashboard-home h2 i[class*='zmdi']::before {
+/* zmdi icons use ::before - ensure it's visible and orange */
+.card.custom-card.card-dashboard-home h2 i[class*='zmdi']::before,
+.card.custom-card.card-dashboard-home > h2:first-child i[class*='zmdi']::before,
+.card.custom-card.card-dashboard-home > h2:first-child i.zmdi-walk::before {
   font-size: 32px !important;
   line-height: 1 !important;
   display: flex !important;
@@ -5102,55 +5450,77 @@ a#extra_time_complete_before:focus {
   padding: 0 !important;
   visibility: visible !important;
   opacity: 1 !important;
-  background-size: 60% !important;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
+  color: #ff6600 !important;
+  text-shadow: 0 0 10px rgba(255, 102, 0, 0.6) !important;
+  background: none !important;
+  background-image: none !important;
+  background-size: auto !important;
+  background-position: initial !important;
+  background-repeat: initial !important;
 }
 
-/* Specific styling for zmdi-walk icon in dashboard home */
-.card.custom-card.card-dashboard-home h2 i.zmdi-walk::before {
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/activity-square.svg') !important;
-  background-size: 60% !important;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
-  width: 100% !important;
-  height: 100% !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
+/* Icon replacement rules removed - using default Font Awesome icons */
 
 .card.custom-card > h2:first-child:hover i {
   transform: scale(1.05) !important;
-  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.3) !important;
+  box-shadow: 0 6px 16px rgba(255, 102, 0, 0.4) !important;
+}
+
+/* OVERRIDE: Dashboard Home Card - Force Orange Text and Icon (must come after general rules) */
+.card.custom-card.card-dashboard-home > h2:first-child {
+  color: #ff6600 !important;
+  border-bottom-color: rgba(255, 102, 0, 0.3) !important;
+}
+
+.card.custom-card.card-dashboard-home > h2:first-child i,
+.card.custom-card.card-dashboard-home > h2:first-child i.zmdi-walk,
+.card.custom-card.card-dashboard-home > h2:first-child i[class*='zmdi'] {
+  color: #ff6600 !important;
+  background: none !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border-radius: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.card.custom-card.card-dashboard-home > h2:first-child i::before,
+.card.custom-card.card-dashboard-home > h2:first-child i.zmdi-walk::before,
+.card.custom-card.card-dashboard-home
+  > h2:first-child
+  i[class*='zmdi']::before {
+  color: #ff6600 !important;
+  text-shadow: 0 0 10px rgba(255, 102, 0, 0.6) !important;
 }
 
 /* Description Paragraph Below Header - Improved */
 .card.custom-card > h2:first-child + p {
-  color: #2d2d2d !important;
+  color: #f5f5f5 !important;
   font-size: 17px !important;
   line-height: 1.7 !important;
   margin: 0 0 32px 0 !important;
   padding: 20px 24px !important;
-  background: rgba(59, 130, 246, 0.06) !important;
-  border-left: 4px solid rgba(59, 130, 246, 0.35) !important;
+  background: rgba(255, 102, 0, 0.05) !important;
+  border-left: 4px solid rgba(255, 102, 0, 0.5) !important;
   border-radius: 8px !important;
 }
 
 .card.custom-card > h2:first-child + p b {
-  color: #3b82f6 !important;
-  font-weight: 600 !important;
+  color: #ff8800 !important;
+  font-weight: 700 !important;
+  text-shadow: 0 0 8px rgba(255, 102, 0, 0.5) !important;
 }
 
 /* HR Separator */
-.card.custom-card > h2:first-child + p + hr {
+.card.custom-card > h2:first-child + p + hr,
+.card.custom-card hr {
   margin: 32px 0 24px 0 !important;
   border: none !important;
   height: 1px !important;
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(59, 130, 246, 0.2) 50%,
+    rgba(255, 102, 0, 0.3) 50%,
     transparent 100%
   ) !important;
 }
@@ -5616,13 +5986,14 @@ div#video_boas_vindas_onboarding_aluno {
 #editar_plano_estudo.card.custom-card h2 {
   font-size: 32px !important;
   font-weight: 700 !important;
-  color: #0a0a0a !important;
+  color: #ff6600 !important;
+  text-shadow: 0 0 15px rgba(255, 102, 0, 0.6), 0 0 30px rgba(255, 102, 0, 0.3) !important;
   margin-bottom: 16px !important;
 }
 
 #editar_plano_estudo.card.custom-card > p {
   font-size: 18px !important;
-  color: #2d2d2d !important;
+  color: #f5f5f5 !important;
   line-height: 1.6 !important;
   margin-bottom: 24px !important;
 }
@@ -5653,907 +6024,723 @@ div#video_boas_vindas_onboarding_aluno {
 }
 
 /* ============================================
-   ICON REPLACEMENT SYSTEM - GitHub URLs
-   Replace all icons with GitHub-hosted SVGs
+   TASK/GOAL ITEMS - Tactical Dark Theme
    ============================================ */
 
-/* Generic Icon Replacement Strategy */
-/* Target Font Awesome icons */
-i[class*='fa-'],
-i.fa,
-.fa,
-[class*='fa-'] {
-  position: relative !important;
+/* Card Container */
+.au-card.au-card--no-shadow.au-card--no-pad {
+  background: rgba(10, 10, 10, 0.98) !important;
+  border: 2px solid rgba(255, 102, 0, 0.3) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 0 20px rgba(255, 102, 0, 0.2), inset 0 0 20px rgba(0, 0, 0, 0.8) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
 }
 
-/* Target Material Design icons */
-i[class*='zmdi-'],
-i.zmdi,
-.zmdi,
-[class*='zmdi-'] {
-  position: relative !important;
+/* Task Item Container */
+.au-task__item.au-task__item--primary {
+  background: rgba(20, 20, 20, 0.95) !important;
+  border: 2px solid rgba(255, 102, 0, 0.2) !important;
+  border-radius: 12px !important;
+  margin-bottom: 24px !important;
+  box-shadow: 0 0 15px rgba(255, 102, 0, 0.15),
+    inset 0 0 15px rgba(0, 0, 0, 0.6) !important;
+  transition: all 0.3s ease !important;
 }
 
-/* Target generic icon classes */
-[class*='icon'],
-[class*='Icon'],
-i[class*='icon'],
-svg[class*='icon'] {
-  position: relative !important;
+.au-task__item.au-task__item--primary:hover {
+  border-color: rgba(255, 102, 0, 0.4) !important;
+  box-shadow: 0 0 20px rgba(255, 102, 0, 0.3), inset 0 0 20px rgba(0, 0, 0, 0.8) !important;
+  transform: translateY(-2px) !important;
 }
 
-/* Common Icon Replacements - Using background-image strategy */
-/* Font Awesome and Material Design icons will be replaced via ::before pseudo-element */
+.au-task__item-inner {
+  background: transparent !important;
+  padding: 28px !important;
+}
 
-/* Accessibility Icon */
-i.fa-universal-access::before,
-i.zmdi-account-circle::before {
-  content: '' !important;
+.au-task__item-inner .task {
+  width: 100% !important;
+}
+
+.au-task-activity {
+  width: 100% !important;
+}
+
+/* Time Container - Date Display */
+.time-container,
+.time-begin.time-day {
+  background: rgba(255, 102, 0, 0.2) !important;
+  border: 1px solid rgba(255, 102, 0, 0.5) !important;
+  border-radius: 8px !important;
+  padding: 12px 18px !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  font-size: 0.9rem !important;
   display: inline-block !important;
-  width: 1em !important;
-  height: 1em !important;
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/accessibility.svg') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  vertical-align: middle !important;
+  margin: 0.25em 0 !important;
+  box-shadow: 0 0 10px rgba(255, 102, 0, 0.3) !important;
 }
 
-/* Activity Icon */
-i.fa-chart-line::before,
-i.zmdi-chart::before {
-  content: '' !important;
-  display: inline-block !important;
-  width: 1em !important;
-  height: 1em !important;
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/activity.svg') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  vertical-align: middle !important;
-}
-
-/* Walk/Activity Square Icon - For greeting/dashboard */
-i.zmdi-walk::before,
-i.fa-walking::before {
-  content: '' !important;
-  display: inline-block !important;
-  width: 1em !important;
-  height: 1em !important;
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/activity-square.svg') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  vertical-align: middle !important;
-}
-
-/* Alert Circle Icon */
-i.fa-exclamation-circle::before,
-i.zmdi-alert-circle::before {
-  content: '' !important;
-  display: inline-block !important;
-  width: 1em !important;
-  height: 1em !important;
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/alert-circle.svg') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  vertical-align: middle !important;
-}
-
-/* Arrow Down Icon */
-i.fa-arrow-down::before,
-i.zmdi-chevron-down::before {
-  content: '' !important;
-  display: inline-block !important;
-  width: 1em !important;
-  height: 1em !important;
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/arrow-down.svg') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  vertical-align: middle !important;
-}
-
-/* Chevron Down Icon */
-i.fa-chevron-down::before {
-  content: '' !important;
-  display: inline-block !important;
-  width: 1em !important;
-  height: 1em !important;
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/chevron-down.svg') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  vertical-align: middle !important;
-}
-
-/* Arrow Up Icon */
-i.fa-arrow-up::before,
-i.zmdi-chevron-up::before {
-  content: '' !important;
-  display: inline-block !important;
-  width: 1em !important;
-  height: 1em !important;
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/arrow-up.svg') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  vertical-align: middle !important;
-}
-
-/* Chevron Up Icon */
-i.fa-chevron-up::before {
-  content: '' !important;
-  display: inline-block !important;
-  width: 1em !important;
-  height: 1em !important;
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/chevron-up.svg') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  vertical-align: middle !important;
-}
-
-/* Arrow Left Icon */
-i.fa-arrow-left::before,
-i.fa-chevron-left::before,
-i.zmdi-chevron-left::before {
-  content: '' !important;
-  display: inline-block !important;
-  width: 1em !important;
-  height: 1em !important;
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/arrow-left.svg') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  vertical-align: middle !important;
-}
-
-/* Arrow Right Icon */
-i.fa-arrow-right::before,
-i.fa-chevron-right::before,
-i.zmdi-chevron-right::before {
-  content: '' !important;
-  display: inline-block !important;
-  width: 1em !important;
-  height: 1em !important;
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/arrow-right.svg') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  vertical-align: middle !important;
-}
-
-/* Bell Icon */
-i.fa-bell::before,
-i.zmdi-notifications::before {
-  content: '' !important;
-  display: inline-block !important;
-  width: 1em !important;
-  height: 1em !important;
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/bell.svg') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  vertical-align: middle !important;
-}
-
-/* Notification Bell Icon - Larger size for header */
-.noti__item i.fa-bell::before,
-.noti__item i.zmdi-notifications::before {
-  width: 22px !important;
-  height: 22px !important;
-  background-size: contain !important;
-  background-position: center center !important;
-  position: absolute !important;
-  top: 50% !important;
-  left: 50% !important;
-  transform: translate(-50%, -50%) !important;
+.time-container p,
+.time-begin.time-day p,
+.time-container,
+.time-begin.time-day {
+  color: #ffffff !important;
   margin: 0 !important;
-  padding: 0 !important;
 }
 
-/* Book Icon */
-i.fa-book::before,
-i.zmdi-book::before {
-  content: '' !important;
+.time-container i,
+.time-begin.time-day i {
+  color: #ffffff !important;
+  margin-right: 8px !important;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8) !important;
+  font-size: 0.9rem !important;
+}
+
+.time-container b,
+.time-begin.time-day b {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Checkbox Styling */
+.au-checkbox {
+  position: relative !important;
+}
+
+.au-checkmark {
+  border: 2px solid rgba(255, 102, 0, 0.5) !important;
+  background: rgba(10, 10, 10, 0.8) !important;
+  border-radius: 4px !important;
+  transition: all 0.3s ease !important;
+}
+
+.au-checkbox input:checked ~ .au-checkmark {
+  background: rgba(255, 102, 0, 0.2) !important;
+  border-color: #ff6600 !important;
+  box-shadow: 0 0 10px rgba(255, 102, 0, 0.4) !important;
+}
+
+.au-checkbox input:checked ~ .au-checkmark:after {
+  border-color: #ff6600 !important;
+}
+
+.au-checkbox label {
+  color: #f5f5f5 !important;
+  font-size: 14px !important;
+  cursor: pointer !important;
+  font-weight: 500 !important;
+  line-height: 1.5 !important;
+}
+
+.au-task-check label.au-checkbox,
+.au-task-check .au-checkbox label {
+  color: #f5f5f5 !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+}
+
+/* Meta Horario - Time Display */
+.meta-horario {
+  background: rgba(255, 102, 0, 0.2) !important;
+  border: 1px solid rgba(255, 102, 0, 0.5) !important;
+  border-radius: 8px !important;
+  padding: 12px 18px !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  font-size: 0.9rem !important;
   display: inline-block !important;
-  width: 1em !important;
-  height: 1em !important;
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/book.svg') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
+  margin: 20px 0 0 0 !important;
+  box-shadow: 0 0 10px rgba(255, 102, 0, 0.3) !important;
+}
+
+.meta-horario i {
+  color: #ffffff !important;
+  margin-right: 8px !important;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8) !important;
+  font-size: 0.9rem !important;
+}
+
+/* Meta Dia Orientacao - Activity Info */
+.meta-dia-orientacao {
+  background: rgba(255, 102, 0, 0.05) !important;
+  border: 1px solid rgba(255, 102, 0, 0.2) !important;
+  border-radius: 8px !important;
+  padding: 20px !important;
+  margin: 25px 0 !important;
+}
+
+.meta-dia-orientacao h4 {
+  color: #ff6600 !important;
+  font-size: 1.15rem !important;
+  font-weight: 700 !important;
+  margin: 5px 0 !important;
+  text-shadow: 0 0 10px rgba(255, 102, 0, 0.5) !important;
+}
+
+.meta-dia-orientacao h4 span {
+  color: #ff8800 !important;
+  font-weight: 800 !important;
+}
+
+.meta-dia-orientacao h6 {
+  color: #e8e8e8 !important;
+  font-size: 0.9rem !important;
+  font-weight: 400 !important;
+  margin: 0 !important;
+  margin-top: 0.5em !important;
+  line-height: 1.5 !important;
+}
+
+/* Meta Progresso - Progress Section */
+.meta-progresso {
+  background: rgba(255, 102, 0, 0.05) !important;
+  border: 1px solid rgba(255, 102, 0, 0.2) !important;
+  border-radius: 8px !important;
+  padding: 24px !important;
+  margin: 25px 0 !important;
+  color: #f5f5f5 !important;
+  font-size: 0.9rem !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.meta-progresso .progress,
+.meta-progresso .progress.progress-activity-bar {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+  border: 2px solid rgba(255, 102, 0, 0.4) !important;
+  border-radius: 8px !important;
+  height: 32px !important;
+  overflow: hidden !important;
+  width: 100% !important;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8), 0 0 10px rgba(255, 102, 0, 0.2) !important;
+  margin-bottom: 16px !important;
+}
+
+.meta-progresso .progress-bar,
+.meta-progresso .progress-bar.bg-info {
+  background: linear-gradient(90deg, #ff6600 0%, #ff8800 100%) !important;
+  box-shadow: 0 0 15px rgba(255, 102, 0, 0.6),
+    inset 0 0 10px rgba(255, 136, 0, 0.3) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  font-size: 0.9rem !important;
+  line-height: 32px !important;
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7) !important;
+  min-width: fit-content !important;
+  padding: 0 12px !important;
+}
+
+.meta-progress-help-text {
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-size: 0.8rem !important;
+  font-style: italic !important;
+  margin-top: 8px !important;
+  display: block !important;
+}
+
+.meta-progresso {
+  font-size: 0.9rem !important;
+}
+
+.meta-progresso span {
+  color: #f5f5f5 !important;
+}
+
+/* Meta Acoes - Action Buttons */
+.meta-acoes {
+  margin: 25px 0 !important;
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  gap: 12px !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  width: 100% !important;
+}
+
+.meta-acoes > div {
+  display: inline-flex !important;
+  margin: 0 !important;
+}
+
+.meta-acoes .btn {
+  border-radius: 8px !important;
+  padding: 10px 20px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+  border: 1px solid transparent !important;
+}
+
+.meta-acoes .btn.btn-info,
+.meta-acoes .btn.btn-sm.btn-info,
+.btn-anotacoes-trigger .btn.btn-sm.btn-info {
+  background: rgba(255, 102, 0, 0.2) !important;
+  border-color: rgba(255, 102, 0, 0.5) !important;
+  border: 2px solid rgba(255, 102, 0, 0.5) !important;
+  color: #ffffff !important;
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+  padding: 12px 24px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  min-height: 44px !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 0 10px rgba(255, 102, 0, 0.2) !important;
+}
+
+.meta-acoes .btn.btn-info:hover,
+.meta-acoes .btn.btn-sm.btn-info:hover,
+.btn-anotacoes-trigger .btn.btn-sm.btn-info:hover {
+  background: rgba(255, 102, 0, 0.4) !important;
+  border-color: rgba(255, 102, 0, 0.8) !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 20px rgba(255, 102, 0, 0.6) !important;
+  transform: translateY(-2px) !important;
+}
+
+.meta-acoes .btn.btn-info i,
+.meta-acoes .btn.btn-sm.btn-info i,
+.btn-anotacoes-trigger .btn.btn-sm.btn-info i {
+  color: #ffffff !important;
+  font-size: 1rem !important;
+  margin-right: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+.meta-acoes .btn.btn-info,
+.meta-acoes .btn.btn-sm.btn-info,
+.btn-anotacoes-trigger .btn.btn-sm.btn-info {
+  text-align: center !important;
   vertical-align: middle !important;
 }
 
-/* Book Open Icon */
-i.fa-book-open::before {
-  content: '' !important;
-  display: inline-block !important;
-  width: 1em !important;
-  height: 1em !important;
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/book-open.svg') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  vertical-align: middle !important;
+.meta-acoes .btn.btn-primary,
+.meta-acoes .btn.btn-sm.btn-primary {
+  background: rgba(255, 102, 0, 0.2) !important;
+  border: 2px solid rgba(255, 102, 0, 0.5) !important;
+  color: #ffffff !important;
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+  padding: 12px 24px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  min-height: 44px !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 0 10px rgba(255, 102, 0, 0.2) !important;
 }
 
-/* File Word Icon - Using file icon as Word file representation */
-i.fa-file-word::before,
-i.fa-file-word-o::before {
-  content: '' !important;
-  display: inline-block !important;
-  width: 1em !important;
-  height: 1em !important;
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/file.svg') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  vertical-align: middle !important;
+.meta-acoes .btn.btn-primary:hover,
+.meta-acoes .btn.btn-sm.btn-primary:hover {
+  background: rgba(255, 102, 0, 0.4) !important;
+  border-color: rgba(255, 102, 0, 0.8) !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 20px rgba(255, 102, 0, 0.6) !important;
+  transform: translateY(-2px) !important;
 }
 
-/* Calendar Icon */
-i.fa-calendar::before,
-i.fa-calendar-alt::before,
-i.zmdi-calendar::before {
-  content: '' !important;
-  display: inline-block !important;
-  width: 1em !important;
-  height: 1em !important;
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/calendar.svg') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  vertical-align: middle !important;
+.meta-acoes .btn.btn-primary i,
+.meta-acoes .btn.btn-sm.btn-primary i {
+  color: #ffffff !important;
+  font-size: 1rem !important;
+  margin-right: 0 !important;
 }
 
-/* Check Icon */
-i.fa-check::before,
-i.zmdi-check::before {
-  content: '' !important;
-  display: inline-block !important;
-  width: 1em !important;
-  height: 1em !important;
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/check.svg') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  vertical-align: middle !important;
-}
-
-/* Clock Icon */
-i.fa-clock::before,
-i.zmdi-time::before {
-  content: '' !important;
-  display: inline-block !important;
-  width: 1em !important;
-  height: 1em !important;
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/clock.svg') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  vertical-align: middle !important;
-}
-
-/* Cog/Settings Icon */
-i.fa-cog::before,
-i.fa-gear::before,
-i.zmdi-settings::before {
-  content: '' !important;
-  display: inline-block !important;
-  width: 1em !important;
-  height: 1em !important;
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/cog.svg') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  vertical-align: middle !important;
-}
-
-/* Download Icon */
-i.fa-download::before,
-i.zmdi-download::before {
-  content: '' !important;
-  display: inline-block !important;
-  width: 1em !important;
-  height: 1em !important;
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/download.svg') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  vertical-align: middle !important;
-}
-
-/* Edit Icon */
-i.fa-edit::before,
-i.fa-pencil::before,
-i.zmdi-edit::before {
-  content: '' !important;
-  display: inline-block !important;
-  width: 1em !important;
-  height: 1em !important;
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/edit.svg') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  vertical-align: middle !important;
-}
-
-/* Eye Icon */
-i.fa-eye::before,
-i.zmdi-eye::before {
-  content: '' !important;
-  display: inline-block !important;
-  width: 1em !important;
-  height: 1em !important;
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/eye.svg') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  vertical-align: middle !important;
-}
-
-/* Eye Off Icon */
-i.fa-eye-slash::before,
-i.zmdi-eye-off::before {
-  content: '' !important;
-  display: inline-block !important;
-  width: 1em !important;
-  height: 1em !important;
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/eye-off.svg') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  vertical-align: middle !important;
-}
-
-/* Home Icon */
-i.fa-home::before,
-i.zmdi-home::before {
-  content: '' !important;
-  display: inline-block !important;
-  width: 1em !important;
-  height: 1em !important;
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/home.svg') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  vertical-align: middle !important;
-}
-
-/* Info Icon */
-i.fa-info-circle::before,
-i.zmdi-info::before {
-  content: '' !important;
-  display: inline-block !important;
-  width: 1em !important;
-  height: 1em !important;
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/info.svg') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  vertical-align: middle !important;
-}
-
-/* Lock Icon */
-i.fa-lock::before,
-i.zmdi-lock::before {
-  content: '' !important;
-  display: inline-block !important;
-  width: 1em !important;
-  height: 1em !important;
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/lock.svg') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  vertical-align: middle !important;
-}
-
-/* Mail Icon */
-i.fa-envelope::before,
-i.zmdi-email::before {
-  content: '' !important;
-  display: inline-block !important;
-  width: 1em !important;
-  height: 1em !important;
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/mail.svg') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  vertical-align: middle !important;
-}
-
-/* Menu Icon - Only target actual icon elements, not containers */
-i.fa-bars::before,
-i.zmdi-menu::before {
-  content: '' !important;
-  display: inline-block !important;
-  width: 1em !important;
-  height: 1em !important;
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/menu.svg') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  vertical-align: middle !important;
-}
-
-/* Plus Icon */
-i.fa-plus::before,
-i.zmdi-plus::before {
-  content: '' !important;
-  display: inline-block !important;
-  width: 1em !important;
-  height: 1em !important;
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/plus.svg') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  vertical-align: middle !important;
-}
-
-/* Search Icon */
-i.fa-search::before,
-i.zmdi-search::before {
-  content: '' !important;
-  display: inline-block !important;
-  width: 1em !important;
-  height: 1em !important;
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/search.svg') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  vertical-align: middle !important;
-}
-
-/* Trash Icon */
-i.fa-trash::before,
-i.zmdi-delete::before {
-  content: '' !important;
-  display: inline-block !important;
-  width: 1em !important;
-  height: 1em !important;
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/trash.svg') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  vertical-align: middle !important;
-}
-
-/* User Icon */
-i.fa-user::before,
-i.zmdi-account::before {
-  content: '' !important;
-  display: inline-block !important;
-  width: 1em !important;
-  height: 1em !important;
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/user.svg') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  vertical-align: middle !important;
-}
-
-/* Users Icon */
-i.fa-users::before,
-i.zmdi-accounts::before {
-  content: '' !important;
-  display: inline-block !important;
-  width: 1em !important;
-  height: 1em !important;
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/users.svg') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  vertical-align: middle !important;
-}
-
-/* X/Close Icon */
-i.fa-times::before,
-i.fa-close::before,
-i.zmdi-close::before {
-  content: '' !important;
-  display: inline-block !important;
-  width: 1em !important;
-  height: 1em !important;
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/x.svg') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  vertical-align: middle !important;
-}
-
-/* Hide original icon fonts/text */
-i[class*='fa-']::before,
-i.fa::before,
-i[class*='zmdi-']::before,
-i.zmdi::before {
-  font-family: inherit !important;
-  content: '' !important;
-}
-
-/* Sidebar Menu Specific Icon Mappings */
-/* Calendar - Single Day View (for calendar-alt variant only) */
-/* Note: fa-calendar is handled by the main Calendar Icon rule above */
-i.fa-calendar-alt::before,
-i.zmdi-calendar-note::before {
-  content: '' !important;
-  display: inline-block !important;
-  width: 1em !important;
-  height: 1em !important;
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/calendar-1.svg') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  vertical-align: middle !important;
-}
-
-/* Calendar - Grid/Month View */
-i.fa-calendar-week::before,
-i.fa-calendar-days::before,
-i.zmdi-calendar::before {
-  content: '' !important;
-  display: inline-block !important;
-  width: 1em !important;
-  height: 1em !important;
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/calendar-days.svg') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  vertical-align: middle !important;
-}
-
-/* Message/WhatsApp/Phone Call Bubble */
-i.fa-comments::before,
-i.fa-whatsapp::before,
-i.fa-comment-dots::before,
-i.zmdi-comment-text::before,
-i.zmdi-whatsapp::before {
-  content: '' !important;
-  display: inline-block !important;
-  width: 1em !important;
-  height: 1em !important;
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/message-circle.svg') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  vertical-align: middle !important;
-}
-
-/* Phone Icon */
-i.fa-phone::before,
-i.fa-phone-alt::before,
-i.zmdi-phone::before {
-  content: '' !important;
-  display: inline-block !important;
-  width: 1em !important;
-  height: 1em !important;
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/phone.svg') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  vertical-align: middle !important;
-}
-
-/* Gauge/Speedometer Icon */
-i.fa-tachometer-alt::before,
-i.fa-gauge::before,
-i.zmdi-time-countdown::before {
-  content: '' !important;
-  display: inline-block !important;
-  width: 1em !important;
-  height: 1em !important;
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/gauge.svg') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  vertical-align: middle !important;
-}
-
-/* Numbered List Icon */
-i.fa-list-ol::before,
-i.fa-list-numeric::before,
-i.zmdi-format-list-numbered::before {
-  content: '' !important;
-  display: inline-block !important;
-  width: 1em !important;
-  height: 1em !important;
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/list-ordered.svg') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  vertical-align: middle !important;
-}
-
-/* File/Document Icon */
-i.fa-file::before,
-i.fa-file-alt::before,
-i.fa-file-text::before,
-i.zmdi-file-text::before {
-  content: '' !important;
-  display: inline-block !important;
-  width: 1em !important;
-  height: 1em !important;
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/file.svg') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  vertical-align: middle !important;
-}
-
-/* Brain Icon - Also used for Referências (fa-university) */
-i.fa-brain::before,
-i.fa-university::before,
-i.zmdi-brain::before {
-  content: '' !important;
-  display: inline-block !important;
-  width: 1em !important;
-  height: 1em !important;
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/brain.svg') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  vertical-align: middle !important;
-}
-
-/* Inbox Icon */
-i.fa-inbox::before,
-i.zmdi-inbox::before {
-  content: '' !important;
-  display: inline-block !important;
-  width: 1em !important;
-  height: 1em !important;
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/inbox.svg') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  vertical-align: middle !important;
-}
-
-/* Bookmark Icon */
-i.fa-bookmark::before,
-i.zmdi-bookmark::before {
-  content: '' !important;
-  display: inline-block !important;
-  width: 1em !important;
-  height: 1em !important;
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/bookmark.svg') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  vertical-align: middle !important;
-}
-
-/* Camera Icon */
-i.fa-camera::before,
-i.fa-camera-retro::before,
-i.zmdi-camera::before {
-  content: '' !important;
-  display: inline-block !important;
-  width: 1em !important;
-  height: 1em !important;
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/camera.svg') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  vertical-align: middle !important;
-}
-
-/* Sign Out/Logout Icon */
-i.fa-sign-out-alt::before,
-i.fa-sign-out::before,
-i.fa-logout::before,
-i.zmdi-power::before {
-  content: '' !important;
-  display: inline-block !important;
-  width: 1em !important;
-  height: 1em !important;
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/606bc3ffb9bf057fd9bc9d4ffaf4b0234fd842a8/icons/log-out.svg') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  vertical-align: middle !important;
-}
-
-/* Ensure icons maintain proper sizing */
-i[class*='fa-'],
-i.fa,
-i[class*='zmdi-'],
-i.zmdi {
-  font-size: inherit !important;
-  line-height: inherit !important;
-  width: 1em !important;
-  height: 1em !important;
-  display: inline-block !important;
+.meta-acoes .btn-group {
+  display: inline-flex !important;
+  margin: 0 !important;
 }
 
 /* ============================================
-   ADDITIONAL TACTICAL STYLING - Remaining Components
+   FORM LABELS AND INPUTS - Tactical Dark Theme
    ============================================ */
 
-/* All buttons - Tactical Style */
-.btn,
-button,
-input[type='button'],
-input[type='submit'],
-a.btn {
-  border-radius: 0 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 1px !important;
-  font-weight: 700 !important;
+.form-group label {
+  color: #f5f5f5 !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  margin-bottom: 8px !important;
+  display: block !important;
 }
 
-/* All badges - Tactical Orange */
-.badge {
-  border-radius: 0 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 1px !important;
-  font-weight: 700 !important;
+.card.custom-card .form-group label {
+  color: #f5f5f5 !important;
 }
 
-/* All inputs and selects - Tactical Dark */
-input,
-select,
-textarea {
-  border-radius: 0 !important;
+.form-control,
+.custom-select {
+  color: #f5f5f5 !important;
   background: rgba(0, 0, 0, 0.8) !important;
-  border: 2px solid rgba(255, 102, 0, 0.3) !important;
-  color: #e0e0e0 !important;
 }
 
-input:focus,
-select:focus,
-textarea:focus {
-  border-color: #ff6600 !important;
-  box-shadow: 0 0 15px rgba(255, 102, 0, 0.5) !important;
-  outline: none !important;
+.form-control option,
+.custom-select option {
+  background: rgba(10, 10, 10, 0.98) !important;
+  color: #f5f5f5 !important;
 }
 
-/* All dropdowns - Tactical Style */
-.dropdown-menu {
-  background: rgba(0, 0, 0, 0.98) !important;
-  border: 2px solid rgba(255, 102, 0, 0.5) !important;
-  border-radius: 0 !important;
-  box-shadow: 0 0 30px rgba(255, 102, 0, 0.4), inset 0 0 30px rgba(0, 0, 0, 0.8) !important;
+/* ============================================
+   BUTTON MODALIDADES - Tactical Dark Theme
+   ============================================ */
+
+.btn-desempenho-modalidades .btn,
+.btn-desempenho-modalidades a.btn {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  border: 2px solid transparent !important;
+  transition: all 0.3s ease !important;
 }
 
-.dropdown-item {
-  color: #e0e0e0 !important;
-  border-radius: 0 !important;
+.btn-desempenho-modalidades .btn-modalidade-active,
+.btn-desempenho-modalidades .btn-modal-34 {
+  background: rgba(59, 130, 246, 0.8) !important;
+  border-color: rgba(59, 130, 246, 1) !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.4) !important;
 }
 
-.dropdown-item:hover {
-  background: rgba(255, 102, 0, 0.2) !important;
+.btn-desempenho-modalidades .btn-modal-35 {
+  background: rgba(255, 193, 7, 0.8) !important;
+  border-color: rgba(255, 193, 7, 1) !important;
+  color: #1a1a1a !important;
+  box-shadow: 0 0 15px rgba(255, 193, 7, 0.4) !important;
+}
+
+.btn-desempenho-modalidades .btn-modal-36 {
+  background: rgba(220, 53, 69, 0.8) !important;
+  border-color: rgba(220, 53, 69, 1) !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 15px rgba(220, 53, 69, 0.4) !important;
+}
+
+.btn-desempenho-modalidades .btn-modal-37 {
+  background: rgba(40, 167, 69, 0.8) !important;
+  border-color: rgba(40, 167, 69, 1) !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 15px rgba(40, 167, 69, 0.4) !important;
+}
+
+.btn-desempenho-modalidades .btn:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Ensure all card titles have proper colors */
+.card.custom-card h2,
+.card.custom-card h2 i,
+.card.custom-card > h2,
+.card.custom-card > h2:first-child {
   color: #ff6600 !important;
+  text-shadow: 0 0 10px rgba(255, 102, 0, 0.5), 0 0 20px rgba(255, 102, 0, 0.3) !important;
 }
 
-/* All modals - Tactical Style */
-.modal-content {
-  background: rgba(0, 0, 0, 0.98) !important;
-  border: 2px solid rgba(255, 102, 0, 0.5) !important;
-  border-radius: 0 !important;
-  box-shadow: 0 0 40px rgba(255, 102, 0, 0.4), inset 0 0 30px rgba(0, 0, 0, 0.8) !important;
-}
-
-.modal-header {
-  border-bottom: 2px solid rgba(255, 102, 0, 0.5) !important;
-}
-
-.modal-footer {
-  border-top: 2px solid rgba(255, 102, 0, 0.5) !important;
-}
-
-/* All tables - Tactical Style */
-.table {
-  background: transparent !important;
-  color: #e0e0e0 !important;
-}
-
-.table thead th {
-  background: rgba(255, 102, 0, 0.1) !important;
+.card.custom-card h2 i,
+.card.custom-card > h2 i,
+.card.custom-card > h2:first-child i {
   color: #ff6600 !important;
-  border-bottom: 2px solid rgba(255, 102, 0, 0.5) !important;
-  text-transform: uppercase !important;
-  font-weight: 800 !important;
-  letter-spacing: 1px !important;
-}
-
-.table tbody td {
-  border-color: rgba(255, 102, 0, 0.2) !important;
-  color: #e0e0e0 !important;
-}
-
-.table tbody tr:hover {
-  background: rgba(255, 102, 0, 0.1) !important;
-}
-
-/* All links - Tactical Orange */
-a {
-  color: #ff6600 !important;
-  transition: color 0.3s ease !important;
-}
-
-a:hover {
-  color: #ff8800 !important;
   text-shadow: 0 0 8px rgba(255, 102, 0, 0.6) !important;
 }
 
-/* Override ALL Bootstrap card backgrounds - Maximum Specificity */
-.card,
-.card.card-default,
-.card.card-primary,
-.card.card-secondary,
-.card.card-success,
-.card.card-danger,
-.card.card-warning,
-.card.card-info,
-.card.card-light,
-.card.card-dark,
-div.card,
-div[class*='card'] {
-  background-color: rgba(10, 10, 10, 0.95) !important;
-  background: rgba(10, 10, 0, 0.95) !important;
-  border-color: rgba(255, 102, 0, 0.3) !important;
-  color: #e0e0e0 !important;
-}
-
-/* Override white backgrounds on any element inside cards */
-.card *,
-.card.custom-card *,
-.custom-card * {
-  color: #e0e0e0 !important;
-}
-
-.card h1,
-.card h2,
-.card h3,
-.card h4,
-.card h5,
-.card h6 {
+.card.custom-card h2 i::before,
+.card.custom-card > h2 i::before,
+.card.custom-card > h2:first-child i::before {
   color: #ff6600 !important;
+  text-shadow: 0 0 8px rgba(255, 102, 0, 0.6) !important;
 }
 
-/* All borders - Remove rounded corners */
-* {
+/* Paragraph text in cards */
+.card.custom-card p,
+.card.custom-card .mb-3 p {
+  color: #f5f5f5 !important;
+}
+
+.card.custom-card p b,
+.card.custom-card .mb-3 p b {
+  color: #ff8800 !important;
+  font-weight: 700 !important;
+  text-shadow: 0 0 8px rgba(255, 102, 0, 0.5) !important;
+}
+
+.meta-acoes .dropdown-menu {
+  background: rgba(10, 10, 10, 0.98) !important;
+  border: 2px solid rgba(255, 102, 0, 0.3) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 0 20px rgba(255, 102, 0, 0.3), inset 0 0 20px rgba(0, 0, 0, 0.8) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+}
+
+.meta-acoes .dropdown-item {
+  color: #f5f5f5 !important;
+  padding: 10px 16px !important;
+  transition: all 0.3s ease !important;
+}
+
+.meta-acoes .dropdown-item:hover {
+  background: rgba(255, 102, 0, 0.2) !important;
+  color: #ff6600 !important;
+  text-shadow: 0 0 8px rgba(255, 102, 0, 0.6) !important;
+}
+
+/* Additional Text Color Fixes - Ensure All Text is Visible */
+.au-task__item-inner p {
+  color: #f5f5f5 !important;
+}
+
+.au-task__item-inner .time-container p,
+.au-task__item-inner .time-begin p {
+  color: #ffffff !important;
+}
+
+/* Ensure proper font sizes and spacing */
+.au-task__item-inner {
+  font-size: 1rem !important;
+  line-height: 1.6 !important;
+}
+
+.au-task-check {
+  margin: 16px 0 !important;
+}
+
+.au-task-check label {
+  font-size: 14px !important;
+  padding-left: 8px !important;
+  color: #f5f5f5 !important;
+}
+
+.au-task-check .au-checkbox label {
+  color: #f5f5f5 !important;
+  font-size: 14px !important;
+}
+
+/* ============================================
+   ACTIVITY TITLE CARD - Tactical Dark Theme
+   ============================================ */
+
+/* Card Container */
+#activity_title.card.custom-card {
+  background: rgba(10, 10, 10, 0.98) !important;
+  border: 2px solid rgba(255, 102, 0, 0.5) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 0 30px rgba(255, 102, 0, 0.3), inset 0 0 30px rgba(0, 0, 0, 0.8) !important;
+  padding: 32px !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+}
+
+/* Header with Icon */
+#activity_title.card.custom-card h2 {
+  color: #ff6600 !important;
+  font-size: 28px !important;
+  font-weight: 700 !important;
+  text-shadow: 0 0 15px rgba(255, 102, 0, 0.6), 0 0 30px rgba(255, 102, 0, 0.3) !important;
+  margin-bottom: 20px !important;
+  padding-bottom: 16px !important;
+  border-bottom: 2px solid rgba(255, 102, 0, 0.3) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+
+#activity_title.card.custom-card h2 i {
+  color: #ff6600 !important;
+  font-size: 28px !important;
+  text-shadow: 0 0 10px rgba(255, 102, 0, 0.8) !important;
+  background: none !important;
+  background-color: transparent !important;
   border-radius: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  width: auto !important;
+  height: auto !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
-/* Exception: Keep circular avatars and icons if needed */
-.avatar,
-.account-item .image img,
-img[class*='avatar'],
-img[class*='profile'] {
-  border-radius: 0 !important;
+#activity_title.card.custom-card h2 i::before {
+  color: #ff6600 !important;
+  text-shadow: 0 0 10px rgba(255, 102, 0, 0.8) !important;
 }
 
-/* LED Monitor Scan Line Effect */
-body::after {
-  content: '' !important;
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  background: repeating-linear-gradient(
-    0deg,
-    transparent,
-    transparent 2px,
-    rgba(255, 102, 0, 0.03) 2px,
-    rgba(255, 102, 0, 0.03) 4px
+/* ============================================
+   CARD DESEMPENHO - Remove All White Backgrounds
+   ============================================ */
+
+/* Force dark backgrounds for all nested elements */
+#card_desempenho,
+#card_desempenho *,
+#card_desempenho .row,
+#card_desempenho [class*='col-'],
+#card_desempenho .desempenho-placeholder,
+#card_desempenho .desempenho-placeholder *,
+#card_desempenho .desempenho-full,
+#card_desempenho .disciplina-container,
+#card_desempenho .disciplina-container *,
+#card_desempenho .desempenho-extra,
+#card_desempenho .desempenho-extra * {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* Ensure specific elements have proper dark backgrounds */
+#card_desempenho .desempenho-full {
+  background: rgba(255, 102, 0, 0.05) !important;
+}
+
+#card_desempenho .disciplina-container-title {
+  background: rgba(255, 102, 0, 0.05) !important;
+}
+
+#card_desempenho .desempenho-container {
+  background: rgba(255, 102, 0, 0.03) !important;
+}
+
+/* Override Bootstrap defaults */
+#card_desempenho .row {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+#card_desempenho [class*='col-'] {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* Paragraph Text */
+#activity_title.card.custom-card p {
+  color: #f5f5f5 !important;
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+  margin-bottom: 20px !important;
+}
+
+#activity_title.card.custom-card p b {
+  color: #ff8800 !important;
+  font-weight: 700 !important;
+  text-shadow: 0 0 8px rgba(255, 102, 0, 0.5) !important;
+}
+
+/* HR Separator */
+#activity_title.card.custom-card hr {
+  border: none !important;
+  height: 2px !important;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 102, 0, 0.3) 20%,
+    rgba(255, 102, 0, 0.5) 50%,
+    rgba(255, 102, 0, 0.3) 80%,
+    transparent 100%
   ) !important;
-  pointer-events: none !important;
-  z-index: 9999 !important;
-  opacity: 0.15 !important;
-  animation: scanline 8s linear infinite !important;
+  margin: 24px 0 !important;
 }
 
-@keyframes scanline {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(100vh);
-  }
+/* Meta Dia Panorama Section */
+.meta-dia-panorama {
+  background: rgba(255, 102, 0, 0.05) !important;
+  border: 1px solid rgba(255, 102, 0, 0.2) !important;
+  border-radius: 8px !important;
+  padding: 24px !important;
+  margin: 24px 0 !important;
+}
+
+.meta-dia-panorama-title {
+  color: #ff6600 !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  text-shadow: 0 0 10px rgba(255, 102, 0, 0.5) !important;
+  margin-bottom: 20px !important;
+}
+
+.meta-dia-panorama-item {
+  background: rgba(20, 20, 20, 0.8) !important;
+  border: 1px solid rgba(255, 102, 0, 0.3) !important;
+  border-radius: 8px !important;
+  padding: 20px !important;
+  text-align: center !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 0 10px rgba(255, 102, 0, 0.1) !important;
+}
+
+.meta-dia-panorama-item:hover {
+  border-color: rgba(255, 102, 0, 0.6) !important;
+  box-shadow: 0 0 15px rgba(255, 102, 0, 0.3) !important;
+  transform: translateY(-2px) !important;
+}
+
+.meta-dia-panorama img {
+  background: rgba(255, 102, 0, 0.1) !important;
+  padding: 12px !important;
+  border-radius: 8px !important;
+  width: 80% !important;
+  max-width: 50px !important;
+  margin: 0 auto 12px auto !important;
+  display: block !important;
+  filter: brightness(0) saturate(100%) invert(58%) sepia(93%) saturate(1352%)
+    hue-rotate(0deg) brightness(104%) contrast(101%) !important;
+}
+
+.meta-dia-panorama-valor {
+  color: #f5f5f5 !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  line-height: 1.4 !important;
+  margin-top: 8px !important;
+}
+
+/* Activity Title Progress Section */
+.activity-title-progress {
+  margin-bottom: 24px !important;
+  margin-top: 24px !important;
+}
+
+.activity-title-progress p {
+  color: #f5f5f5 !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  margin-bottom: 12px !important;
+}
+
+.activity-title-progress .progress {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+  border: 1px solid rgba(255, 102, 0, 0.3) !important;
+  border-radius: 4px !important;
+  height: 24px !important;
+  overflow: hidden !important;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8) !important;
+}
+
+.activity-title-progress .progress-bar.bg-primary {
+  background: linear-gradient(90deg, #ff6600 0%, #ff8800 100%) !important;
+  box-shadow: 0 0 15px rgba(255, 102, 0, 0.6),
+    inset 0 0 10px rgba(255, 136, 0, 0.3) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  font-size: 0.85rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
+}
+
+#progresso_dia .progress-bar {
+  background: linear-gradient(90deg, #ff6600 0%, #ff8800 100%) !important;
+  color: #ffffff !important;
 }
