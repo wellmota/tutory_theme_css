@@ -1,0 +1,201 @@
+<nav class="navbar-sidebar">
+  <ul class="list-unstyled navbar__list">
+    <!-- Lista de Menus (Renderização Dinâmica) -->
+    <li class="sidebar-menu-item-metas-diarias ">
+      <a href="/painel/metas">
+        <i class="fas fa-calendar"></i> <span>Metas Diárias</span>
+      </a>
+    </li>
+    <li class="sidebar-menu-item-resumo-semana ">
+      <a href="/painel/semana?periodo=1">
+        <i class="fas fa-calendar-alt"></i> <span>Resumo da Semana</span>
+      </a>
+    </li>
+    <li class="sidebar-menu-item-questoes ">
+      <a class="js-arrow" href="#!">
+        <i class="fas fa-check"></i> <span>Questões</span>
+      </a>
+      <ul class="navbar-desktop-sub__list list-unstyled js-sub-list" style="display:none">
+        <li class="">
+          <a href="/painel/dashboards/?id=4">
+            <span>Análise de Questões</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="/painel/questoes/lancamento">
+            <span>Lançamentos de Questões</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="/painel/questoes/praticar">
+            <span>Praticar Questões</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="/painel/questoes/erros">
+            <span>Questões Erradas</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="/painel/simulados">
+            <span>Simulados</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li class="sidebar-menu-item-meu-desempenho ">
+      <a class="js-arrow" href="#!">
+        <i class="fas fa-tachometer-alt"></i> <span>Meu Desempenho</span>
+      </a>
+      <ul class="navbar-desktop-sub__list list-unstyled js-sub-list" style="display:none">
+        <li class="">
+          <a href="/painel/desempenho">
+            <span>Progresso do Plano</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="/painel/dashboards/?id=1">
+            <span>Perfil dos Estudos</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="/painel/dashboards/?id=2">
+            <span>Tempos de Estudos</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="/painel/dashboards/?id=5">
+            <span>Horas Líquidas (cronômetro)</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="/painel/dashboards/?id=3">
+            <span>Sua Performance</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="/painel/dashboards/?id=6">
+            <span>Resultados de Simulados</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li class="sidebar-menu-item-editar-plano ">
+      <a class="js-arrow" href="#!">
+        <i class="fas fa-cog"></i> <span>Meu Plano</span>
+      </a>
+      <ul class="navbar-desktop-sub__list list-unstyled js-sub-list" style="display:none">
+        <li class="">
+          <a href="/painel/config/disciplinas">
+            <span>Editar Matérias</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="/painel/config/ciclo">
+            <span>Editar Ciclo de Matérias</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="/painel/config/horarios">
+            <span>Editar Horários</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="/painel/config/replanejar-atrasos">
+            <span>Replanejar Atrasos</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="/painel/config/marcar-assuntos">
+            <span>Sinalizar Assuntos já Estudados</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="/painel/config/rever-assuntos">
+            <span>Rever Assuntos do Plano</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="/painel/config/pausar-plano">
+            <span>Pausar Plano</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="/painel/config/atingir-data">
+            <span>Ajustar Data Final</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="/painel/config/reiniciar-plano">
+            <span>Reiniciar o Plano</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li class="sidebar-menu-item-edital ">
+      <a class="js-arrow" href="#!">
+        <i class="fas fa-list-ol"></i> <span>Edital do Plano</span>
+      </a>
+      <ul class="navbar-desktop-sub__list list-unstyled js-sub-list" style="display:none">
+        <li class="">
+          <a href="/painel/panorama">
+            <span>Edital Verticalizado</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="/painel/edital">
+            <span>Edital</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li class="sidebar-menu-item-materiais ">
+      <a href="/painel/materiais">
+        <i class="fas fa-book"></i> <span>Materiais de Apoio</span>
+      </a>
+    </li>
+    <li class="sidebar-menu-item-cadernos ">
+      <a href="/painel/cadernos">
+        <i class="fas fa-file"></i> <span>Cadernos</span>
+      </a>
+    </li>
+    <li class="sidebar-menu-item-referencias ">
+      <a href="/painel/referencias">
+        <i class="fas fa-university"></i> <span>Referências</span>
+      </a>
+    </li>
+    <li class="sidebar-menu-item-metodologia ">
+      <a href="/painel/metodologia">
+        <i class="fas fa-brain"></i> <span>Metodologia</span>
+      </a>
+    </li>
+    <li class="sidebar-menu-item-central-duvidas ">
+      <a class="js-arrow" href="#!">
+        <i class="fas fa-inbox"></i> <span>Central de Dúvidas</span>
+      </a>
+      <ul class="navbar-desktop-sub__list list-unstyled js-sub-list" style="display:none">
+        <li class="">
+          <a href="/painel/forum">
+            <span>Enviar Dúvida</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="/painel/forum/todas">
+            <span>Base de Conhecimento</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li class="sidebar-menu-item-inbox ">
+      <a href="/painel/meu-coach">
+        <i class="fas fa-comment"></i> <span>Inbox</span>
+      </a>
+    </li>
+    <li class="sidebar-menu-item-tube ">
+      <a href="/painel/tube">
+        <i class="fas fa-play"></i> <span>Vídeos</span>
+      </a>
+    </li>
+    <!-- /LISTA DE MENUS -->
+  </ul>
+</nav>
