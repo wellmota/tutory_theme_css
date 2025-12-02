@@ -3089,51 +3089,51 @@ div#tarefas_dia_aluno {
   margin-bottom: 36px;
 }
 
+/* Override modal-specific styles to match dark tactical theme */
 #modal_finalizacao_meta .view-finalizacao-meta {
-  position: relative;
-  margin: 2em auto;
-  width: 80%;
-  max-width: 600px;
-  background: #ffffff;
-  backdrop-filter: blur(20px);
-  border-radius: 6px;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5),
-    0 10px 10px -5px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(59, 130, 246, 0.2);
-  border: 1px solid rgba(59, 130, 246, 0.2);
-  padding: 32px;
-  text-align: center;
-  z-index: 2;
+  position: relative !important;
+  margin: 1.5em auto !important;
+  width: 90% !important;
+  max-width: 700px !important;
+  background: rgba(10, 10, 10, 0.98) !important;
+  backdrop-filter: blur(10px) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 0 30px rgba(255, 102, 0, 0.2), inset 0 0 20px rgba(0, 0, 0, 0.8) !important;
+  border: 2px solid rgba(255, 102, 0, 0.3) !important;
+  padding: 24px !important;
+  text-align: left !important;
+  z-index: 2 !important;
 }
 
 #modal_finalizacao_meta .view-finalizacao-meta-progress-done {
-  height: 100%;
-  background: linear-gradient(90deg, #3b82f6 0%, #2563eb 100%);
+  height: 100% !important;
+  background: linear-gradient(90deg, #ff6600 0%, #ff8800 100%) !important;
 }
 
 #modal_finalizacao_meta .view-finalizacao-meta-has-ended h3 {
-  color: #1a1a1a;
+  color: #ff6600 !important;
 }
 
 #modal_finalizacao_meta .view-finalizacao-meta-footer {
-  margin: 40px 0px 0px 0px;
-  background: #ffffff;
-  backdrop-filter: blur(10px);
-  padding: 24px;
-  border-radius: 6px;
-  border: 1px solid rgba(59, 130, 246, 0.15);
+  margin: 20px 0px 0px 0px !important;
+  background: rgba(20, 20, 20, 0.6) !important;
+  backdrop-filter: blur(10px) !important;
+  padding: 20px !important;
+  border-radius: 8px !important;
+  border: 1px solid rgba(255, 102, 0, 0.2) !important;
 }
 
 #modal_finalizacao_meta .view-finalizacao-meta-pre-actions h4 {
-  color: #1a1a1a;
-  margin-bottom: 1em;
-  font-size: 16px;
+  color: #ff6600 !important;
+  margin-bottom: 16px !important;
+  font-size: 16px !important;
 }
 
 #modal_finalizacao_meta .view-finalizacao-meta-action p {
-  color: #1a1a1a;
-  font-size: 0.8rem;
-  line-height: 1rem;
-  margin-top: 12px;
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-size: 12px !important;
+  line-height: 1.4 !important;
+  margin-top: 8px !important;
 }
 
 a#extra_time_default_finish {
@@ -3604,19 +3604,26 @@ h4.consultoria-modulo-title {
   margin: 24px 0px !important;
 }
 
+/* Hide activity-title-progress in all components except #activity_title */
 .activity-title-progress {
+  display: none !important;
+}
+
+/* Show only in #activity_title card */
+#activity_title .activity-title-progress {
+  display: block !important;
   margin-bottom: 24px !important;
 }
 
-.activity-title-progress,
-.activity-title-progress p {
+#activity_title .activity-title-progress,
+#activity_title .activity-title-progress p {
   color: #f5f5f5 !important;
   font-size: 16px !important;
   font-weight: 500 !important;
   margin-bottom: 12px !important;
 }
 
-.activity-title-progress b {
+#activity_title .activity-title-progress b {
   color: #ff6600 !important;
   font-weight: 800 !important;
   font-size: 18px !important;
@@ -6041,15 +6048,29 @@ div#video_boas_vindas_onboarding_aluno {
 .au-task__item.au-task__item--primary {
   background: rgba(20, 20, 20, 0.95) !important;
   border: 2px solid rgba(255, 102, 0, 0.2) !important;
+  border-left: 4px solid rgba(255, 102, 0, 0.6) !important;
   border-radius: 12px !important;
   margin-bottom: 24px !important;
   box-shadow: 0 0 15px rgba(255, 102, 0, 0.15),
     inset 0 0 15px rgba(0, 0, 0, 0.6) !important;
   transition: all 0.3s ease !important;
+  position: relative !important;
+}
+
+/* Remove any blue left borders or accents */
+.au-task__item.au-task__item--primary::before,
+.au-task__item-inner::before,
+.au-task__item-inner .task::before,
+.au-task-activity::before {
+  display: none !important;
+  content: none !important;
+  background: none !important;
+  border: none !important;
 }
 
 .au-task__item.au-task__item--primary:hover {
   border-color: rgba(255, 102, 0, 0.4) !important;
+  border-left-color: rgba(255, 102, 0, 0.8) !important;
   box-shadow: 0 0 20px rgba(255, 102, 0, 0.3), inset 0 0 20px rgba(0, 0, 0, 0.8) !important;
   transform: translateY(-2px) !important;
 }
@@ -6057,6 +6078,43 @@ div#video_boas_vindas_onboarding_aluno {
 .au-task__item-inner {
   background: transparent !important;
   padding: 28px !important;
+  border-left: none !important;
+  border-left-color: transparent !important;
+}
+
+/* Ensure no blue colors on task items - Override all possible blue borders */
+.au-task__item,
+.au-task__item-inner,
+.au-task__item-inner .task,
+.au-task-activity,
+.meta-dia-fix-pad,
+.au-task__item-inner.meta-dia-fix-pad {
+  border-left-color: transparent !important;
+  border-left: none !important;
+}
+
+.au-task__item.au-task__item--primary {
+  border-left: 4px solid rgba(255, 102, 0, 0.6) !important;
+  border-left-color: rgba(255, 102, 0, 0.6) !important;
+}
+
+/* Override any blue accent bars or borders */
+.au-task__item *,
+.au-task__item-inner *,
+.meta-dia-fix-pad * {
+  border-left-color: transparent !important;
+}
+
+/* Remove any blue background accents */
+.au-task__item::before,
+.au-task__item-inner::before,
+.au-task__item-inner::after,
+.meta-dia-fix-pad::before,
+.meta-dia-fix-pad::after {
+  background-color: transparent !important;
+  background: none !important;
+  border-left-color: transparent !important;
+  border-left: none !important;
 }
 
 .au-task__item-inner .task {
@@ -6621,12 +6679,99 @@ div#video_boas_vindas_onboarding_aluno {
   background-image: none !important;
 }
 
-/* Paragraph Text */
-#activity_title.card.custom-card p {
+/* Paragraph Text - Only style the greeting paragraph (first p after h2) */
+#activity_title.card.custom-card h2 + p {
+  color: #f5f5f5 !important;
+  font-size: 20px !important;
+  line-height: 1.7 !important;
+  margin-bottom: 20px !important;
+  position: relative !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+  gap: 24px !important;
+  min-height: 260px !important;
+  padding-right: 280px !important;
+  font-weight: 500 !important;
+}
+
+/* Make the date more prominent */
+#activity_title.card.custom-card h2 + p b {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+  color: #ff6600 !important;
+  text-shadow: 0 0 15px rgba(255, 102, 0, 0.8), 0 0 30px rgba(255, 102, 0, 0.4) !important;
+  margin-left: 4px !important;
+}
+
+/* Other paragraphs in #activity_title (like in .activity-title-progress) */
+/* Note: We style these separately to avoid :not() with complex selectors */
+#activity_title.card.custom-card .activity-title-progress p,
+#activity_title.card.custom-card .meta-dia-panorama p {
   color: #f5f5f5 !important;
   font-size: 16px !important;
   line-height: 1.6 !important;
   margin-bottom: 20px !important;
+  position: static !important;
+  display: block !important;
+  min-height: auto !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+/* Explicitly reset .activity-title-progress paragraph */
+#activity_title.card.custom-card .activity-title-progress p {
+  position: static !important;
+  display: block !important;
+  min-height: auto !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  flex: none !important;
+  align-items: normal !important;
+  justify-content: normal !important;
+}
+
+/* Tactical Soldier Image - Top Right Corner - Only on greeting paragraph */
+#activity_title.card.custom-card h2 + p::after {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+  width: 260px !important;
+  height: 260px !important;
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/refs/heads/main/images/tactical-soldier.png') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  z-index: 1 !important;
+  filter: drop-shadow(0 0 20px rgba(255, 102, 0, 0.4)) !important;
+  transition: transform 0.3s ease !important;
+}
+
+#activity_title.card.custom-card h2 + p:hover::after {
+  transform: scale(1.05) !important;
+  filter: drop-shadow(0 0 30px rgba(255, 102, 0, 0.6)) !important;
+}
+
+/* Ensure no image appears on other paragraphs, especially in .activity-title-progress */
+#activity_title.card.custom-card .activity-title-progress p::after,
+#activity_title.card.custom-card .activity-title-progress p::before,
+#activity_title .meta-dia-panorama p::after,
+#activity_title.card.custom-card .meta-dia-panorama p::before {
+  content: none !important;
+  display: none !important;
+  background-image: none !important;
+  background: none !important;
+}
+
+/* Reset any positioning/styling on .activity-title-progress paragraphs */
+#activity_title.card.custom-card .activity-title-progress p {
+  position: static !important;
+  display: block !important;
+  min-height: auto !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  flex: none !important;
 }
 
 #activity_title.card.custom-card p b {
@@ -6705,42 +6850,623 @@ div#video_boas_vindas_onboarding_aluno {
   margin-top: 8px !important;
 }
 
-/* Activity Title Progress Section */
-.activity-title-progress {
+/* Activity Title Progress Section - Only in #activity_title */
+#activity_title .activity-title-progress {
   margin-bottom: 24px !important;
   margin-top: 24px !important;
+  display: block !important;
+  padding: 1em 2em 1.5em 2em !important;
+  margin: 1em -2em -2em -2em !important;
+  border-top: 1px solid rgba(255, 102, 0, 0.3) !important;
 }
 
-.activity-title-progress p {
+#activity_title .activity-title-progress p {
   color: #f5f5f5 !important;
   font-size: 16px !important;
   font-weight: 500 !important;
   margin-bottom: 12px !important;
 }
 
-.activity-title-progress .progress {
-  background-color: rgba(0, 0, 0, 0.6) !important;
-  border: 1px solid rgba(255, 102, 0, 0.3) !important;
-  border-radius: 4px !important;
-  height: 24px !important;
+#activity_title .activity-title-progress .progress,
+#activity_title .activity-title-progress #progresso_dia {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  border: 2px solid rgba(255, 102, 0, 0.5) !important;
+  border-radius: 2px !important;
+  height: 32px !important;
   overflow: hidden !important;
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8) !important;
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.9), 0 0 10px rgba(255, 102, 0, 0.2) !important;
+  position: relative !important;
 }
 
-.activity-title-progress .progress-bar.bg-primary {
-  background: linear-gradient(90deg, #ff6600 0%, #ff8800 100%) !important;
-  box-shadow: 0 0 15px rgba(255, 102, 0, 0.6),
-    inset 0 0 10px rgba(255, 136, 0, 0.3) !important;
+/* Call of Duty Style Progress Bar with Striped Pattern */
+#activity_title .activity-title-progress .progress-bar.bg-primary,
+#activity_title
+  .activity-title-progress
+  #progresso_dia
+  .progress-bar.bg-primary {
+  background: linear-gradient(
+    90deg,
+    #ff6600 0%,
+    #ff8800 50%,
+    #ff6600 100%
+  ) !important;
+  background-size: 200% 100% !important;
+  /* Striped pattern overlay */
+  background-image: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 8px,
+      rgba(255, 255, 255, 0.1) 8px,
+      rgba(255, 255, 255, 0.1) 16px
+    ),
+    linear-gradient(90deg, #ff6600 0%, #ff8800 50%, #ff6600 100%) !important;
+  background-size: 20px 20px, 200% 100% !important;
+  animation: progressStripes 1s linear infinite !important;
+  box-shadow: 0 0 20px rgba(255, 102, 0, 0.8),
+    inset 0 0 15px rgba(255, 136, 0, 0.4), inset 0 -2px 5px rgba(0, 0, 0, 0.5) !important;
   color: #ffffff !important;
   font-weight: 700 !important;
-  font-size: 0.85rem !important;
+  font-size: 0.9rem !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
+  text-shadow: 0 0 10px rgba(255, 102, 0, 1), 0 1px 3px rgba(0, 0, 0, 0.8),
+    0 0 20px rgba(255, 255, 255, 0.3) !important;
+  border-right: 2px solid rgba(255, 255, 255, 0.3) !important;
+  position: relative !important;
+  transition: width 0.3s ease !important;
 }
 
+/* Animated stripe effect */
+@keyframes progressStripes {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 20px 0, 0 0;
+  }
+}
+
+/* Add a subtle inner glow effect */
+#activity_title .activity-title-progress .progress-bar.bg-primary::before,
+#activity_title
+  .activity-title-progress
+  #progresso_dia
+  .progress-bar.bg-primary::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.2) 0%,
+    transparent 50%,
+    rgba(0, 0, 0, 0.3) 100%
+  ) !important;
+  pointer-events: none !important;
+}
+
+/* This rule is now handled by the more specific rule above */
 #progresso_dia .progress-bar {
+  /* Styles inherited from #activity_title .activity-title-progress .progress-bar.bg-primary */
+}
+
+/* ============================================
+   VIEW FINALIZACAO META - Dark Tactical Theme
+   ============================================ */
+
+/* Main Container - Compact & Dark */
+.view-finalizacao-meta {
+  position: relative !important;
+  margin: 1.5em auto !important;
+  width: 90% !important;
+  max-width: 700px !important;
+  background: rgba(10, 10, 10, 0.98) !important;
+  border: 2px solid rgba(255, 102, 0, 0.3) !important;
+  border-radius: 12px !important;
+  padding: 24px !important;
+  box-shadow: 0 0 30px rgba(255, 102, 0, 0.2), inset 0 0 20px rgba(0, 0, 0, 0.8) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+}
+
+/* Close Button - Top Right */
+.view-finalizacao-meta-close {
+  position: absolute !important;
+  top: 16px !important;
+  right: 16px !important;
+  width: 36px !important;
+  height: 36px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: rgba(255, 102, 0, 0.1) !important;
+  border: 1px solid rgba(255, 102, 0, 0.3) !important;
+  border-radius: 50% !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  z-index: 10 !important;
+}
+
+.view-finalizacao-meta-close:hover {
+  background: rgba(255, 102, 0, 0.2) !important;
+  border-color: rgba(255, 102, 0, 0.6) !important;
+  transform: scale(1.1) !important;
+  box-shadow: 0 0 15px rgba(255, 102, 0, 0.4) !important;
+}
+
+.view-finalizacao-meta-close i {
+  color: #ff6600 !important;
+  font-size: 18px !important;
+  text-shadow: 0 0 8px rgba(255, 102, 0, 0.6) !important;
+}
+
+/* Header Section */
+.view-finalizacao-meta-header {
+  margin-bottom: 20px !important;
+  padding-bottom: 16px !important;
+  border-bottom: 1px solid rgba(255, 102, 0, 0.3) !important;
+}
+
+.view-finalizacao-meta-header h3 {
+  color: #ff6600 !important;
+  font-size: 22px !important;
+  font-weight: 700 !important;
+  margin: 0 !important;
+  text-shadow: 0 0 15px rgba(255, 102, 0, 0.6), 0 0 30px rgba(255, 102, 0, 0.3) !important;
+}
+
+/* Progress Section - Compact */
+.view-finalizacao-meta-progress {
+  margin-bottom: 24px !important;
+  padding: 20px !important;
+  background: rgba(255, 102, 0, 0.05) !important;
+  border: 1px solid rgba(255, 102, 0, 0.2) !important;
+  border-radius: 8px !important;
+}
+
+.view-finalizacao-meta-progress h2 {
+  color: #f5f5f5 !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  margin-bottom: 16px !important;
+  line-height: 1.5 !important;
+}
+
+.view-finalizacao-meta-assunto {
+  color: #ff8800 !important;
+  font-weight: 700 !important;
+  text-shadow: 0 0 8px rgba(255, 102, 0, 0.5) !important;
+}
+
+/* Progress Bar Container */
+.view-finalizacao-meta-progress-bar {
+  height: 32px !important;
+  background: rgba(0, 0, 0, 0.6) !important;
+  border: 2px solid rgba(255, 102, 0, 0.3) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  display: flex !important;
+  margin-bottom: 12px !important;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8) !important;
+}
+
+.view-finalizacao-meta-progress-done {
+  height: 100% !important;
   background: linear-gradient(90deg, #ff6600 0%, #ff8800 100%) !important;
+  box-shadow: 0 0 15px rgba(255, 102, 0, 0.6),
+    inset 0 0 10px rgba(255, 136, 0, 0.3) !important;
+  transition: width 0.5s ease !important;
+}
+
+.view-finalizacao-meta-progress-to-do {
+  height: 100% !important;
+  background: rgba(40, 40, 40, 0.8) !important;
+  transition: width 0.5s ease !important;
+}
+
+/* Progress Description */
+.view-finalizacao-meta-progress-desc {
+  display: flex !important;
+  gap: 8px !important;
+  font-size: 13px !important;
+}
+
+.view-finalizacao-meta-progress-text-done,
+.view-finalizacao-meta-progress-text-to-do {
+  text-align: center !important;
+  padding: 8px !important;
+  border-radius: 6px !important;
+}
+
+.view-finalizacao-meta-progress-text-done {
+  background: rgba(255, 102, 0, 0.1) !important;
+  color: #ff8800 !important;
+  border: 1px solid rgba(255, 102, 0, 0.3) !important;
+}
+
+.view-finalizacao-meta-progress-text-to-do {
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: #e0e0e0 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.view-finalizacao-meta-text-done-span,
+.view-finalizacao-meta-text-to-do-span {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  display: block !important;
+}
+
+.view-finalizacao-meta-text-done-span {
+  color: #ff6600 !important;
+  text-shadow: 0 0 10px rgba(255, 102, 0, 0.6) !important;
+}
+
+/* Slides Container */
+.view-finalizacao-meta-slides {
+  margin-top: 20px !important;
+}
+
+.view-finalizacao-meta-slide-item {
+  padding: 0 !important;
+}
+
+/* Programation Section */
+.view-finalizacao-meta-programation {
+  margin-bottom: 20px !important;
+  padding: 16px !important;
+  background: rgba(255, 102, 0, 0.05) !important;
+  border: 1px solid rgba(255, 102, 0, 0.2) !important;
+  border-radius: 8px !important;
+}
+
+.view-finalizacao-meta-has-more h3,
+.view-finalizacao-meta-has-ended h3 {
+  color: #ff6600 !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  margin-bottom: 12px !important;
+  text-shadow: 0 0 10px rgba(255, 102, 0, 0.5) !important;
+}
+
+.view-finalizacao-meta-has-more p,
+.view-finalizacao-meta-has-ended p {
+  color: #f5f5f5 !important;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  margin: 0 !important;
+}
+
+/* Footer Section */
+.view-finalizacao-meta-footer {
+  margin-top: 20px !important;
+  padding: 20px !important;
+  background: rgba(20, 20, 20, 0.6) !important;
+  border: 1px solid rgba(255, 102, 0, 0.2) !important;
+  border-radius: 8px !important;
+}
+
+.view-finalizacao-meta-pre-actions h4 {
+  color: #ff6600 !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  margin-bottom: 16px !important;
+  text-align: center !important;
+}
+
+/* Actions Container */
+.view-finalizacao-meta-actions-container {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+}
+
+.view-finalizacao-meta-action {
+  padding: 12px !important;
+  background: rgba(255, 102, 0, 0.05) !important;
+  border: 1px solid rgba(255, 102, 0, 0.2) !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+}
+
+.view-finalizacao-meta-action:hover {
+  background: rgba(255, 102, 0, 0.1) !important;
+  border-color: rgba(255, 102, 0, 0.4) !important;
+  transform: translateX(4px) !important;
+}
+
+.view-finalizacao-meta-action a.btn {
+  width: 100% !important;
+  padding: 12px 20px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  border-radius: 6px !important;
+  transition: all 0.3s ease !important;
+  border: 2px solid transparent !important;
+}
+
+.view-finalizacao-meta-action a.btn-success {
+  background: rgba(40, 167, 69, 0.2) !important;
+  border-color: rgba(40, 167, 69, 0.5) !important;
   color: #ffffff !important;
+}
+
+.view-finalizacao-meta-action a.btn-success:hover {
+  background: rgba(40, 167, 69, 0.3) !important;
+  border-color: rgba(40, 167, 69, 0.7) !important;
+  box-shadow: 0 0 15px rgba(40, 167, 69, 0.4) !important;
+  transform: translateY(-2px) !important;
+}
+
+.view-finalizacao-meta-action a.btn-danger {
+  background: rgba(220, 53, 69, 0.2) !important;
+  border-color: rgba(220, 53, 69, 0.5) !important;
+  color: #ffffff !important;
+}
+
+.view-finalizacao-meta-action a.btn-danger:hover {
+  background: rgba(220, 53, 69, 0.3) !important;
+  border-color: rgba(220, 53, 69, 0.7) !important;
+  box-shadow: 0 0 15px rgba(220, 53, 69, 0.4) !important;
+  transform: translateY(-2px) !important;
+}
+
+.view-finalizacao-meta-action a.btn-primary {
+  background: rgba(255, 102, 0, 0.2) !important;
+  border-color: rgba(255, 102, 0, 0.5) !important;
+  color: #ffffff !important;
+}
+
+.view-finalizacao-meta-action a.btn-primary:hover {
+  background: rgba(255, 102, 0, 0.3) !important;
+  border-color: rgba(255, 102, 0, 0.7) !important;
+  box-shadow: 0 0 15px rgba(255, 102, 0, 0.4) !important;
+  transform: translateY(-2px) !important;
+}
+
+.view-finalizacao-meta-action a.btn-secondary {
+  background: rgba(108, 117, 125, 0.2) !important;
+  border-color: rgba(108, 117, 125, 0.5) !important;
+  color: #ffffff !important;
+}
+
+.view-finalizacao-meta-action a.btn-secondary:hover {
+  background: rgba(108, 117, 125, 0.3) !important;
+  border-color: rgba(108, 117, 125, 0.7) !important;
+  box-shadow: 0 0 15px rgba(108, 117, 125, 0.4) !important;
+  transform: translateY(-2px) !important;
+}
+
+.view-finalizacao-meta-action p {
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-size: 12px !important;
+  line-height: 1.4 !important;
+  margin-top: 8px !important;
+  margin-bottom: 0 !important;
+}
+
+/* More Time Slide */
+.view-finalizacao-meta-slide-mais-tempo h4 {
+  color: #ff6600 !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  margin-bottom: 12px !important;
+}
+
+.view-finalizacao-meta-slide-mais-tempo p {
+  color: #f5f5f5 !important;
+  font-size: 14px !important;
+  margin-bottom: 20px !important;
+}
+
+.view-finalizacao-meta-more-time-select {
+  margin-bottom: 20px !important;
+}
+
+.view-finalizacao-meta-more-time-select p {
+  color: #f5f5f5 !important;
+  font-size: 14px !important;
+  margin-bottom: 8px !important;
+}
+
+.view-finalizacao-meta-more-time-select select {
+  background: rgba(0, 0, 0, 0.8) !important;
+  border: 2px solid rgba(255, 102, 0, 0.3) !important;
+  border-radius: 6px !important;
+  color: #f5f5f5 !important;
+  padding: 10px 16px !important;
+  width: 100% !important;
+}
+
+.view-finalizacao-meta-more-time-select select:focus {
+  border-color: rgba(255, 102, 0, 0.6) !important;
+  box-shadow: 0 0 15px rgba(255, 102, 0, 0.3) !important;
+  outline: none !important;
+}
+
+.view-finalizacao-meta-more-time-container {
+  margin-bottom: 20px !important;
+}
+
+.view-finalizacao-meta-more-time-check {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  padding: 12px !important;
+  background: rgba(255, 102, 0, 0.05) !important;
+  border: 1px solid rgba(255, 102, 0, 0.2) !important;
+  border-radius: 6px !important;
+  margin-bottom: 12px !important;
+}
+
+.view-finalizacao-meta-more-time-check p {
+  color: #f5f5f5 !important;
+  font-size: 13px !important;
+  margin: 0 !important;
+  flex: 1 !important;
+}
+
+.view-finalizacao-meta-more-time-check i {
+  color: #ff6600 !important;
+  cursor: help !important;
+}
+
+.view-finalizacao-meta-more-time-messages {
+  margin-bottom: 16px !important;
+}
+
+.view-finalizacao-meta-more-time-messages .alert {
+  background: rgba(220, 53, 69, 0.1) !important;
+  border: 1px solid rgba(220, 53, 69, 0.3) !important;
+  border-radius: 6px !important;
+  color: #ffffff !important;
+  padding: 12px !important;
+}
+
+.view-finalizacao-meta-slide-mais-tempo .btn-block {
+  background: rgba(255, 102, 0, 0.2) !important;
+  border-color: rgba(255, 102, 0, 0.5) !important;
+  color: #ffffff !important;
+  padding: 12px 20px !important;
+  font-weight: 600 !important;
+}
+
+.view-finalizacao-meta-slide-mais-tempo .btn-block:hover {
+  background: rgba(255, 102, 0, 0.3) !important;
+  border-color: rgba(255, 102, 0, 0.7) !important;
+  box-shadow: 0 0 15px rgba(255, 102, 0, 0.4) !important;
+}
+
+/* Recalculo Slide */
+.view-finalizacao-meta-slide-recalculo h4 {
+  color: #ff6600 !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  margin-bottom: 12px !important;
+}
+
+.view-finalizacao-meta-slide-recalculo p {
+  color: #f5f5f5 !important;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  margin-bottom: 20px !important;
+}
+
+.view-finalizacao-meta-slide-recalculo p b {
+  color: #ff8800 !important;
+  font-weight: 700 !important;
+}
+
+.view-finalizacao-meta-slide-recalculo .alert {
+  padding: 12px 16px !important;
+  border-radius: 6px !important;
+  margin-bottom: 16px !important;
+  border: 1px solid !important;
+}
+
+.view-finalizacao-meta-slide-recalculo .alert-primary {
+  background: rgba(59, 130, 246, 0.1) !important;
+  border-color: rgba(59, 130, 246, 0.3) !important;
+  color: #ffffff !important;
+}
+
+.view-finalizacao-meta-slide-recalculo .alert-danger {
+  background: rgba(220, 53, 69, 0.1) !important;
+  border-color: rgba(220, 53, 69, 0.3) !important;
+  color: #ffffff !important;
+}
+
+.view-finalizacao-meta-slide-recalculo .alert-warning {
+  background: rgba(255, 193, 7, 0.1) !important;
+  border-color: rgba(255, 193, 7, 0.3) !important;
+  color: #ffffff !important;
+}
+
+.view-finalizacao-meta-slide-recalculo .alert strong {
+  color: #ff6600 !important;
+}
+
+.view-finalizacao-meta-slide-recalculo .btn-warning {
+  background: rgba(255, 193, 7, 0.2) !important;
+  border-color: rgba(255, 193, 7, 0.5) !important;
+  color: #ffffff !important;
+  padding: 12px 20px !important;
+  font-weight: 600 !important;
+}
+
+.view-finalizacao-meta-slide-recalculo .btn-warning:hover {
+  background: rgba(255, 193, 7, 0.3) !important;
+  border-color: rgba(255, 193, 7, 0.7) !important;
+  box-shadow: 0 0 15px rgba(255, 193, 7, 0.4) !important;
+}
+
+.view-finalizacao-meta-slide-recalculo #back_replan_time {
+  display: block !important;
+  text-align: center !important;
+  margin-top: 12px !important;
+  color: #ff6600 !important;
+  text-decoration: none !important;
+  font-size: 14px !important;
+  transition: all 0.3s ease !important;
+}
+
+.view-finalizacao-meta-slide-recalculo #back_replan_time:hover {
+  color: #ff8800 !important;
+  text-shadow: 0 0 8px rgba(255, 102, 0, 0.5) !important;
+}
+
+/* Toggle Switch Styling */
+.t-switch {
+  position: relative !important;
+  display: inline-block !important;
+  width: 50px !important;
+  height: 26px !important;
+  flex-shrink: 0 !important;
+}
+
+.t-switch input {
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.t-slider {
+  position: absolute !important;
+  cursor: pointer !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background-color: rgba(60, 60, 60, 0.8) !important;
+  transition: 0.3s !important;
+  border-radius: 26px !important;
+  border: 1px solid rgba(255, 102, 0, 0.3) !important;
+}
+
+.t-slider:before {
+  position: absolute !important;
+  content: '' !important;
+  height: 20px !important;
+  width: 20px !important;
+  left: 2px !important;
+  bottom: 2px !important;
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  transition: 0.3s !important;
+  border-radius: 50% !important;
+}
+
+.t-switch input:checked + .t-slider {
+  background-color: rgba(255, 102, 0, 0.5) !important;
+  border-color: rgba(255, 102, 0, 0.7) !important;
+  box-shadow: 0 0 10px rgba(255, 102, 0, 0.4) !important;
+}
+
+.t-switch input:checked + .t-slider:before {
+  transform: translateX(24px) !important;
+  background-color: #ff6600 !important;
+  box-shadow: 0 0 8px rgba(255, 102, 0, 0.6) !important;
 }
