@@ -1540,7 +1540,39 @@ td.table-danger {
 }
 
 .meta-progresso {
-  margin: 25px 0px !important;
+  margin: 16px 0 !important;
+  padding: 16px !important;
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(0, 255, 136, 0.1) !important;
+  border-radius: 8px !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+}
+
+.meta-progresso .progress {
+  margin-bottom: 12px !important;
+  height: 12px !important;
+  border-radius: 6px !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  overflow: hidden !important;
+}
+
+.meta-progresso .progress-bar {
+  background: linear-gradient(90deg, #00ff88 0%, #00cc6f 100%) !important;
+  border-radius: 6px !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  color: #0a0a0a !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.meta-progress-help-text {
+  color: rgba(255, 255, 255, 0.6) !important;
+  font-size: 12px !important;
+  font-style: italic !important;
 }
 
 .activity-goal-links {
@@ -1548,7 +1580,81 @@ td.table-danger {
 }
 
 .meta-acoes {
-  margin: 25px 0px !important;
+  margin: 20px 0 0 0 !important;
+  padding: 16px 0 !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+  align-items: center !important;
+  border-top: 1px solid rgba(0, 255, 136, 0.1) !important;
+}
+
+.meta-acoes .btn-anotacoes-trigger,
+.meta-acoes .btn-pomodoro-trigger,
+.meta-acoes .btn-links-trigger {
+  display: inline-block !important;
+}
+
+.meta-acoes .btn {
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  padding: 10px 20px !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+.meta-acoes .btn-info {
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.meta-acoes .btn-info:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  transform: translateY(-2px) !important;
+}
+
+.meta-acoes .btn-primary {
+  background: rgba(0, 255, 136, 0.15) !important;
+  color: #00ff88 !important;
+  border: 1px solid rgba(0, 255, 136, 0.2) !important;
+}
+
+.meta-acoes .btn-primary:hover {
+  background: rgba(0, 255, 136, 0.25) !important;
+  border-color: rgba(0, 255, 136, 0.4) !important;
+  transform: translateY(-2px) !important;
+}
+
+.meta-acoes .btn i {
+  font-size: 14px !important;
+}
+
+.meta-acoes .dropdown-menu {
+  background: linear-gradient(135deg, #1a1a1a 0%, #0f1419 100%) !important;
+  border: 1px solid rgba(0, 255, 136, 0.2) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+  padding: 8px !important;
+}
+
+.meta-acoes .dropdown-item {
+  color: rgba(255, 255, 255, 0.9) !important;
+  padding: 10px 16px !important;
+  border-radius: 6px !important;
+  transition: all 0.2s ease !important;
+  font-size: 13px !important;
+}
+
+.meta-acoes .dropdown-item:hover {
+  background: rgba(0, 255, 136, 0.1) !important;
+  color: #00ff88 !important;
+  transform: translateX(4px) !important;
 }
 
 .meta-aviso-resumo,
@@ -1558,10 +1664,18 @@ td.table-danger {
 }
 
 .meta-dia-orientacao {
-  border-style: none;
-  background: #121212;
-  padding: 20px;
-  border-radius: 4px;
+  border-style: none !important;
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(0, 255, 136, 0.1) !important;
+  padding: 20px !important;
+  border-radius: 8px !important;
+  margin: 16px 0 !important;
+  transition: all 0.3s ease !important;
+}
+
+.meta-dia-orientacao:hover {
+  background: rgba(0, 255, 136, 0.05) !important;
+  border-color: rgba(0, 255, 136, 0.2) !important;
 }
 
 h4.meta-trigger-link.meta-trigger-aula {
@@ -2246,16 +2360,117 @@ body
   margin: 0.25em auto;
 }
 
-div#tarefas_dia_aluno {
-  margin-top: 48px;
+/* Task Card Container */
+#tarefas_dia_aluno.au-card {
+  background: linear-gradient(135deg, #1a1a1a 0%, #0f1419 100%) !important;
+  border-radius: 12px !important;
+  padding: 32px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0, 255, 136, 0.15) !important;
+  border: 1px solid rgba(0, 255, 136, 0.15) !important;
 }
 
+#tarefas_dia_aluno.au-card.au-card--no-shadow {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0, 255, 136, 0.15) !important;
+}
+
+#tarefas_dia_aluno.au-card.au-card--no-pad {
+  padding: 32px !important;
+}
+
+div#tarefas_dia_aluno {
+  margin-top: 48px !important;
+}
+
+/* Task List Container */
+.au-task-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0 !important;
+}
+
+/* Task Activity Container */
+.au-task-activity {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+}
+
+/* Task Container */
+.au-task {
+  width: 100% !important;
+}
+
+/* Task Text Elements */
+.task p {
+  color: rgba(255, 255, 255, 0.9) !important;
+  margin: 0 !important;
+  font-size: 14px !important;
+}
+
+.task p.time-begin {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+/* Modern Task Item Cards - Green Theme */
 .au-task__item.au-task__item--primary {
-  margin-bottom: 36px;
+  margin-bottom: 24px !important;
+  background: linear-gradient(
+    135deg,
+    rgba(26, 26, 26, 0.95) 0%,
+    rgba(15, 20, 25, 0.98) 100%
+  ) !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(0, 255, 136, 0.15) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(0, 255, 136, 0.1) !important;
+  transition: all 0.3s ease !important;
+  overflow: hidden !important;
+}
+
+.au-task__item.au-task__item--primary:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0, 255, 136, 0.2) !important;
+  border-color: rgba(0, 255, 136, 0.25) !important;
+  transform: translateY(-2px) !important;
 }
 
 .au-task__item.au-task__item--success {
-  margin-bottom: 36px;
+  margin-bottom: 24px !important;
+  background: linear-gradient(
+    135deg,
+    rgba(26, 26, 26, 0.95) 0%,
+    rgba(15, 20, 25, 0.98) 100%
+  ) !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(0, 255, 136, 0.15) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(0, 255, 136, 0.1) !important;
+}
+
+/* Task Item Inner Container */
+.au-task__item-inner {
+  padding: 24px !important;
+  background: transparent !important;
+}
+
+.au-task__item-inner.meta-dia-fix-pad {
+  padding: 24px !important;
+}
+
+/* Strikethrough completed tasks */
+.au-task__item-inner.strikethrough {
+  opacity: 0.6 !important;
+  position: relative !important;
+}
+
+.au-task__item-inner.strikethrough::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 2px !important;
+  background: rgba(0, 255, 136, 0.3) !important;
+  z-index: 1 !important;
 }
 
 #modal_finalizacao_meta .view-finalizacao-meta {
@@ -2423,15 +2638,69 @@ a#btn_select_more_time:focus {
 }
 
 .au-task__item-inner:not(.strikethrough) .au-checkmark {
-  animation: none;
+  animation: none !important;
 }
 
 .au-checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  border: 2px solid #d5d5d5;
-  border-radius: 3px;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  border: 2px solid rgba(0, 255, 136, 0.3) !important;
+  border-radius: 6px !important;
+  width: 20px !important;
+  height: 20px !important;
+  background: rgba(255, 255, 255, 0.03) !important;
+  transition: all 0.3s ease !important;
+}
+
+.au-checkbox input[type='checkbox']:checked ~ .au-checkmark {
+  background: linear-gradient(135deg, #00ff88 0%, #00cc6f 100%) !important;
+  border-color: #00ff88 !important;
+}
+
+.au-checkbox input[type='checkbox']:checked ~ .au-checkmark::after {
+  content: '' !important;
+  position: absolute !important;
+  left: 6px !important;
+  top: 2px !important;
+  width: 6px !important;
+  height: 10px !important;
+  border: solid #0a0a0a !important;
+  border-width: 0 2px 2px 0 !important;
+  transform: rotate(45deg) !important;
+}
+
+.au-task-check {
+  margin-bottom: 12px !important;
+}
+
+.au-task-check label {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  cursor: pointer !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  transition: color 0.3s ease !important;
+}
+
+.au-task-check label:hover {
+  color: #00ff88 !important;
+}
+
+.au-checkbox {
+  position: relative !important;
+  display: inline-block !important;
+}
+
+.au-checkbox input[type='checkbox'] {
+  position: absolute !important;
+  opacity: 0 !important;
+  cursor: pointer !important;
+  width: 20px !important;
+  height: 20px !important;
+  margin: 0 !important;
 }
 
 .meta-horario {
@@ -2645,27 +2914,109 @@ h4.consultoria-modulo-title {
   border-radius: 6px;
 }
 
+/* Time Container - Modern Badge Style */
 #tarefas_dia_aluno .au-task-list .au-task__item-inner .task .time-container,
 #tarefas_dia_aluno .au-task-list .au-task__item-inner .task .time-notify-delay {
-  position: relative;
-  display: inline-block;
-  padding: 10px;
-  height: auto;
-  width: auto;
-  margin: 0.25em auto;
-  background: #545454;
-  border-radius: 4px;
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 10px 16px !important;
+  height: auto !important;
+  width: auto !important;
+  margin: 0 0 12px 0 !important;
+  background: rgba(0, 255, 136, 0.1) !important;
+  border: 1px solid rgba(0, 255, 136, 0.2) !important;
+  border-radius: 8px !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 14px !important;
+  transition: all 0.3s ease !important;
+}
+
+#tarefas_dia_aluno
+  .au-task-list
+  .au-task__item-inner
+  .task
+  .time-container:hover,
+#tarefas_dia_aluno
+  .au-task-list
+  .au-task__item-inner
+  .task
+  .time-notify-delay:hover {
+  background: rgba(0, 255, 136, 0.15) !important;
+  border-color: rgba(0, 255, 136, 0.3) !important;
+}
+
+#tarefas_dia_aluno .au-task-list .au-task__item-inner .task .time-container i,
+#tarefas_dia_aluno
+  .au-task-list
+  .au-task__item-inner
+  .task
+  .time-notify-delay
+  i {
+  color: #00ff88 !important;
+  font-size: 14px !important;
+}
+
+#tarefas_dia_aluno .au-task-list .au-task__item-inner .task .time-container b,
+#tarefas_dia_aluno
+  .au-task-list
+  .au-task__item-inner
+  .task
+  .time-notify-delay
+  b {
+  color: #00ff88 !important;
+  font-weight: 700 !important;
+}
+
+/* Delay Notification - Warning Style */
+#tarefas_dia_aluno .au-task-list .au-task__item-inner .task .time-notify-delay {
+  background: rgba(255, 188, 0, 0.15) !important;
+  border-color: rgba(255, 188, 0, 0.3) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+#tarefas_dia_aluno
+  .au-task-list
+  .au-task__item-inner
+  .task
+  .time-notify-delay
+  i {
+  color: #ffbc00 !important;
+}
+
+#tarefas_dia_aluno
+  .au-task-list
+  .au-task__item-inner
+  .task
+  .time-notify-delay:hover {
+  background: rgba(255, 188, 0, 0.2) !important;
+  border-color: rgba(255, 188, 0, 0.4) !important;
 }
 
 .meta-horario {
-  color: #0a0a0a;
-  background: linear-gradient(135deg, #00ff88 0%, #00cc6f 100%);
-  border-radius: 4px;
-  padding: 10px;
-  display: inline-block;
-  margin: 0.25em 0;
-  font-size: 0.8rem;
-  box-shadow: 0 2px 4px rgba(0, 255, 136, 0.3);
+  color: #0a0a0a !important;
+  background: linear-gradient(135deg, #00ff88 0%, #00cc6f 100%) !important;
+  border-radius: 8px !important;
+  padding: 10px 16px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  margin: 12px 0 !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  box-shadow: 0 2px 8px rgba(0, 255, 136, 0.3) !important;
+  transition: all 0.3s ease !important;
+}
+
+.meta-horario:hover {
+  box-shadow: 0 4px 12px rgba(0, 255, 136, 0.4) !important;
+  transform: translateY(-2px) !important;
+}
+
+.meta-horario i {
+  font-size: 14px !important;
+  color: #0a0a0a !important;
 }
 
 .card-dashboard-home .progress {
@@ -2714,18 +3065,31 @@ a#recover_pwd {
 }
 
 .meta-dia-orientacao h4 {
-  font-size: 1.15rem;
-  font-weight: 700;
-  margin: 5px 0px;
-  color: #fff;
+  font-size: 1.15rem !important;
+  font-weight: 700 !important;
+  margin: 0 0 8px 0 !important;
+  color: #ffffff !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+.meta-dia-orientacao h4 span {
+  color: #00ff88 !important;
+  font-weight: 600 !important;
+  padding: 4px 12px !important;
+  background: rgba(0, 255, 136, 0.1) !important;
+  border-radius: 6px !important;
+  font-size: 0.9rem !important;
 }
 
 .meta-dia-orientacao h6 {
-  font-size: 0.9rem;
-  font-weight: 300;
-  margin: 0;
-  margin-top: 0.25em;
-  color: #fff;
+  font-size: 0.95rem !important;
+  font-weight: 400 !important;
+  margin: 0 !important;
+  margin-top: 8px !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+  line-height: 1.5 !important;
 }
 
 .swal-icon--success__line {

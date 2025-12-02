@@ -1582,6 +1582,23 @@ a:hover {
   align-items: center !important;
   gap: 14px !important;
   line-height: 1.3 !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Ensure title text is visible - prevent text from disappearing */
+.card-desempenho-header h2.desemp-title-34,
+.card-desempenho-header h2.desemp-title-34 * {
+  visibility: visible !important;
+  opacity: 1 !important;
+  color: #7c3aed !important;
+  display: block !important;
+}
+
+/* Ensure text content is visible */
+.card-desempenho-header h2.desemp-title-34:not(:empty) {
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 /* Description Paragraph */
@@ -1868,6 +1885,9 @@ a:hover {
 
   .card-desempenho-header h2.desemp-title-34 {
     font-size: 24px !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    color: #7c3aed !important;
   }
 
   .desempenho-full h3 {
@@ -5415,6 +5435,7 @@ a#extra_time_complete_before:focus {
   ) !important;
   padding: 0 !important;
   margin: 0 !important;
+  margin-right: 12px !important;
   font-size: 28px !important;
   position: relative !important;
   flex-shrink: 0 !important;
@@ -5430,6 +5451,16 @@ a#extra_time_complete_before:focus {
   -moz-osx-font-smoothing: grayscale !important;
   font-smoothing: antialiased !important;
   filter: none !important;
+  z-index: 1 !important;
+}
+
+/* Ensure Font Awesome icons are visible - specifically for fa-tachometer-alt */
+.card.custom-card > h2:first-child i.fa-tachometer-alt,
+.card.custom-card > h2:first-child i[class*='fa-'] {
+  display: inline-flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  color: #7c3aed !important;
 }
 
 /* Support for Font Awesome icons */
@@ -5447,6 +5478,17 @@ a#extra_time_complete_before:focus {
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
   font-smoothing: antialiased !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  color: #7c3aed !important;
+}
+
+/* Ensure Font Awesome icon content is visible */
+.card.custom-card > h2:first-child i.fa-tachometer-alt::before,
+.card.custom-card > h2:first-child i[class*='fa-']::before {
+  visibility: visible !important;
+  opacity: 1 !important;
+  color: #7c3aed !important;
 }
 
 /* Support for zmdi icons - ensure visibility */
@@ -5886,84 +5928,112 @@ div#video_boas_vindas_onboarding_aluno {
    Improved Typography & Colors
    ============================================ */
 
-/* Card Container */
+/* Card Container - Dark Theme */
 .box-plan-summary {
-  background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%) !important;
+  background: linear-gradient(
+    135deg,
+    rgba(30, 30, 40, 0.95) 0%,
+    rgba(20, 20, 30, 0.98) 100%
+  ) !important;
   border-radius: 12px !important;
   padding: 28px !important;
   margin-bottom: 24px !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(59, 130, 246, 0.12) !important;
-  border: 1px solid rgba(59, 130, 246, 0.1) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(124, 58, 237, 0.15) !important;
+  border: 1px solid rgba(124, 58, 237, 0.2) !important;
   transition: all 0.3s ease !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.box-plan-summary::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 3px !important;
+  background: linear-gradient(
+    90deg,
+    rgba(124, 58, 237, 0.8) 0%,
+    rgba(139, 92, 246, 0.6) 100%
+  ) !important;
+  opacity: 0 !important;
+  transition: opacity 0.3s ease !important;
 }
 
 .box-plan-summary:hover {
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(59, 130, 246, 0.2) !important;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(124, 58, 237, 0.3) !important;
   transform: translateY(-2px) !important;
-  border-color: rgba(59, 130, 246, 0.2) !important;
+  border-color: rgba(124, 58, 237, 0.35) !important;
 }
 
-/* Title - Improved Typography */
+.box-plan-summary:hover::before {
+  opacity: 1 !important;
+}
+
+/* Title - Dark Theme Typography */
 .box-plan-disc-title {
   font-size: 22px !important;
   font-weight: 700 !important;
-  color: #0a0a0a !important;
+  color: #f5f5f5 !important;
   margin-bottom: 20px !important;
   line-height: 1.3 !important;
   letter-spacing: -0.01em !important;
+  text-shadow: 0 2px 8px rgba(124, 58, 237, 0.3) !important;
 }
 
-/* Options Container - Improved Typography */
+/* Options Container - Dark Theme */
 .box-plan-options {
   font-size: 16px !important;
   line-height: 1.7 !important;
-  color: #2d2d2d !important;
+  color: #e5e5e5 !important;
   margin-bottom: 20px !important;
   padding: 16px !important;
-  background: rgba(59, 130, 246, 0.04) !important;
+  background: rgba(124, 58, 237, 0.08) !important;
   border-radius: 8px !important;
-  border-left: 3px solid rgba(59, 130, 246, 0.3) !important;
+  border-left: 3px solid rgba(124, 58, 237, 0.4) !important;
+  border: 1px solid rgba(124, 58, 237, 0.15) !important;
 }
 
 .box-plan-options b {
   font-weight: 700 !important;
-  color: #6366f1 !important;
+  color: #a78bfa !important;
 }
 
 .box-plan-level,
 .box-plan-subjects {
-  color: #6366f1 !important;
+  color: #a78bfa !important;
   font-weight: 700 !important;
 }
 
 .box-plan-phases {
-  color: #2d2d2d !important;
+  color: #e5e5e5 !important;
 }
 
 .box-plan-phases .e1,
 .box-plan-phases .e2,
 .box-plan-phases .e3,
 .box-plan-phases .e4 {
-  color: #2d2d2d !important;
+  color: #d4d4d4 !important;
   font-weight: 500 !important;
 }
 
-/* Badge Styling - Improved */
+/* Badge Styling - Dark Theme */
 .badge-secondary.box-plan-checkpoint {
   background: linear-gradient(
     135deg,
-    rgba(59, 130, 246, 0.15) 0%,
-    rgba(59, 130, 246, 0.1) 100%
+    rgba(124, 58, 237, 0.2) 0%,
+    rgba(124, 58, 237, 0.15) 100%
   ) !important;
-  color: #6366f1 !important;
-  border: 1px solid rgba(59, 130, 246, 0.25) !important;
+  color: #a78bfa !important;
+  border: 1px solid rgba(124, 58, 237, 0.3) !important;
   padding: 8px 16px !important;
   font-size: 14px !important;
   font-weight: 600 !important;
   border-radius: 6px !important;
   display: inline-block !important;
   margin-top: 8px !important;
-  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.15) !important;
+  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.25) !important;
 }
 
 /* Button Improvements */
@@ -5983,47 +6053,47 @@ div#video_boas_vindas_onboarding_aluno {
 .box-plan-summary .btn-primary {
   background: linear-gradient(
     135deg,
-    rgba(59, 130, 246, 0.2) 0%,
-    rgba(59, 130, 246, 0.15) 100%
+    rgba(124, 58, 237, 0.25) 0%,
+    rgba(124, 58, 237, 0.18) 100%
   ) !important;
-  color: #6366f1 !important;
-  border: 1px solid rgba(59, 130, 246, 0.3) !important;
-  box-shadow: 0 2px 6px rgba(59, 130, 246, 0.2) !important;
+  color: #c4b5fd !important;
+  border: 1px solid rgba(124, 58, 237, 0.35) !important;
+  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.25) !important;
 }
 
 .box-plan-summary .btn-primary:hover {
   background: linear-gradient(
     135deg,
-    rgba(59, 130, 246, 0.3) 0%,
-    rgba(59, 130, 246, 0.22) 100%
+    rgba(124, 58, 237, 0.35) 0%,
+    rgba(124, 58, 237, 0.25) 100%
   ) !important;
-  color: #5b21b6 !important;
-  border-color: rgba(59, 130, 246, 0.4) !important;
+  color: #ddd6fe !important;
+  border-color: rgba(124, 58, 237, 0.5) !important;
   transform: translateY(-2px) !important;
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3) !important;
+  box-shadow: 0 4px 16px rgba(124, 58, 237, 0.4) !important;
 }
 
 .box-plan-summary .btn-danger {
   background: linear-gradient(
     135deg,
-    rgba(239, 68, 68, 0.15) 0%,
-    rgba(239, 68, 68, 0.1) 100%
+    rgba(239, 68, 68, 0.2) 0%,
+    rgba(239, 68, 68, 0.15) 100%
   ) !important;
-  color: #dc2626 !important;
-  border: 1px solid rgba(239, 68, 68, 0.25) !important;
-  box-shadow: 0 2px 6px rgba(239, 68, 68, 0.15) !important;
+  color: #fca5a5 !important;
+  border: 1px solid rgba(239, 68, 68, 0.3) !important;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.2) !important;
 }
 
 .box-plan-summary .btn-danger:hover {
   background: linear-gradient(
     135deg,
-    rgba(239, 68, 68, 0.25) 0%,
-    rgba(239, 68, 68, 0.18) 100%
+    rgba(239, 68, 68, 0.3) 0%,
+    rgba(239, 68, 68, 0.22) 100%
   ) !important;
-  color: #b91c1c !important;
-  border-color: rgba(239, 68, 68, 0.35) !important;
+  color: #fecaca !important;
+  border-color: rgba(239, 68, 68, 0.4) !important;
   transform: translateY(-2px) !important;
-  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.25) !important;
+  box-shadow: 0 4px 16px rgba(239, 68, 68, 0.3) !important;
 }
 
 .box-plan-summary .btn-success {
@@ -6032,9 +6102,9 @@ div#video_boas_vindas_onboarding_aluno {
     rgba(34, 197, 94, 0.2) 0%,
     rgba(34, 197, 94, 0.15) 100%
   ) !important;
-  color: #16a34a !important;
+  color: #86efac !important;
   border: 1px solid rgba(34, 197, 94, 0.3) !important;
-  box-shadow: 0 2px 6px rgba(34, 197, 94, 0.2) !important;
+  box-shadow: 0 2px 8px rgba(34, 197, 94, 0.2) !important;
 }
 
 .box-plan-summary .btn-success:hover {
@@ -6043,10 +6113,10 @@ div#video_boas_vindas_onboarding_aluno {
     rgba(34, 197, 94, 0.3) 0%,
     rgba(34, 197, 94, 0.22) 100%
   ) !important;
-  color: #15803d !important;
+  color: #bbf7d0 !important;
   border-color: rgba(34, 197, 94, 0.4) !important;
   transform: translateY(-2px) !important;
-  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3) !important;
+  box-shadow: 0 4px 16px rgba(34, 197, 94, 0.3) !important;
 }
 
 /* Card Header Section */
@@ -6064,6 +6134,47 @@ div#video_boas_vindas_onboarding_aluno {
   color: #f5f5f5 !important;
   line-height: 1.6 !important;
   margin-bottom: 24px !important;
+}
+
+/* Ensure proper grid layout within #editar_plano_estudo */
+#editar_plano_estudo .row.justify-content-start {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  margin-left: -15px !important;
+  margin-right: -15px !important;
+}
+
+#editar_plano_estudo .row.justify-content-start > [class*='col-'] {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+
+#editar_plano_estudo #drag_disc {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  margin-left: -15px !important;
+  margin-right: -15px !important;
+}
+
+#editar_plano_estudo #drag_disc > [class*='col-'] {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  margin-bottom: 0 !important;
+}
+
+/* Ensure box-plan-summary cards have proper spacing in grid */
+#editar_plano_estudo .box-plan-summary {
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+#editar_plano_estudo .box-plan-summary .box-plan-options {
+  flex-grow: 1 !important;
+}
+
+#editar_plano_estudo .box-plan-summary .btn {
+  align-self: flex-start !important;
 }
 
 /* Responsive for Box Plan */
@@ -6568,6 +6679,27 @@ div#video_boas_vindas_onboarding_aluno {
   color: #7c3aed !important;
   text-shadow: 0 0 10px rgba(124, 58, 237, 0.5),
     0 0 20px rgba(124, 58, 237, 0.3) !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Ensure text content in h2 is visible - prevent text from disappearing */
+.card.custom-card h2:not(:empty),
+.card.custom-card > h2:not(:empty),
+.card.custom-card > h2:first-child:not(:empty) {
+  visibility: visible !important;
+  opacity: 1 !important;
+  color: #7c3aed !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* Ensure text content is visible - override any hiding rules */
+.card.custom-card h2,
+.card.custom-card > h2,
+.card.custom-card > h2:first-child {
+  -webkit-text-fill-color: #7c3aed !important;
+  color: #7c3aed !important;
 }
 
 /* Icons should be crisp - no text-shadow inheritance */
