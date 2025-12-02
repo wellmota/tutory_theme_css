@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "csso advanced.css --output advanced.min.css",
-    "minify": "npm run build"
+    "minify": "npm run build",
+    "minify-themes": "mkdir -p themes/minified && for file in themes/*.css; do [ -f \"$file\" ] && [[ ! \"$file\" =~ \\.min\\.css$ ]] && npx csso-cli \"$file\" --output \"themes/minified/$(basename ${file%.css}.min.css)\"; done"
   },
   "keywords": [],
   "author": "",
