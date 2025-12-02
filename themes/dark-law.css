@@ -6933,23 +6933,54 @@ div#video_boas_vindas_onboarding_aluno {
   transform: translateY(-2px) !important;
 }
 
-/* Consolidated meta-dia-panorama img styling - Show images as-is */
+/* Consolidated meta-dia-panorama img styling - Replace icons via CSS */
+/* Hide original img src completely */
 .meta-dia-panorama img {
-  background: rgba(124, 58, 237, 0.1) !important;
-  padding: 12px !important;
-  border-radius: 8px !important;
-  width: 80% !important;
-  max-width: 50px !important;
-  margin: 0 auto 12px auto !important;
+  display: none !important;
+}
+
+/* Use pseudo-element to show custom icons */
+.meta-dia-panorama-item {
+  position: relative !important;
+}
+
+.meta-dia-panorama-item::before {
+  content: '' !important;
   display: block !important;
-  /* No filters - show images in their original colors */
-  filter: none !important;
-  opacity: 1 !important;
+  width: 80px !important;
+  height: 80px !important;
+  margin: 0 auto 12px auto !important;
+  background: rgba(124, 58, 237, 0.1) !important;
+  padding: 24px !important;
+  border-radius: 8px !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
   transition: transform 0.3s ease !important;
 }
 
-.meta-dia-panorama-item:hover img {
-  opacity: 1 !important;
+/* Replace icons using CSS background images */
+/* First icon - Calendar */
+.meta-dia-panorama .row > .col:nth-child(2) .meta-dia-panorama-item::before {
+  background-image: url('https://github.com/wellmota/tutory_theme_css/blob/main/icons%20law/calendar.png?raw=true') !important;
+}
+
+/* Second icon - Book */
+.meta-dia-panorama .row > .col:nth-child(3) .meta-dia-panorama-item::before {
+  background-image: url('https://github.com/wellmota/tutory_theme_css/blob/main/icons%20law/book.png?raw=true') !important;
+}
+
+/* Third icon - Clock */
+.meta-dia-panorama .row > .col:nth-child(4) .meta-dia-panorama-item::before {
+  background-image: url('https://github.com/wellmota/tutory_theme_css/blob/main/icons%20law/Clock.png?raw=true') !important;
+}
+
+/* Fourth icon - Lessons */
+.meta-dia-panorama .row > .col:nth-child(5) .meta-dia-panorama-item::before {
+  background-image: url('https://github.com/wellmota/tutory_theme_css/blob/main/icons%20law/lesons.png?raw=true') !important;
+}
+
+.meta-dia-panorama-item:hover::before {
   transform: scale(1.05) !important;
 }
 
