@@ -439,7 +439,11 @@ div#nps_aluno {
   padding: 0 !important;
   margin: 0 !important;
   display: inline-block !important;
-  text-shadow: 0 0 10px rgba(124, 58, 237, 0.6) !important;
+  text-shadow: none !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  font-smoothing: antialiased !important;
+  filter: none !important;
 }
 
 .legend-week-activities.card.custom-card h2 span {
@@ -3099,12 +3103,16 @@ body
 }
 
 .meta-dia-panorama img {
-  background: #2c2c2c;
-  padding: 10px;
-  border-radius: 4px;
-  width: 80%;
-  max-width: 50px;
-  margin: 0.25em auto;
+  background: rgba(124, 58, 237, 0.1) !important;
+  padding: 10px !important;
+  border-radius: 8px !important;
+  width: 80% !important;
+  max-width: 50px !important;
+  margin: 0.25em auto !important;
+  display: block !important;
+  /* Show images as-is, no filters */
+  filter: none !important;
+  opacity: 1 !important;
 }
 
 div#tarefas_dia_aluno {
@@ -5417,6 +5425,11 @@ a#extra_time_complete_before:focus {
   vertical-align: middle !important;
   visibility: visible !important;
   opacity: 1 !important;
+  text-shadow: none !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  font-smoothing: antialiased !important;
+  filter: none !important;
 }
 
 /* Support for Font Awesome icons */
@@ -5430,6 +5443,10 @@ a#extra_time_complete_before:focus {
   height: 100% !important;
   margin: 0 !important;
   padding: 0 !important;
+  text-shadow: none !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  font-smoothing: antialiased !important;
 }
 
 /* Support for zmdi icons - ensure visibility */
@@ -5472,13 +5489,17 @@ a#extra_time_complete_before:focus {
   align-items: center !important;
   justify-content: center !important;
   line-height: 1 !important;
-  text-shadow: 0 0 10px rgba(124, 58, 237, 0.6) !important;
+  text-shadow: none !important;
   margin-right: 12px !important;
   background: none !important;
   background-color: transparent !important;
   border-radius: 0 !important;
   border: none !important;
   box-shadow: none !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  font-smoothing: antialiased !important;
+  filter: none !important;
 }
 
 /* zmdi icons use ::before - ensure it's visible and orange */
@@ -6540,9 +6561,8 @@ div#video_boas_vindas_onboarding_aluno {
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.3) !important;
 }
 
-/* Ensure all card titles have proper colors */
+/* Ensure all card titles have proper colors - but icons should NOT have text-shadow */
 .card.custom-card h2,
-.card.custom-card h2 i,
 .card.custom-card > h2,
 .card.custom-card > h2:first-child {
   color: #7c3aed !important;
@@ -6550,11 +6570,21 @@ div#video_boas_vindas_onboarding_aluno {
     0 0 20px rgba(124, 58, 237, 0.3) !important;
 }
 
+/* Icons should be crisp - no text-shadow inheritance */
+.card.custom-card h2 i {
+  text-shadow: none !important;
+}
+
 .card.custom-card h2 i,
 .card.custom-card > h2 i,
 .card.custom-card > h2:first-child i {
   color: #7c3aed !important;
-  text-shadow: 0 0 8px rgba(124, 58, 237, 0.6) !important;
+  text-shadow: none !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  font-smoothing: antialiased !important;
+  filter: none !important;
+  backdrop-filter: none !important;
 }
 
 .card.custom-card h2 i::before,
@@ -6661,24 +6691,49 @@ div#video_boas_vindas_onboarding_aluno {
   gap: 12px !important;
 }
 
-#activity_title.card.custom-card h2 i {
+/* Activity Title Icon - Ensure it's visible and properly styled */
+/* Override general card icon styles for activity_title */
+#activity_title.card.custom-card h2 i,
+#activity_title.card.custom-card > h2:first-child i {
   color: #7c3aed !important;
   font-size: 28px !important;
-  text-shadow: 0 0 10px rgba(124, 58, 237, 0.8) !important;
+  display: inline-block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
   background: none !important;
   background-color: transparent !important;
+  background-image: none !important;
   border-radius: 0 !important;
   border: none !important;
   box-shadow: none !important;
   width: auto !important;
+  min-width: auto !important;
   height: auto !important;
+  min-height: auto !important;
   padding: 0 !important;
   margin: 0 !important;
+  margin-right: 12px !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  font-smoothing: antialiased !important;
+  filter: none !important;
+  line-height: 1 !important;
+  vertical-align: middle !important;
+  position: static !important;
+  flex-shrink: 0 !important;
 }
 
+/* Font Awesome icon ::before - ensure it's visible */
 #activity_title.card.custom-card h2 i::before {
   color: #7c3aed !important;
-  text-shadow: 0 0 10px rgba(124, 58, 237, 0.8) !important;
+  display: inline-block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  font-smoothing: antialiased !important;
 }
 
 /* ============================================
@@ -6779,18 +6834,18 @@ div#video_boas_vindas_onboarding_aluno {
   justify-content: normal !important;
 }
 
-/* Tactical Soldier Image - Top Right Corner - Only on greeting paragraph */
+/* Chess Piece Image - Bottom Right Corner - Only on greeting paragraph */
 #activity_title.card.custom-card h2 + p::after {
   content: '' !important;
   position: absolute !important;
-  top: 0 !important;
+  bottom: -20px !important;
   right: 0 !important;
-  width: 260px !important;
-  height: 260px !important;
-  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/refs/heads/main/images/tactical-soldier.png') !important;
+  width: 350px !important;
+  height: 350px !important;
+  background-image: url('https://raw.githubusercontent.com/wellmota/tutory_theme_css/refs/heads/main/images/chess2.png') !important;
   background-size: contain !important;
   background-repeat: no-repeat !important;
-  background-position: center center !important;
+  background-position: center bottom !important;
   z-index: 1 !important;
   filter: drop-shadow(0 0 20px rgba(124, 58, 237, 0.4)) !important;
   transition: transform 0.3s ease !important;
@@ -6878,6 +6933,7 @@ div#video_boas_vindas_onboarding_aluno {
   transform: translateY(-2px) !important;
 }
 
+/* Consolidated meta-dia-panorama img styling - Show images as-is */
 .meta-dia-panorama img {
   background: rgba(124, 58, 237, 0.1) !important;
   padding: 12px !important;
@@ -6886,8 +6942,15 @@ div#video_boas_vindas_onboarding_aluno {
   max-width: 50px !important;
   margin: 0 auto 12px auto !important;
   display: block !important;
-  filter: brightness(0) saturate(100%) invert(58%) sepia(93%) saturate(1352%)
-    hue-rotate(0deg) brightness(104%) contrast(101%) !important;
+  /* No filters - show images in their original colors */
+  filter: none !important;
+  opacity: 1 !important;
+  transition: transform 0.3s ease !important;
+}
+
+.meta-dia-panorama-item:hover img {
+  opacity: 1 !important;
+  transform: scale(1.05) !important;
 }
 
 .meta-dia-panorama-valor {
